@@ -39,17 +39,20 @@ Maximilian Bachl\> 123456\\\\
 	 \draw [->] (-1,0) -- (2,0) node [right]  {$x$};
 	 \draw [->] (0,-1) -- (0,2) node [above] {$y$};
 	 \draw [-, densely dashed] (0,0) -- (2,2);
+	 \draw [-, densely dashed] (0,0) -- (2,-2);
 	 \def \bsp{(0,0) -- (2,2) -- (0,2)}
+	 \pattern[pattern color=blue!60, pattern=north west lines]  \bsp;
+	 \def \bsp{(0,0) -- (2,-2) -- (0,-2)}
 	 \pattern[pattern color=blue!60, pattern=north west lines]  \bsp;
 	\end{scope}
 \end{tikzpicture}
 \end{floatingfigure}
 \begin{align*}
-\delta A &= \lbrace \left( x , y \right) \in \R ^2 : |x| = |y| , x \geq 0 \rbrace \\
-\mathring{A} &= \lbrace \left( x,y \right) \in \R ^2 : |x| < |y|, x \geq 0 \rbrace
+\delta A &= \lbrace \left( x , y \right) \in \R ^2 | (|x| = |y| \lor (x = 0 \land y \in \R \setminus\lbrace0\rbrace)) \land x \geq 0 \rbrace \\
+\mathring{A} &= \lbrace \left( x,y \right) \in \R ^2 | |x| < |y|, x > 0 \rbrace
 \end{align*}\\
 Abgeschlossen? Nein, da  $\delta A \not \subseteq A$\\
-Offen? Ja, da $\delta A \cap A = \emptyset$\\
+Offen? Nein, da $\delta A \cap A = \lbrace \left( x , y \right) \in \R ^2 |(x = 0 \land y \in \R \setminus \lbrace0\rbrace)\rbrace $\\
 Beschränkt? Nein\\
 Kompakt? Nein, da A weder abgeschlossen, noch beschränkt ist.\\
 \subsubsection*{\textbf{(b)}}
@@ -61,9 +64,11 @@ Kompakt? Nein, da A weder abgeschlossen, noch beschränkt ist.\\
 %    % The main labels of the axes can be places using `node`s:
 	 \draw [->] (-2,0) -- (2.5,0) node [right]  {$x$};
 	 \draw [->] (0,-1) -- (0,1.5) node [above] {$y$};
-	 \draw [color = blue] (-1,-1) -- (-1,1.5) node [right] {$\frac {\pi}2$};
-	 \draw [color = blue] (1,-1) -- (1,1.5) node [right] {$- \frac {\pi}2$};
-	 \draw [color = blue] (2,-1) -- (2,1.5) node [right] {$\pi$};
+	 \draw [color = blue] (-2.2,1) -- (2.2,1) node [right] {$\frac {\pi}2$};
+	 \draw [color = blue] (-2.2,-1) -- (2.2,-1) node [right] {$- \frac {\pi}2$};
+	 \draw [color = blue] (2,-1.5) -- (2,1.5) node [right] {$\pi$};
+     \draw [color = blue] (0,-1.5) -- (0,1.5) node [right] {$0$};
+	 \draw [color = blue] (-2,-1.5) -- (-2,1.5) node [right] {$- \pi$};
 	\end{scope}
 \end{tikzpicture}
 \end{floatingfigure}
@@ -73,7 +78,7 @@ Kompakt? Nein, da A weder abgeschlossen, noch beschränkt ist.\\
 \end{align*}\\
 Abgeschlossen? Ja, da $\delta B \subseteq B$.\\
 Offen? Nein, da $\delta B \cap B = B \neq \emptyset$\\
-Beschränkt? Nein, da $y \in \R$.\\
+Beschränkt? Nein, da die Gerade $x=0 \in B$.\\
 Kompakt? Nein, da $B$ zwar abgeschlossen, aber nicht beschränkt ist.\\
 \subsubsection*{\textbf{(c)}}
 \begin{floatingfigure}[r]{118pt}
