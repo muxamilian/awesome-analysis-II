@@ -1,0 +1,258 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usepackage[a4paper,
+left=3.0cm, right=3.0cm,
+top=2.0cm, bottom=2.0cm]{geometry}
+\usepackage{fullpage}
+\usepackage[german]{babel}
+\usepackage{pst-all}
+\usepackage{pstricks}
+\usepackage{floatflt}
+\setlength{\unitlength}{1cm}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\R}{\mathbb{R}}
+\author{Tom}
+\title{Analysis 2 - Hausaufgabe 1}
+\begin{document}
+\begin{center}
+\Large{Analysis 2 - Hausaufgabe 1} \\
+\end{center}
+\begin{tabbing}
+Tom Nick \hspace{1.4cm}\= 342225\\
+Tom Lehmann\>  340621\\
+Maximilian Bachl\> 123456\\\\ 
+\end{tabbing}
+\subsection*{Aufgabe 1.}
+\subsubsection*{\textbf{(a)}}
+\begin{floatingfigure}[r]{150pt}
+\begin{tikzpicture}
+	\begin{scope}[thick,font=\scriptsize]
+%    % Axes:
+%    % Are simply drawn using line with the `->` option to make them arrows:
+%    % The main labels of the axes can be places using `node`s:
+	 \draw [->] (-1,0) -- (2,0) node [right]  {$x$};
+	 \draw [->] (0,-1) -- (0,2) node [above] {$y$};
+	 \draw [-, densely dashed] (0,0) -- (2,2);
+	 \def \bsp{(0,0) -- (2,2) -- (0,2)}
+	 \pattern[pattern color=blue!60, pattern=north west lines]  \bsp;
+	\end{scope}
+\end{tikzpicture}
+\end{floatingfigure}
+\begin{align*}
+\delta A &= \lbrace \left( x , y \right) \in \R ^2 : |x| = |y| , x \geq 0 \rbrace \\
+\mathring{A} &= \lbrace \left( x,y \right) \in \R ^2 : |x| < |y|, x \geq 0 \rbrace
+\end{align*}\\
+Abgeschlossen? Nein, da  $\delta A \not \subseteq A$\\
+Offen? Ja, da $\delta A \cap A = \emptyset$\\
+Beschränkt? Nein\\
+Kompakt? Nein, da A weder abgeschlossen, noch beschränkt ist.\\
+\subsubsection*{\textbf{(b)}}
+\begin{floatingfigure}[r]{140pt}
+\begin{tikzpicture}
+	\begin{scope}[thick,font=\scriptsize]
+%    % Axes:
+%    % Are simply drawn using line with the `->` option to make them arrows:
+%    % The main labels of the axes can be places using `node`s:
+	 \draw [->] (-2,0) -- (2.5,0) node [right]  {$x$};
+	 \draw [->] (0,-1) -- (0,1.5) node [above] {$y$};
+	 \draw [color = blue] (-1,-1) -- (-1,1.5) node [right] {$\frac {\pi}2$};
+	 \draw [color = blue] (1,-1) -- (1,1.5) node [right] {$- \frac {\pi}2$};
+	 \draw [color = blue] (2,-1) -- (2,1.5) node [right] {$\pi$};
+	\end{scope}
+\end{tikzpicture}
+\end{floatingfigure}
+\begin{align*}
+\delta B &= \lbrace \left( x,y \right) \in \R ^2 : \sin \left( x \right) \cos \left( y \right) = 0 \rbrace \\
+ \mathring{B} &= \emptyset
+\end{align*}\\
+Abgeschlossen? Ja, da $\delta B \subseteq B$.\\
+Offen? Nein, da $\delta B \cap B = B \neq \emptyset$\\
+Beschränkt? Nein, da $y \in \R$.\\
+Kompakt? Nein, da $B$ zwar abgeschlossen, aber nicht beschränkt ist.\\
+\subsubsection*{\textbf{(c)}}
+\begin{floatingfigure}[r]{118pt}
+\begin{tikzpicture}
+	\begin{scope}[thick,font=\scriptsize]
+%    % Axes:
+%    % Are simply drawn using line with the `->` option to make them arrows:
+%    % The main labels of the axes can be places using `node`s:
+	 \draw [->] (1.5,1.5) -- (-1.5,-1.5) node [left] {$x$};
+	 \draw [->] (-2,0) -- (2.5,0) node [right]  {$y$};
+	 \draw [->] (0,-2) -- (0,2.5) node [above] {$z$};
+	 \draw {(-0.71,-1.71) -- (0.29,-0.71) -- (-0.71,0.29)  -- (-1.71,-0.71) -- (-0.71,-1.71)};
+	 \draw {(0.71,-0.29) -- (1.71,0.71) -- (0.71,1.71) -- (-0.29,0.71)};% -- (0.71,-0.29)};
+	 \draw [-,dotted] (-0.29,0.71) -- (0.71,-0.29);
+
+	 \draw {(-0.71,-1.71) -- (0.71,-0.29)};
+	 \draw {(0.29,-0.71) -- (1.71,0.71)};
+	 \draw {(-0.71,0.29) -- (0.71,1.71)};
+	\end{scope} 
+\end{tikzpicture}
+\end{floatingfigure}
+\begin{align*}
+\delta C &= \lbrace \left( x,y,z \right) \in \R ^3 : |y|+|z| = 1, |x| = 1 \rbrace \\
+\mathring{C} &= \lbrace \left( x,y,z \right) \in \R ^3 : |y| + |z| < 1 , |x| < 1 \rbrace 
+\end{align*}\\
+Abgeschlossen? Ja, da $\delta C \subseteq B$\\
+Offen? Nein, da $\delta C \cap C \neq \emptyset$\\
+Beschränkt? Ja, da $C \subseteq K_4(0,0,0)$\\
+Kompakt? Ja, da $C$ sowohl abgeschlossen als auch beschränkt ist.\\\\
+
+TODO: A-C
+\newpage
+\subsection*{Aufgabe 2.}
+\subsubsection*{\textbf{(i)}}
+\begin{tabbing}
+Wenn A offen ist, gilt: $\delta A \cap A = \emptyset$\\
+\hspace{0.6cm}\= Da $\delta A = \delta A^c$, muss gelten:
+$\delta A^c \cap A \neq \emptyset \Rightarrow \delta A \subseteq A^c $\\
+\> Also ist $A^c$ abgeschlossen, wenn $A$ offen ist.\\
+Wenn A abgeschlossen ist, gilt: $\delta A \subseteq A$\\
+\> Da $\delta A = \delta A^c$, muss gelten (da $A \not \subseteq A^c$):
+$\delta A^c \cap A = \emptyset$\\
+\> Also ist $A^C$ offen, wenn A abgeschlossen ist.
+\end{tabbing}
+Die Aussage ist somit wahr.
+\subsubsection*{\textbf{(ii)}}
+Kein Plan
+\subsection*{Aufgabe 3.}
+\subsubsection*{\textbf{(i)}}
+\begin{align*}
+&a_{k1}: \lim_{k \to \infty} \frac{ \arctan \left( k^2 \right) - \frac{\pi}2}{\frac 1k} = \text{!!!l'Hospital!!} \lim_{k \to \infty} \frac{\frac{1}{1+ k^4} \cdot 2k}{- \frac{1}{k^2}} = \lim_{k \to \infty} - \frac{2k^3}{1+k^4} = \lim_{k \to \infty} - \frac{\frac 2k}{\frac 1{k^4} + ^1} = 0\\
+&a_{k2}: \lim_{k \to \infty} \frac 1{k^3} = 0\\
+\\
+&b_{k1}: \lim_{k \to \infty} \cos \left( \frac{\pi \cdot k}{2} \right)\\
+&b_{k2}: \lim_{k \to \infty} \int_1^k \frac 1{t^2} dt = \lim_{k \to \inf} \left[ - \frac 1t \right]_1^k = \lim_{k \to \infty} -\frac 1t + 1 = 1 
+\end{align*}
+TEXT FEHLT
+\subsubsection*{\textbf{(ii)}}
+Kein Plan
+%\subsubsection*{$y' = y^2 + \frac y x + \frac 1 {x^2}$}
+%\begin{align*}
+%y_1' &= (-2)^2 + \frac{-2}{\frac 12} + \frac 1{\frac 14} = 4 -4 + 4 = 4\\
+%y_2' &= (-1)^2 - \frac 11 + \frac 1{1^2} = 1 - 1 + 1 = 1\\
+%y_3' &= \left(-\frac 12\right)^2 + \frac {- \frac 12}{2} + \frac{1}{2^2} = \frac 14 - \frac 14 + \frac 14 = \frac 14
+%\end{align*}
+%\begin{floatingfigure}[l]{0.5\textwidth}
+%\begin{center}
+%\begin{tikzpicture}
+%    \begin{scope}[thick,font=\scriptsize]
+%    % Axes:
+%    % Are simply drawn using line with the `->` option to make them arrows:
+%    % The main labels of the axes can be places using `node`s:
+%    \draw [->] (-1.5,0) -- (2.5,0) node [right]  {$x$};
+%    \draw [->] (0,-2.5) -- (0,1.5) node [above] {$y$};
+%
+%    % Axes labels:
+%    % Are drawn using small lines and labeled with `node`s. The placement can be set using options
+%%    \iffalse% Single
+%    % If you only want a single label per axis side:
+%    \draw (2,-3pt) -- (2,3pt)   node [above] {$2$};
+%    \draw (1,-3pt) -- (1,3pt)   node [above] {$1$};
+%    \draw (-1,-3pt) -- (-1,3pt) node [above] {$-1$};
+%    \draw (3pt,1) -- (-3pt,1)   node [left] {$1$};
+%    \draw (3pt,-1) -- (-3pt,-1) node [left] {$-1$};
+%    \draw (3pt,-2) -- (-3pt,-2)   node [left] {$-2$};
+%%    \else% Multiple
+%    % If you want labels at every unit step:
+%%    \foreach \n in {-4,...,-1,1,2,...,4}{%
+%%        \draw (\n,-3pt) -- (\n,3pt)   node [above] {$\n$};
+%%        \draw (-3pt,\n) -- (3pt,\n)   node [right] {$\n i$};
+%%    }
+%%    \fi
+%	\draw (0.9,-1.1) -- (1.1,-0.9);
+%	\draw (1.9,-0.55) -- (2.1,-0.45);
+%	\draw (0.45,-2.1) -- (0.55,-1.9);
+%    \end{scope}
+%    % The circle is drawn with `(x,y) circle (radius)`
+%    % You can draw the outer border and fill the inner area differently.
+%    % Here I use gray, semitransparent filling to not cover the axes below the circle
+%    %\path [draw=none,fill=gray,semitransparent] (+1,-1) circle (3);
+%    % Place the equation into the circle:
+%    %\node [below right,darkgray] at (+1,-1) {$|z-1+i| \leq 3$};
+%\end{tikzpicture}
+%\end{center}
+%\end{floatingfigure}
+%Da $y: x \mapsto -\frac 1x$, gilt: $y' = \frac 1{x^2}$.\\
+%Eingesetzt:
+%\begin{align*}
+%x^2 \cdot \frac 1 {x^2} &= x^2 \cdot \left( - \frac 1x \right) ^2 + x \cdot \left( - \frac 1x \right) +  1\\
+%1 &= 1-1+1 \text{  w.A.}
+%\end{align*}
+%Demzufolge erfüllt $y: x \mapsto -\frac 1x$ die gegebene Differentialgleichung. Das Richtungsfeld in den gegebenen Punkten gibt die Steigung einer möglichen Lösungsfunktion (hier  $y: x \mapsto - \frac 1x$) in diesen Punkten an .
+%%\setlength{\unitlength}{1cm}
+%%\begin{pspicture}(0.5,3.5)(-3,-2)
+%%
+%%\put(2.6,-.1){$x$}
+%%\put(-.1,1.7){$y$}
+%%\put(0.2,0.9){$1$}
+%%\put(0.9,0.2){$1$}
+%%\linethickness{.075mm}
+%%\psaxes[labels=none]{->}(0,0)(-1.5,-2.5)(2.5,1.5)
+%%\linethickness{.3mm}
+%%\psline(0.9,-1.1)(1.1,-0.9)
+%%\psline(1.9,-0.55)(2.1,-0.45)
+%%\psline(0.45,-2.1)(0.55,-1.9)
+%%\end{pspicture}\\
+%\subsection*{Aufgabe 2.}
+%\subsubsection*{(a)}
+%$ y' = -sin^2 (x)y + e^{\frac 12 (\sin(x)\cos(x)-x)}$
+%\begin{align*}
+%y_h &= c \cdot e^{\int -\sin ^2(x) dx} = c \cdot e ^{\frac 12 (\sin (x) \cos (x) -x )}\\
+%y_p &= \int e^{-\frac 12 ( \sin (x) \cos (x) - x)} \cdot e^{\frac 12 \left( \sin (x) \cos (x) - x \right)} dx \cdot e ^{\frac 12 (\sin (x) \cos (x) -x )}\\
+%&= \int {1}  dx \cdot e^{\frac 12 (\sin (x) \cos (x) -x )}\\
+%&= x \cdot e^{\frac 12 (\sin (x) \cos (x) -x )}\\
+%y(x) &= e^{\frac 12 (\sin (x) \cos (x) -x )} \left( c + x \right)
+%\end{align*}
+%Da $y(0) = 1$:\\
+%
+%$y(0) = 1 = e^0 \cdot \left( c + 0 \right) \Rightarrow c = 1$\\\\
+%Also:\\
+%
+%$y(x) = e^{\frac 12 (\sin (x) \cos (x) -x )} \left( 1 + x \right)$
+%
+%\subsubsection*{(b)}
+%$y' = y \cdot \left( \frac{-4x}{1+x^2} \right) + \left( \frac x{1+x^2} \right)$ mit $y(1) = 1$
+%\begin{align*}
+%y_h &= c \cdot e^{-2 \cdot \log \left( x^2 + 1 \right) }\\
+%y_p &= c(x) \cdot e^{-2 \cdot \ln \left( x^2 + 1 \right) }\\
+%&=  \int e^{2 \cdot \ln \left( x^2 + 1 \right) } \cdot \left( \frac x{1+x^2} \right) dx \cdot e^{-2 \cdot \ln \left( x^2 + 1 \right) }\\
+%&= \int x \left(x^2 + 1 \right) dx \cdot e^{-2 \cdot \ln \left( x^2 + 1 \right) }\\
+%&= \frac 14 x^4 + \frac 12 x^2 \cdot e^{-2 \cdot \ln \left( x^2 + 1 \right) }\\
+%&=  x^2 \left( \frac 14 x^2 + \frac 12 \right) \cdot e^{-2 \cdot \ln \left( x^2 + 1 \right) }\\
+%y(x) &= e^{-2 \cdot \ln \left( x^2 + 1 \right) } \cdot \left( c+ x^2 \left( \frac 14 x^2 + \frac 12 \right) \right)\\
+%&= \left( x^2 + 1 \right)^{-2} \cdot \left( c+ x^2 \left( \frac 14 x^2 + \frac 12 \right) \right)
+%\end{align*}
+%Da $y(1) = 1$:\\
+%
+%$y(1) = 1 = 2^{-2} \cdot \left( c+ 1^2 \cdot \left( \frac 14 \cdot 1^2 + \frac 12 \right) \right) = c + \frac 14 \Rightarrow c = \frac 34$\\\\
+%Also:\\
+%
+%$y(x) = \left( x^2 + 1 \right)^{-2} \cdot \left( \frac 34 + x^2 \left( \frac 14 x^2 + \frac 12 \right) \right)$
+%
+%\subsubsection*{(c)}
+%$y' = sinc(x) \cdot y$
+%Da es sich hier um eine homogene, lineare Differentialgleichung erster Ordnung handelt, gilt:
+%\begin{align*}
+%y(x) &= \tilde c \cdot e^{\int sinc \left( x \right) dx}
+%\end{align*}
+%Da gelten $y(0)=0$ gelten soll, muss gelten: $\tilde c = 0$. Also gilt:\\
+%
+%$y(x) = 0$
+%\subsection*{Aufgabe 3.}
+%\subsubsection*{(a)}
+%\begin{align*}
+%y_1 &= c_1 \cdot e^{-\int a \left( x \right) dx} + e^{- \int a \left( a \right) dx }  \cdot \int e^{\int a \left( x \right) dx} \cdot r_1 \left( x \right) dx\\
+%&= e^{-\int a \left( x \right) dx} \left( c_1 + \int e^{\int a \left( x \right) dx} \cdot r_1 \left( x \right) dx \right)\\
+%y_2 &= c_2 \cdot e^{- \int a \left( x \right) dx} + e^{- \int a \left( x \right) dx} \cdot \int e^{\int a \left( x \right) dx} \cdot r_2 \left( x \right) dx\\
+%&= e^{- \int a \left( x \right) dx} \cdot \left( c_2 + \int e^{\int a \left( x \right) dx} \cdot r_2 \left( x \right) dx \right)\\
+%&\\
+%y_1 - y_2 &= e^{- \int a \left( x \right) dx}  \cdot \left( c_1 - c_2 + \int e^{\int a \left( x \right) dx} \cdot \left( r_1 \left( x \right) - r_2 \left( x \right) \right) dx \right)
+%\end{align*}
+\end{document}
