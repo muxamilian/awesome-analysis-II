@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper]{article}
+\documentclass[10pt,a4paper]{scrartcl}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -64,11 +64,9 @@ Kompakt? Nein, da A weder abgeschlossen, noch beschränkt ist.\\
 %    % The main labels of the axes can be places using `node`s:
 	 \draw [->] (-2,0) -- (2.5,0) node [right]  {$x$};
 	 \draw [->] (0,-1) -- (0,1.5) node [above] {$y$};
-	 \draw [color = blue] (-2.2,1) -- (2.2,1) node [right] {$\frac {\pi}2$};
-	 \draw [color = blue] (-2.2,-1) -- (2.2,-1) node [right] {$- \frac {\pi}2$};
-	 \draw [color = blue] (2,-1.5) -- (2,1.5) node [right] {$\pi$};
-     \draw [color = blue] (0,-1.5) -- (0,1.5) node [right] {$0$};
-	 \draw [color = blue] (-2,-1.5) -- (-2,1.5) node [right] {$- \pi$};
+	 \draw [color = blue] (-1,-1) -- (-1,1.5) node [right] {$\frac {\pi}2$};
+	 \draw [color = blue] (1,-1) -- (1,1.5) node [right] {$- \frac {\pi}2$};
+	 \draw [color = blue] (2,-1) -- (2,1.5) node [right] {$\pi$};
 	\end{scope}
 \end{tikzpicture}
 \end{floatingfigure}
@@ -78,7 +76,7 @@ Kompakt? Nein, da A weder abgeschlossen, noch beschränkt ist.\\
 \end{align*}\\
 Abgeschlossen? Ja, da $\delta B \subseteq B$.\\
 Offen? Nein, da $\delta B \cap B = B \neq \emptyset$\\
-Beschränkt? Nein, da die Gerade $x=0 \in B$.\\
+Beschränkt? Nein, da $y \in \R$.\\
 Kompakt? Nein, da $B$ zwar abgeschlossen, aber nicht beschränkt ist.\\
 \subsubsection*{\textbf{(c)}}
 \begin{floatingfigure}[r]{118pt}
@@ -106,16 +104,13 @@ Kompakt? Nein, da $B$ zwar abgeschlossen, aber nicht beschränkt ist.\\
 \end{align*}\\
 Abgeschlossen? Ja, da $\delta C \subseteq B$\\
 Offen? Nein, da $\delta C \cap C \neq \emptyset$\\
-% Tooom, warst du betrunken? ;P
-Beschränkt? Nein, da der Körper unbegrenzt groß ist.
-Kompakt? Nein, da $C$ zwar abgeschlossen aber nicht beschränkt.\\\\
+Beschränkt? Ja, da $C \subseteq K_4(0,0,0)$\\
+Kompakt? Ja, da $C$ sowohl abgeschlossen als auch beschränkt ist.\\\\
 
-% Was sind topologische Eigenschaften? :o
 TODO: A-C
 \newpage
 \subsection*{Aufgabe 2.}
 \subsubsection*{\textbf{(i)}}
-\textsc{Tom Lehmann}
 \begin{tabbing}
 Wenn A offen ist, gilt: $\delta A \cap A = \emptyset$\\
 \hspace{0.6cm}\= Da $\delta A = \delta A^c$, muss gelten:
@@ -128,28 +123,9 @@ $\delta A^c \cap A = \emptyset$\\
 \end{tabbing}
 
 Die Aussage ist somit wahr.
-
-\textsc{Max Bachl} \textbf{WARUM ist das eingerückt?}
-
-\begin{floatingfigure}[r]{150pt}
-\begin{tikzpicture}
-	\begin{scope}[thick,font=\scriptsize]
-%    % Axes:
-%    % Are simply drawn using line with the `->` option to make them arrows:
-%    % The main labels of the axes can be places using `node`s:
-	 \draw [->] (-1,0) -- (2,0) node [right]  {$x$};
-	 \draw [->] (0,-1) -- (0,2) node [above] {$y$};
-	 \draw [-, densely dashed] (1,1) -- (1,2);
-	 \draw [-] (1,1) -- (2,1);
-	 \fill[pattern color=blue!60, pattern=north west lines] (1,1) rectangle (2,2);
-	\end{scope}
-\end{tikzpicture}
-\end{floatingfigure}
-
-Gegenbeispiel:
-
 \subsubsection*{\textbf{(ii)}}
-Von der Logik her gilt das auf jeden Fall. Bleibt zu beweisen warum... % Max
+
+TODO
 \subsection*{Aufgabe 3.}
 \subsubsection*{\textbf{(i)}}
 \begin{align*}
@@ -164,7 +140,7 @@ $a_k$ konvergiert, da alle Komponentenfolgen konvergieren.
 
 $b_k$ konvergiert nicht, da $a_{k1}$ nicht konvergiert.
 \subsubsection*{\textbf{(ii)}}
-Der cos bei $b_k$ schwankt ja immer zwischen ein paar Werten. Wir nehmen die Folgen an gleichen Werten als Teilfolgen, haben dann konstante Folgen, die soundso konvergieren --- Max
+Der cos bei $b_k$ schwankt ja immer zwischen ein paar Werten. Wir nehmen die Folgen an gleichen Werten als Teilfolgen, haben dann konstante Folgen, die soundso konvergieren
 %\subsubsection*{$y' = y^2 + \frac y x + \frac 1 {x^2}$}
 %\begin{align*}
 %y_1' &= (-2)^2 + \frac{-2}{\frac 12} + \frac 1{\frac 14} = 4 -4 + 4 = 4\\
