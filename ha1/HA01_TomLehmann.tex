@@ -105,9 +105,7 @@ Kompakt? Nein, da $B$ zwar abgeschlossen, aber nicht beschränkt ist.\\
 Abgeschlossen? Ja, da $\delta C \subseteq B$\\
 Offen? Nein, da $\delta C \cap C \neq \emptyset$\\
 Beschränkt? Ja, da $C \subseteq K_4(0,0,0)$\\
-Kompakt? Ja, da $C$ sowohl abgeschlossen als auch beschränkt ist.\\\\
-
-TODO: A-C
+Kompakt? Ja, da $C$ sowohl abgeschlossen als auch beschränkt ist.\\
 \newpage
 \subsection*{Aufgabe 2.}
 \subsubsection*{\textbf{(i)}}
@@ -121,11 +119,8 @@ Wenn A abgeschlossen ist, gilt: $\delta A \subseteq A$\\
 $\delta A^c \cap A = \emptyset$\\
 \> Also ist $A^C$ offen, wenn A abgeschlossen ist.
 \end{tabbing}
-
-Die Aussage ist somit wahr.
 \subsubsection*{\textbf{(ii)}}
-
-TODO
+Wähle $$\bigcup_{i = 1}^{\infty} \left\{\frac{1}{i}\right\}$$ Jedes Glied der Folge ist offensichtlich abgeschlossen. Die Folge konvergiert gegen $0$, welches ein Randpunkt der Menge ist. Somit ist der Randpunkt kein Teil der Menge, welche demnach weder offen noch angeschlossen ist. (Siehe Streit im Tutorium)
 \subsection*{Aufgabe 3.}
 \subsubsection*{\textbf{(i)}}
 \begin{align*}
@@ -140,7 +135,14 @@ $a_k$ konvergiert, da alle Komponentenfolgen konvergieren.
 
 $b_k$ konvergiert nicht, da $a_{k1}$ nicht konvergiert.
 \subsubsection*{\textbf{(ii)}}
-Der cos bei $b_k$ schwankt ja immer zwischen ein paar Werten. Wir nehmen die Folgen an gleichen Werten als Teilfolgen, haben dann konstante Folgen, die soundso konvergieren
+Man wähle die Teilfolgen $$\vec c_k = \left(\cos \left( \frac{\pi \cdot 4k}{2} \right), \int_1^k \frac 1{t^2} dt\right) = \left(\cos \left(\pi \cdot 2k \right), \int_1^k \frac 1{t^2} dt\right) $$ und $$\vec d_k = \left(\cos \left(\pi \cdot 2k + \pi\right), \int_1^k \frac 1{t^2} dt\right)$$
+aus der divergenten Folge $\vec b_k$.
+
+$$c_{k1}: \lim_{k \to \infty} \cos \left(\pi \cdot 2k \right) = 1$$
+und $ \lim_{k \to \infty} c_{k1} = 1$ (siehe (i))
+$$d_{k1}: \lim_{k \to \infty} \cos \left(\pi \cdot 2k + \pi\right) = -1$$
+und $ \lim_{k \to \infty} d_{k1} = 1$ (siehe (i))
+
 %\subsubsection*{$y' = y^2 + \frac y x + \frac 1 {x^2}$}
 %\begin{align*}
 %y_1' &= (-2)^2 + \frac{-2}{\frac 12} + \frac 1{\frac 14} = 4 -4 + 4 = 4\\
