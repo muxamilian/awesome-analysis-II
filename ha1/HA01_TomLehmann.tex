@@ -106,13 +106,16 @@ Kompakt? Nein, da $B$ zwar abgeschlossen, aber nicht beschränkt ist.\\
 \end{align*}\\
 Abgeschlossen? Ja, da $\delta C \subseteq B$\\
 Offen? Nein, da $\delta C \cap C \neq \emptyset$\\
-Beschränkt? Ja, da $C \subseteq K_4(0,0,0)$\\
-Kompakt? Ja, da $C$ sowohl abgeschlossen als auch beschränkt ist.\\\\
+% Tooom, warst du betrunken? ;P
+Beschränkt? Nein, da der Körper unbegrenzt groß ist.
+Kompakt? Nein, da $C$ zwar abgeschlossen aber nicht beschränkt.\\\\
 
+% Was sind topologische Eigenschaften? :o
 TODO: A-C
 \newpage
 \subsection*{Aufgabe 2.}
 \subsubsection*{\textbf{(i)}}
+\textsc{Tom Lehmann}
 \begin{tabbing}
 Wenn A offen ist, gilt: $\delta A \cap A = \emptyset$\\
 \hspace{0.6cm}\= Da $\delta A = \delta A^c$, muss gelten:
@@ -123,21 +126,45 @@ Wenn A abgeschlossen ist, gilt: $\delta A \subseteq A$\\
 $\delta A^c \cap A = \emptyset$\\
 \> Also ist $A^C$ offen, wenn A abgeschlossen ist.
 \end{tabbing}
+
 Die Aussage ist somit wahr.
+
+\textsc{Max Bachl} \textbf{WARUM ist das eingerückt?}
+
+\begin{floatingfigure}[r]{150pt}
+\begin{tikzpicture}
+	\begin{scope}[thick,font=\scriptsize]
+%    % Axes:
+%    % Are simply drawn using line with the `->` option to make them arrows:
+%    % The main labels of the axes can be places using `node`s:
+	 \draw [->] (-1,0) -- (2,0) node [right]  {$x$};
+	 \draw [->] (0,-1) -- (0,2) node [above] {$y$};
+	 \draw [-, densely dashed] (1,1) -- (1,2);
+	 \draw [-] (1,1) -- (2,1);
+	 \fill[pattern color=blue!60, pattern=north west lines] (1,1) rectangle (2,2);
+	\end{scope}
+\end{tikzpicture}
+\end{floatingfigure}
+
+Gegenbeispiel:
+
 \subsubsection*{\textbf{(ii)}}
-Kein Plan
+Von der Logik her gilt das auf jeden Fall. Bleibt zu beweisen warum... % Max
 \subsection*{Aufgabe 3.}
 \subsubsection*{\textbf{(i)}}
 \begin{align*}
-&a_{k1}: \lim_{k \to \infty} \frac{ \arctan \left( k^2 \right) - \frac{\pi}2}{\frac 1k} \overset{\text{l'Hospital}}{=} \lim_{k \to \infty} \frac{\frac{1}{1+ k^4} \cdot 2k}{- \frac{1}{k^2}} = \lim_{k \to \infty} - \frac{2k^3}{1+k^4} = \lim_{k \to \infty} - \frac{\frac 2k}{\frac 1{k^4} + ^1} = 0\\
+&a_{k1}: \lim_{k \to \infty} \frac{ \arctan \left( k^2 \right) - \frac{\pi}2}{\frac 1k} \overset{\text{l'Hospital}}{=} \lim_{k \to \infty} \frac{\frac{1}{1+ k^4} \cdot 2k}{- \frac{1}{k^2}} = \lim_{k \to \infty} - \frac{2k^3}{1+k^4} = \lim_{k \to \infty} - \frac{\frac 2k}{\frac 1{k^4} + 1} = 0\\
 &a_{k2}: \lim_{k \to \infty} \frac 1{k^3} = 0\\
 \\
 &b_{k1}: \lim_{k \to \infty} \cos \left( \frac{\pi \cdot k}{2} \right)\\
-&b_{k2}: \lim_{k \to \infty} \int_1^k \frac 1{t^2} dt = \lim_{k \to \inf} \left[ - \frac 1t \right]_1^k = \lim_{k \to \infty} -\frac 1t + 1 = 1 
+&b_{k2}: \lim_{k \to \infty} \int_1^k \frac 1{t^2} dt = \lim_{k \to \infty} \left[ - \frac 1t \right]_1^k = \lim_{k \to \infty} -\frac 1k + 1 = 1 
 \end{align*}
-TEXT FEHLT
+
+$a_k$ konvergiert, da alle Komponentenfolgen konvergieren.
+
+$b_k$ konvergiert nicht, da $a_{k1}$ nicht konvergiert.
 \subsubsection*{\textbf{(ii)}}
-Kein Plan
+Der cos bei $b_k$ schwankt ja immer zwischen ein paar Werten. Wir nehmen die Folgen an gleichen Werten als Teilfolgen, haben dann konstante Folgen, die soundso konvergieren --- Max
 %\subsubsection*{$y' = y^2 + \frac y x + \frac 1 {x^2}$}
 %\begin{align*}
 %y_1' &= (-2)^2 + \frac{-2}{\frac 12} + \frac 1{\frac 14} = 4 -4 + 4 = 4\\
