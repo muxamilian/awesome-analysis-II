@@ -15,9 +15,37 @@ top=2.0cm, bottom=2.0cm]{geometry}
 \usepackage{pstricks}
 \usepackage{floatflt}
 \usepackage{listings}
- \lstset{ language=Mathematica,keywordstyle=\color[rgb]{0,0,0.7},
-        commentstyle=\color[rgb]{0.533,0.545,0.533},
-        stringstyle=\color[rgb]{0.999,0.526,0.041}}
+\usepackage{courier}
+ \lstset{
+         basicstyle=\footnotesize\ttfamily, % Standardschrift
+         %numbers=left,               % Ort der Zeilennummern
+         numberstyle=\tiny,          % Stil der Zeilennummern
+         %stepnumber=2,               % Abstand zwischen den Zeilennummern
+         numbersep=5pt,              % Abstand der Nummern zum Text
+         tabsize=2,                  % Groesse von Tabs
+         extendedchars=true,         %
+         breaklines=true,            % Zeilen werden Umgebrochen
+         keywordstyle=\color{red},
+    		frame=b,         
+ %        keywordstyle=[1]\textbf,    % Stil der Keywords
+ %        keywordstyle=[2]\textbf,    %
+ %        keywordstyle=[3]\textbf,    %
+ %        keywordstyle=[4]\textbf,   \sqrt{\sqrt{}} %
+         stringstyle=\color{white}\ttfamily, % Farbe der String
+         showspaces=false,           % Leerzeichen anzeigen ?
+         showtabs=false,             % Tabs anzeigen ?
+         xleftmargin=17pt,
+         framexleftmargin=17pt,
+         framexrightmargin=5pt,
+         framexbottommargin=4pt,
+         %backgroundcolor=\color{lightgray},
+         showstringspaces=false      % Leerzeichen in Strings anzeigen ?        
+ }
+ \usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43, 0.35, 0.35,0.01}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={bf,footnotesize}}
+
 \usepackage{color}
 \usepackage{enumerate}
 \setlength{\unitlength}{1cm}
@@ -37,43 +65,57 @@ Maximilian Bachl\> 123456\\\\
 \end{tabbing}
 \subsection*{Aufgabe 1.}
 \begin{enumerate}[(i)]
-\item 
+\item
 \begin{minipage}{0.49\columnwidth}
-\begin{lstlisting}
+\begin{lstlisting}[caption= Mathematica Code für die Niveaulinien von h]
 ContourPlot[{x^2/4 + y^2/9 + 4 == 4, 
 x^2/4 + y^2/9 + 4 ==  5, 
 x^2/4 + y^2/9 + 4 == 8}, 
 {x, -6, 6}, {y, -6, 6},
 ContourStyle -> Black]
 \end{lstlisting}
+Eine allgemeine Vorschrift für Niveaulinien zum Wert $c$ ist: $\frac{x^2}{4} + \frac{y^2}{9} + 4 =c$ bzw. nach $y$ umgestellt: $$y = \sqrt{9c + 36 + \frac{9x^2}{4}}$$
 \end{minipage}
-\begin{minipage}{0.50\columnwidth}
-\includegraphics[scale=0.7]{1i.eps} 
+\begin{minipage}{0.49\columnwidth}
+$\qquad$\includegraphics[scale=0.7]{1i.eps} 
 \end{minipage}
 \item 
-\begin{minipage}{0.49\columnwidth}
-\begin{lstlisting}
+\begin{minipage}{0.50\columnwidth}
+\begin{lstlisting}[caption= Mathematica Code für den Graph von h]
 Plot3D[x^2/4 + y^2/9 + 4, 
 {x, -6, 6}, {y, -6, 6},
 PlotStyle -> None]
 \end{lstlisting}
 \end{minipage}
 \begin{minipage}{0.50\columnwidth}
-\includegraphics[scale=0.7]{1ii.eps} 
+$\qquad$\includegraphics[scale=0.7]{1ii.eps} 
 \end{minipage}
 \item 
 Da $f$ eine Komposition von stetigen Funktionen ist, sowie das Intervall $D$ kompakt ist, muss $f$ Minima und Maxima in $D$ annehmen. Anhand der Bilder ist ein leichtes zu sehen, wo Minima und Maxima auftreten. \textbf{Minima: } $f(0,0) = 4$, \textbf{Maxima: } $f(0,1) = \frac{52}{9}$
 \item 
-Man kann $\vec{Z}$ nicht zeichnen, da man 4 Dimensionen nicht darstellen kann. Wählt man jedoch $r=1$ sieht das ganze so aus: \\
+Man kann $\vec{Z}$ nicht zeichnen, da man 4 Dimensionen nicht darstellen kann.  \\
 \begin{minipage}{0.49\columnwidth}
-\begin{lstlisting}
+Wählt man jedoch $r=1$ sieht das ganze so aus:
+\begin{lstlisting}[caption= Mathematica Code für den Graph von Z]
 Plot3D[{{cos phi}, {sin phi}, {z}}, 
 {phi, 0, 6.28}, {z, 0, 2},
 PlotStyle -> None]
 \end{lstlisting}
 \end{minipage}
 \begin{minipage}{0.50\columnwidth}
-\includegraphics[scale=0.7]{1iv.eps} 
+$\qquad$\includegraphics[scale=0.7]{1iv.eps} 
+\end{minipage}
+\begin{minipage}{0.50\columnwidth}
+Wählt man $z = 1$, aber lässt $r$ variabel:
+\begin{lstlisting}[caption= Mathematica Code für den Graph von Z]
+Plot3D[
+{{r*cos (phi)}, {r*sin (phi)},{1}}, 
+{phi, 0, 6.28}, {r, 0, 1}, 
+ PlotStyle -> None]
+\end{lstlisting}
+\end{minipage}
+\begin{minipage}{0.50\columnwidth}
+$\qquad$\includegraphics[scale=0.7]{1iv2.eps} 
 \end{minipage}
 \end{enumerate}
 \subsection*{Aufgabe 2.}
