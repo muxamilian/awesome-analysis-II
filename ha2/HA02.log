@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2012.6.30)  5 NOV 2012 10:38
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2012.6.30)  5 NOV 2012 16:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1187,40 +1187,40 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 111--111
 
 File: 1iv2.eps Graphic file (type eps)
 <1iv2.eps>
-Overfull \hbox (20.50243pt too wide) in paragraph at lines 97--121
+Overfull \hbox (20.50243pt too wide) in paragraph at lines 97--120
 []$ $[]$
  []
 
 
-Overfull \hbox (25.02962pt too wide) in paragraph at lines 97--121
+Overfull \hbox (25.02962pt too wide) in paragraph at lines 97--120
 []$ $[]$ 
  []
 
 [1
 
 ]
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 132
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 131
 .
  (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 131--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--132
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--144
+Underfull \hbox (badness 10000) in paragraph at lines 133--143
 
  []
 
-[2] (./HA02.aux) ) 
+[2] [3] (./HA02.aux) ) 
 Here is how much of TeX's memory you used:
  18773 strings out of 493489
  327333 string characters out of 3141349
- 523584 words of memory out of 3000000
+ 525584 words of memory out of 3000000
  21673 multiletter control sequences out of 15000+200000
  18264 words of font info for 60 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 65i,10n,100p,586b,1233s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 65i,10n,100p,586b,1239s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on HA02.dvi (2 pages, 14132 bytes).
+Output written on HA02.dvi (3 pages, 14436 bytes).

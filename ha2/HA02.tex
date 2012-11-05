@@ -98,9 +98,9 @@ Man kann $\vec{Z}$ nicht zeichnen, da man 6 Dimensionen nicht darstellen kann.  
 \begin{minipage}{0.49\columnwidth}
 Wählt man jedoch $r=1$ sieht das ganze so aus:
 \begin{lstlisting}[caption= Mathematica Code für den Graph von Z]
-Plot3D[{{cos phi}, {sin phi}, {z}}, 
-{phi, 0, 6.28}, {z, 0, 2},
-PlotStyle -> None]
+RevolutionPlot3D[{Cos[phi], Sin[phi], z}, 
+{phi, 0, 2 \[Pi]}, {z, 0, 
+  2}, AspectRatio -> Automatic, PlotStyle -> None]
 \end{lstlisting}
 \end{minipage}
 \begin{minipage}{0.50\columnwidth}
@@ -109,9 +109,8 @@ $\qquad$\includegraphics[scale=0.7]{1iv.eps}
 \begin{minipage}{0.50\columnwidth}
 Wählt man $z = 1$, aber lässt $r$ variabel:
 \begin{lstlisting}[caption= Mathematica Code für den Graph von Z]
-Plot3D[
-{{r*cos (phi)}, {r*sin (phi)},{1}}, 
-{phi, 0, 6.28}, {r, 0, 1}, 
+RevolutionPlot3D[{r*Cos[t], r*Sin[t], 1}, 
+{t, 0, 2 Pi}, {r, 0, 1}, 
  PlotStyle -> None]
 \end{lstlisting}
 \end{minipage}
