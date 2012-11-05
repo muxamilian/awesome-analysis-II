@@ -1,6 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2012.6.30)  5 NOV 2012 17:06
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.10.28)  5 NOV 2012 18:56
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **HA02.tex
 (./HA02.tex
@@ -17,23 +18,24 @@ kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
 lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, 
 welsh, loaded.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/koma-script/scrartcl.cls
-Document Class: scrartcl 2012/05/15 v3.11 KOMA-Script document class (article)
+Document Class: scrartcl 2012/07/29 v3.11b KOMA-Script document class (article)
+
 (/usr/local/texlive/2012/texmf-dist/tex/latex/koma-script/scrkbase.sty
-Package: scrkbase 2012/05/15 v3.11 KOMA-Script package (KOMA-Script-dependent b
-asics and keyval usage)
+Package: scrkbase 2012/07/29 v3.11b KOMA-Script package (KOMA-Script-dependent 
+basics and keyval usage)
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/koma-script/scrbase.sty
-Package: scrbase 2012/05/15 v3.11 KOMA-Script package (KOMA-Script-independent 
-basics and keyval usage)
+Package: scrbase 2012/07/29 v3.11b KOMA-Script package (KOMA-Script-independent
+ basics and keyval usage)
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/koma-script/scrlfile.sty
-Package: scrlfile 2011/03/09 v3.09 KOMA-Script package (loading files)
+Package: scrlfile 2012/06/15 v3.12 KOMA-Script package (loading files)
 
-Package scrlfile, 2011/03/09 v3.09 KOMA-Script package (loading files)
+Package scrlfile, 2012/06/15 v3.12 KOMA-Script package (loading files)
                   Copyright (C) Markus Kohm
 
 ))) (/usr/local/texlive/2012/texmf-dist/tex/latex/koma-script/tocbasic.sty
@@ -54,16 +56,16 @@ Package scrartcl Info: You've used obsolete option `10pt'.
 (scrartcl)             You may simply replace `10pt'
 (scrartcl)             by `fontsize=10pt'.
 Class scrartcl Info: File `scrsize10pt.clo' used to setup font sizes on input l
-ine 1265.
+ine 1267.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/koma-script/scrsize10pt.clo
-File: scrsize10pt.clo 2012/05/15 v3.11 KOMA-Script font size class option (10pt
-)
+File: scrsize10pt.clo 2012/07/29 v3.11b KOMA-Script font size class option (10p
+t)
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/koma-script/typearea.sty
-Package: typearea 2012/05/15 v3.11 KOMA-Script package (type area)
+Package: typearea 2012/07/29 v3.11b KOMA-Script package (type area)
 
-Package typearea, 2012/05/15 v3.11 KOMA-Script package (type area)
+Package typearea, 2012/07/29 v3.11b KOMA-Script package (type area)
                   Copyright (C) Frank Neukam, 1992-1994
                   Copyright (C) Markus Kohm, 1994-
 
@@ -94,7 +96,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 10.0pt
 (typearea)              \footskip       = 42.0pt
 (typearea)              \baselineskip   = 12.0pt
-(typearea)              on input line 1211.
+(typearea)              on input line 1213.
 )
 \c@part=\count80
 \c@section=\count81
@@ -422,10 +424,18 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 (/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: dvips.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/dvips.def
-File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count100
 ))
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
@@ -451,24 +461,23 @@ ode.tex
 \pgf@yc=\dimen121
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count100
-\c@pgf@countb=\count101
-\c@pgf@countc=\count102
-\c@pgf@countd=\count103
+\c@pgf@counta=\count101
+\c@pgf@countb=\count102
+\c@pgf@countc=\count103
+\c@pgf@countd=\count104
 
 (/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
-Package pgfsys Info: Driver file for pgf: pgfsys-dvips.def on input line 900.
+Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 900.
 
-(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvips.de
-f
-File: pgfsys-dvips.def 2008/04/03  (rcs-revision 1.20)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+File: pgfsys-pdftex.def 2009/05/22  (rcs-revision 1.26)
 
 (/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
-ostscript.def
-File: pgfsys-common-postscript.def 2008/10/01  (rcs-revision 1.22)
-\pgf@objectcount=\count104
+df.def
+File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
 )))
 (/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
 code.tex
@@ -485,8 +494,9 @@ Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 (/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package xcolor Info: Driver file: dvips.def on input line 225.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
 Package xcolor Info: Model `RGB' extended on input line 1353.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
@@ -702,7 +712,7 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 
 (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is not detected.
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
@@ -746,20 +756,20 @@ Package babel Info: Making " an active character on input line 102.
 Package: pst-all 2008/01/01 the main pstricks tools
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/pstricks/pstricks.sty
-Package: pstricks 2011/10/31 v0.52 LaTeX wrapper for `PSTricks' (RN,HV)
+Package: pstricks 2012/08/24 v0.53 LaTeX wrapper for `PSTricks' (RN,HV)
 
 (/usr/local/texlive/2012/texmf-dist/tex/generic/pstricks/pstricks.tex
 (/usr/local/texlive/2012/texmf-dist/tex/generic/xkeyval/pst-xkey.tex
 File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 
 (/usr/local/texlive/2012/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 \XKV@toks=\toks32
 \XKV@tempa@toks=\toks33
 \XKV@depth=\count124
-File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 )))
 (/usr/local/texlive/2012/texmf-dist/tex/generic/pstricks/pst-fp.tex
 `pst-fp' v0.05, 2010/01/17 (hv)
@@ -775,7 +785,7 @@ File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
 )
 \psLoopIndex=\count134
 
-`PSTricks' v2.29  <2012/06/04> (tvz)
+`PSTricks' v2.33  <2012/09/23> (tvz)
 \pst@dima=\dimen166
 \pst@dimb=\dimen167
 \pst@dimc=\dimen168
@@ -820,10 +830,10 @@ File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
 \pst@shift=\dimen188
 \theoverlaybox=\box41
 )
-File: pstricks.tex 2012/06/04 v2.29 `PSTricks' (tvz,hv)
+File: pstricks.tex 2012/09/23 v2.33 `PSTricks' (tvz,hv)
 
 (/usr/local/texlive/2012/texmf-dist/tex/generic/pstricks/pst-fp.tex)
-File: pst-fp.tex 2012/06/04 v2.29 `PST-fp' (hv)
+File: pst-fp.tex 2012/09/23 v2.33 `PST-fp' (hv)
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/pst-plot/pst-plot.sty
 Package: pst-plot 2011/06/05 v1.00 LaTeX wrapper for `pst-plot' (HV)
@@ -870,11 +880,11 @@ Package: pst-plot 2011/04/13 package wrapper for pst-plot.tex (hv)
 File: pst-plot.tex 2012/05/03 1.42 `pst-plot' (tvz,hv)
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/pst-node/pst-node.sty
-Package: pst-node 2011/06/05 v1.00 LaTeX wrapper for `pst-node' (HV)
+Package: pst-node 2012/09/18 v1.01 LaTeX wrapper for `pst-node' (HV)
 Package: pst-node 2010/04/22 package wrapper for pst-node.tex
 
 (/usr/local/texlive/2012/texmf-dist/tex/generic/pst-node/pst-node.tex
- v1.22, 2012/02/12
+ v1.25, 2012/09/21
 \psrow=\count151
 \pscol=\count152
 \psmatrixcnt=\count153
@@ -884,7 +894,7 @@ Package: pst-node 2010/04/22 package wrapper for pst-node.tex
 \num@pts=\count155
 \pst@argcnt=\count156
 )
-File: pst-node.tex 2012/02/12 1.22 `pst-node' (tvz)
+File: pst-node.tex 2012/09/21 1.25 `pst-node' (tvz,hv)
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/pst-tree/pst-tree.sty
 Package: pst-tree 2009/01/25 package wrapper for pst-tree.tex
@@ -961,19 +971,20 @@ Package: pstricks-add 2010/02/11 v. 0.14 package wrapper for pstricks-add.tex (
 hv)
 
 (/usr/local/texlive/2012/texmf-dist/tex/generic/pstricks-add/pstricks-add.tex
-`pstricks-add' v3.55, 2011/12/11 (dr,hv)
-\pshooklength=\dimen206
-\pshookwidth=\dimen207
+`pstricks-add' v3.59, 2012/09/28 (dr,hv)
+\psparallelogramsep=\dimen206
+\pshooklength=\dimen207
+\pshookwidth=\dimen208
 \pst@cntC=\count162
-\chart@ColorIndex=\dimen208
-\chart@ColorStep=\dimen209
-\pst@chartHeight=\dimen210
-\pst@chartStackDepth=\dimen211
-\pst@chartStackWidth=\dimen212
+\chart@ColorIndex=\dimen209
+\chart@ColorStep=\dimen210
+\pst@chartHeight=\dimen211
+\pst@chartStackDepth=\dimen212
+\pst@chartStackWidth=\dimen213
 \chart@Toggle=\count163
 \psVectorCtr=\count164
 )
-File: pstricks-add.tex 2011/12/11 v3.55 `PSTricks-add' (hv)
+File: pstricks-add.tex 2012/09/28 v3.59 `PSTricks-add' (hv)
 ))
 (/usr/local/texlive/2012/texmf-dist/tex/latex/floatflt/floatflt.sty
 Package: floatflt 1997/07/16 v. 1.31
@@ -987,14 +998,14 @@ Package: floatflt 1997/07/16 v. 1.31
 \hangcount=\count169
 \nosuccesstryfig=\count170
 \nosuccesstrytab=\count171
-\figgutter=\dimen213
-\tabgutter=\dimen214
-\htdone=\dimen215
-\pageht=\dimen216
-\startpageht=\dimen217
-\tabbredd=\dimen218
-\floatfltwidth=\dimen219
-\fltitemwidth=\dimen220
+\figgutter=\dimen214
+\tabgutter=\dimen215
+\htdone=\dimen216
+\pageht=\dimen217
+\startpageht=\dimen218
+\tabbredd=\dimen219
+\floatfltwidth=\dimen220
+\fltitemwidth=\dimen221
 \outputpretest=\toks38
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/listings/listings.sty
@@ -1002,14 +1013,14 @@ Package: floatflt 1997/07/16 v. 1.31
 \lst@gtempboxa=\box48
 \lst@token=\toks39
 \lst@length=\count173
-\lst@currlwidth=\dimen221
+\lst@currlwidth=\dimen222
 \lst@column=\count174
 \lst@pos=\count175
-\lst@lostspace=\dimen222
-\lst@width=\dimen223
+\lst@lostspace=\dimen223
+\lst@width=\dimen224
 \lst@newlines=\count176
 \lst@lineno=\count177
-\lst@maxwidth=\dimen224
+\lst@maxwidth=\dimen225
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
@@ -1030,12 +1041,12 @@ Package: caption 2012/02/19 v3.2f Customizing captions (AR)
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
-\captionmargin=\dimen225
-\captionmargin@=\dimen226
-\captionwidth=\dimen227
-\caption@indent=\dimen228
-\caption@parindent=\dimen229
-\caption@hangindent=\dimen230
+\captionmargin=\dimen226
+\captionmargin@=\dimen227
+\captionwidth=\dimen228
+\caption@indent=\dimen229
+\caption@parindent=\dimen230
+\caption@hangindent=\dimen231
 )
 Package caption Info: KOMA-Script document class.
 \c@ContinuedFloat=\count180
@@ -1065,10 +1076,67 @@ LaTeX Font Info:    Try loading font information for OT1+ppl on input line 57.
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 ABD: EveryShipout initializing macros
+(/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count181
+\scratchdimen=\dimen232
+\scratchbox=\box50
+\nofMPsegments=\count182
+\nofMParguments=\count183
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count184
+\MPscratchDim=\dimen233
+\MPnumerator=\count185
+\makeMPintoPDFobject=\count186
+\everyMPtoPDFconversion=\toks42
+) (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 *geometry* driver: auto-detecting
-*geometry* detected driver: dvips
+*geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
-* driver: dvips
+* driver: pdftex
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -1099,7 +1167,7 @@ ABD: EveryShipout initializing macros
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count181
+\c@lstlisting=\count187
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
@@ -1157,8 +1225,26 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 10.42007pt on input line 77.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 7.91925pt on input line 77.
-File: 1i.eps Graphic file (type eps)
- <1i.eps>
+Package epstopdf Info: Source file: <1i.eps>
+(epstopdf)                    date: 2012-11-05 18:55:26
+(epstopdf)                    size: 109687 bytes
+(epstopdf)             Output file: <1i-eps-converted-to.pdf>
+(epstopdf)             Command: <epstopdf --outfile=1i-eps-converted-to.pdf 1i.
+eps>
+(epstopdf)             \includegraphics on input line 80.
+runsystem(epstopdf --outfile=1i-eps-converted-to.pdf 1i.eps)...executed.
+
+Package epstopdf Info: Result file: <1i-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-11-05 18:56:14
+(epstopdf)                    size: 8811 bytes.
+
+<1i-eps-converted-to.pdf, id=4, 260.975pt x 258.9675pt>
+File: 1i-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 1i-eps-converted-to.pdf>
+Package pdftex.def Info: 1i-eps-converted-to.pdf used on input line 80.
+(pdftex.def)             Requested size: 182.68126pt x 181.27599pt.
+
 Overfull \hbox (15.97523pt too wide) in paragraph at lines 69--83
 []$[]$ $[]$ 
  []
@@ -1168,8 +1254,25 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 84--84
 [][][][][][][] 
  []
 
-File: 1ii.eps Graphic file (type eps)
-<1ii.eps>
+Package epstopdf Info: Source file: <1ii.eps>
+(epstopdf)                    date: 2012-11-05 18:55:26
+(epstopdf)                    size: 272130 bytes
+(epstopdf)             Output file: <1ii-eps-converted-to.pdf>
+(epstopdf)             Command: <epstopdf --outfile=1ii-eps-converted-to.pdf 1i
+i.eps>
+(epstopdf)             \includegraphics on input line 91.
+runsystem(epstopdf --outfile=1ii-eps-converted-to.pdf 1ii.eps)...executed.
+
+Package epstopdf Info: Result file: <1ii-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-11-05 18:56:14
+(epstopdf)                    size: 38492 bytes.
+<1ii-eps-converted-to.pdf, id=5, 260.975pt x 206.7725pt>
+File: 1ii-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 1ii-eps-converted-to.pdf>
+Package pdftex.def Info: 1ii-eps-converted-to.pdf used on input line 91.
+(pdftex.def)             Requested size: 182.68126pt x 144.73975pt.
+
 Overfull \hbox (25.02962pt too wide) in paragraph at lines 83--94
 []$[]$ $[]$ 
  []
@@ -1179,14 +1282,48 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 100--100
 [][][][][][][] 
  []
 
-File: 1iv.eps Graphic file (type eps)
-<1iv.eps>
+Package epstopdf Info: Source file: <1iv.eps>
+(epstopdf)                    date: 2012-11-05 18:55:26
+(epstopdf)                    size: 272163 bytes
+(epstopdf)             Output file: <1iv-eps-converted-to.pdf>
+(epstopdf)             Command: <epstopdf --outfile=1iv-eps-converted-to.pdf 1i
+v.eps>
+(epstopdf)             \includegraphics on input line 107.
+runsystem(epstopdf --outfile=1iv-eps-converted-to.pdf 1iv.eps)...executed.
+
+Package epstopdf Info: Result file: <1iv-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-11-05 18:56:15
+(epstopdf)                    size: 33376 bytes.
+<1iv-eps-converted-to.pdf, id=6, 260.975pt x 287.0725pt>
+File: 1iv-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 1iv-eps-converted-to.pdf>
+Package pdftex.def Info: 1iv-eps-converted-to.pdf used on input line 107.
+(pdftex.def)             Requested size: 182.68126pt x 200.94937pt.
+
 Overfull \hbox (6.0pt too wide) in paragraph at lines 111--111
 [][][][][][][] 
  []
 
-File: 1iv2.eps Graphic file (type eps)
-<1iv2.eps>
+Package epstopdf Info: Source file: <1iv2.eps>
+(epstopdf)                    date: 2012-11-05 18:55:26
+(epstopdf)                    size: 195488 bytes
+(epstopdf)             Output file: <1iv2-eps-converted-to.pdf>
+(epstopdf)             Command: <epstopdf --outfile=1iv2-eps-converted-to.pdf 1
+iv2.eps>
+(epstopdf)             \includegraphics on input line 118.
+runsystem(epstopdf --outfile=1iv2-eps-converted-to.pdf 1iv2.eps)...executed.
+
+Package epstopdf Info: Result file: <1iv2-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-11-05 18:56:15
+(epstopdf)                    size: 20623 bytes.
+<1iv2-eps-converted-to.pdf, id=7, 260.975pt x 287.0725pt>
+File: 1iv2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 1iv2-eps-converted-to.pdf>
+Package pdftex.def Info: 1iv2-eps-converted-to.pdf used on input line 118.
+(pdftex.def)             Requested size: 182.68126pt x 200.94937pt.
+
 Overfull \hbox (20.50243pt too wide) in paragraph at lines 97--120
 []$ $[]$
  []
@@ -1197,30 +1334,63 @@ Overfull \hbox (25.02962pt too wide) in paragraph at lines 97--120
  []
 
 [1
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
 
-]
+
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/upd
+map/pdftex.map} <./1i-eps-converted-to.pdf> <./1ii-eps-converted-to.pdf>]
 LaTeX Font Info:    Try loading font information for U+fplmbb on input line 131
 .
- (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/ufplmbb.fd
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 130--132
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 133--143
+[2 <./1iv-eps-converted-to.pdf> <./1iv2-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 152--154
 
  []
 
-[2] [3] (./HA02.aux) ) 
+[3] (./HA02.aux) ) 
 Here is how much of TeX's memory you used:
- 18773 strings out of 493489
- 327333 string characters out of 3141349
- 527584 words of memory out of 3000000
- 21673 multiletter control sequences out of 15000+200000
- 18264 words of font info for 60 fonts, out of 3000000 for 9000
+ 19833 strings out of 493488
+ 344553 string characters out of 3141325
+ 539534 words of memory out of 3000000
+ 22669 multiletter control sequences out of 15000+200000
+ 28011 words of font info for 83 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 65i,10n,100p,586b,1237s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 65i,10n,100p,586b,1239s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.e
+nc}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pf
+b></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+/usr/local/texlive/2012/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr
+/local/texlive/2012/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/loca
+l/texlive/2012/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texliv
+e/2012/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2012/
+texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2012/texmf-d
+ist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on HA02.pdf (3 pages, 201149 bytes).
+PDF statistics:
+ 102 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on HA02.dvi (3 pages, 14524 bytes).
