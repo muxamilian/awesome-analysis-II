@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  5 NOV 2012 22:34
+=======
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2012.6.30)  5 NOV 2012 23:19
+>>>>>>> b57a23f02cdadd2509b7ff7610cacb3d2aab75f0
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1166,46 +1170,88 @@ Overfull \hbox (25.02962pt too wide) in paragraph at lines 90--103
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (6.0pt too wide) in paragraph at lines 110--110
+=======
+Overfull \hbox (6.0pt too wide) in paragraph at lines 102--102
+[][][][][][][] 
+ []
+
+File: 1iv3.eps Graphic file (type eps)
+<1iv3.eps>
+Overfull \hbox (6.0pt too wide) in paragraph at lines 116--116
+>>>>>>> b57a23f02cdadd2509b7ff7610cacb3d2aab75f0
 [][][][][][][] 
  []
 
 File: 1iv.eps Graphic file (type eps)
 <1iv.eps>
+<<<<<<< HEAD
 Overfull \hbox (6.0pt too wide) in paragraph at lines 123--123
+=======
+Overfull \hbox (6.0pt too wide) in paragraph at lines 129--129
+>>>>>>> b57a23f02cdadd2509b7ff7610cacb3d2aab75f0
 [][][][][][][] 
  []
 
 File: 1iv2.eps Graphic file (type eps)
 <1iv2.eps>
+<<<<<<< HEAD
 Overfull \hbox (20.50243pt too wide) in paragraph at lines 107--134
+=======
+Overfull \hbox (20.50243pt too wide) in paragraph at lines 101--140
+[]$[]$ $[]$
+ []
+
+
+Overfull \hbox (20.50243pt too wide) in paragraph at lines 101--140
+>>>>>>> b57a23f02cdadd2509b7ff7610cacb3d2aab75f0
 []$ $[]$
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (25.02962pt too wide) in paragraph at lines 107--134
+=======
+Overfull \hbox (25.02962pt too wide) in paragraph at lines 101--140
+>>>>>>> b57a23f02cdadd2509b7ff7610cacb3d2aab75f0
 []$ $[]$ 
  []
 
 [1
 
+<<<<<<< HEAD
 ]
 LaTeX Font Info:    Try loading font information for U+fplmbb on input line 145
+=======
+] [2]
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 151
+>>>>>>> b57a23f02cdadd2509b7ff7610cacb3d2aab75f0
 .
  (/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 144--155
 
  []
 
 [2]
 Underfull \hbox (badness 10000) in paragraph at lines 161--164
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 150--161
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--170
+>>>>>>> b57a23f02cdadd2509b7ff7610cacb3d2aab75f0
 
  []
 
 [3] (./HA02.aux) ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  18628 strings out of 493634
  324414 string characters out of 3143401
  533762 words of memory out of 3000000
@@ -1215,3 +1261,14 @@ Here is how much of TeX's memory you used:
  65i,12n,100p,586b,1239s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on HA02.dvi (3 pages, 16672 bytes).
+=======
+ 18775 strings out of 493489
+ 327349 string characters out of 3141349
+ 543584 words of memory out of 3000000
+ 21674 multiletter control sequences out of 15000+200000
+ 18264 words of font info for 60 fonts, out of 3000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 65i,10n,100p,586b,1235s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on HA02.dvi (3 pages, 17028 bytes).
+>>>>>>> b57a23f02cdadd2509b7ff7610cacb3d2aab75f0
