@@ -1,0 +1,130 @@
+\documentclass[10pt,a4paper,parskip=half]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{mathpazo}
+\usetikzlibrary{patterns}
+\usepackage[a4paper,
+left=3.0cm, right=3.0cm,
+top=2.0cm, bottom=2.0cm]{geometry}
+\usepackage{fullpage}
+\usepackage[german]{babel}
+\usepackage{pst-all}
+\usepackage{pstricks}
+\usepackage{floatflt}
+\usepackage{listings}
+\usepackage{courier}
+ \lstset{
+         basicstyle=\footnotesize\ttfamily, % Standardschrift
+         %numbers=left,               % Ort der Zeilennummern
+         numberstyle=\tiny,          % Stil der Zeilennummern
+         %stepnumber=2,               % Abstand zwischen den Zeilennummern
+         numbersep=5pt,              % Abstand der Nummern zum Text
+         tabsize=2,                  % Groesse von Tabs
+         extendedchars=true,         %
+         breaklines=true,            % Zeilen werden Umgebrochen
+         keywordstyle=\color{red},
+    		frame=b,         
+ %        keywordstyle=[1]\textbf,    % Stil der Keywords
+ %        keywordstyle=[2]\textbf,    %
+ %        keywordstyle=[3]\textbf,    %
+ %        keywordstyle=[4]\textbf,   \sqrt{\sqrt{}} %
+         stringstyle=\color{white}\ttfamily, % Farbe der String
+         showspaces=false,           % Leerzeichen anzeigen ?
+         showtabs=false,             % Tabs anzeigen ?
+         xleftmargin=17pt,
+         framexleftmargin=17pt,
+         framexrightmargin=5pt,
+         framexbottommargin=4pt,
+         %backgroundcolor=\color{lightgray},
+         showstringspaces=false      % Leerzeichen in Strings anzeigen ?       
+ }
+ \usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43, 0.35, 0.35,0.01}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={bf,footnotesize}}
+
+\usepackage{color}
+\usepackage{enumerate}
+\setlength{\unitlength}{1cm}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\R}{\mathbb{R}}
+\parindent 0mm
+\author{Tom}
+\title{Analysis 2 - Hausaufgabe 3}
+
+% new commands for vectors
+\newcommand{\vectwo}[2]{\left(\begin {array} {c} #1 \\ #2 \\ \end {array} \right)}
+\newcommand{\vecthree}[3]{\left(\begin {array} {c} #1 \\ #2 \\ #3\\ \end {array} \right) }
+
+\begin{document}
+\begin{center}
+\textsc{\Large{Analysis 2 - Hausaufgabe 3}} \\
+\end{center}
+\begin{tabbing}
+Tom Nick \hspace{1.4cm}\= 342225\\
+Tom Lehmann\>  340621\\
+Maximilian Bachl\>  341455
+\end{tabbing}
+\section{Aufgabe}
+\begin{enumerate}[(i)]
+\item
+$f$ ist als Komposition differenzierbarer Funktionen auf $\R^2\setminus{\{(0,0)\}}$ differenzierbar und somit dort auch partiell differenzierbar. Bleibt dies noch für den Punkt $\vec x_0 = (0,0)$ zu zeigen.
+\begin{align*}
+\frac{\partial f}{\partial x} (0,0)&= \lim_{t \to 0} \frac{f(x+t,y)-f(0,0)}{t}\\
+&= \lim_{t \to 0} \frac{\frac{t^20^2+0^8}{t^2+0^4} -0}{t} = 0
+\end{align*}
+\begin{align*}
+\frac{\partial f}{\partial y} (0,0)&= \lim_{t \to 0} \frac{f(x,y+t)-f(0,0)}{t}\\
+&= \lim_{t \to 0} \frac{\frac{0+t^8}{t^4} - 0}{t} \\
+&= \lim_{t \to 0} \frac{t^4}{t} \\
+&= \lim_{t \to 0} t^3 = 0
+\end{align*}
+Somit wurde gezeigt, dass f auch im Punkt (0,0) partiell differenzierbar ist.
+\begin{align*}
+\frac{\partial f}{\partial x} &= \frac{2xy^2(x^2+y^4) - (x^2y^2+y^8)2x}{(x^2+y^4)^2}\\
+&= \frac{2x^3y^2+2xy^6 - 2x^3y^2-2xy^8}{(x^2+y^4)^2}\\
+&= \frac{2xy^6 -2xy^8}{(x^2+y^4)^2}\\
+\end{align*}
+\begin{align*}
+\frac{\partial f}{\partial y} &= \frac{(2yx^2 + 8y^7)(x^2+y^4)- (x^2y^2+y^8)(4y^3)}{(x^2+y^4)^2}\\
+&= \frac{2yx^4 + 8y^5x^4 +8x^2y^2 + 8y^6-4x^2y^5 - 4y^{11}}{(x^2+y^4)^2}\\
+\end{align*}
+
+$g$ ist als Komposition differenzierbarer Funktionen auf $\R^2\setminus{\{(0,0)\}}$ differenzierbar und somit dort auch partiell differenzierbar. Bleibt dies noch für den Punkt $\vec x_0 = (0,1)$ zu zeigen.
+\begin{align*}
+\frac{\partial g}{\partial x} (0,1)&= \lim_{t \to 0} \frac{g(x+t,y)-g(0,1)}{t}\\
+&= \lim_{t \to 0} \frac{\frac{t^40^2+t^30^3}{(t^2+0^2)^3} - 0}{t}\\
+&= \lim_{t \to 0} \frac{0}{t} = 0
+\end{align*}
+\begin{align*}
+\frac{\partial g}{\partial y} (0,1)&= \lim_{t \to 0} \frac{g(x,y+t)-g(0,1)}{t}\\
+&= \lim_{t \to 0} \frac{\frac{0}{(0^2+t^2)^3} - 0}{t}\\
+&= \lim_{t \to 0} \frac{0}{t} = 0
+\end{align*}
+
+\item
+$\textrm{Rest} = f(x,y) - f(0,0) - f'(0,0) \Delta \vec x = \frac{x^2y^2+y^8}{x^2 + y^4} - 0 - (0,0) \vectwo{x}{y} = \frac{x^2y^2+y^8}{x^2 + y^4}$
+
+% Kleines Problem mit den Vektoren ;)
+Z.z. $\lim_{\vectwo{x}{y} \to \vectwo{0}{0}} \frac{\frac{x^2y^2+y^8}{x^2 + y^4}}{\left|\vectwo{x}{y}\right|} = 0$
+
+\begin{align*}
+0 &\le \lim_{\Delta \vec x \to \vec 0} \frac{\frac{x^2y^2+y^8}{x^2 + y^4}}{\left|\vectwo{x}{y}\right|}\\
+&= \lim_{\Delta \vec x \to \vec 0} \frac{\frac{x^2y^2+y^8}{x^2 + y^4}}{\sqrt{x^2+y^2}} \\ 
+\textrm{echt keine Ahnung}
+\end{align*}
+\end{enumerate}
+\end{document}
+
+
+
+
+
+
+
+
+
