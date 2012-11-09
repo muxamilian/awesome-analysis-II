@@ -84,15 +84,16 @@ $f$ ist als Komposition differenzierbarer Funktionen auf $\R^2\setminus{\{(0,0)\
 &= \lim_{t \to 0} t^3 = 0
 \end{align*}
 Somit wurde gezeigt, dass f auch im Punkt (0,0) partiell differenzierbar ist.
-\begin{align*}
-\frac{\partial f}{\partial x} &= \frac{2xy^2(x^2+y^4) - (x^2y^2+y^8)2x}{(x^2+y^4)^2}\\
-&= \frac{2x^3y^2+2xy^6 - 2x^3y^2-2xy^8}{(x^2+y^4)^2}\\
-&= \frac{2xy^6 -2xy^8}{(x^2+y^4)^2}\\
-\end{align*}
-\begin{align*}
-\frac{\partial f}{\partial y} &= \frac{(2yx^2 + 8y^7)(x^2+y^4)- (x^2y^2+y^8)(4y^3)}{(x^2+y^4)^2}\\
-&= \frac{2yx^4 + 8y^5x^4 +8x^2y^2 + 8y^6-4x^2y^5 - 4y^{11}}{(x^2+y^4)^2}\\
-\end{align*}
+% Unnötig
+%\begin{align*}
+%\frac{\partial f}{\partial x} &= \frac{2xy^2(x^2+y^4) - (x^2y^2+y^8)2x}{(x^2+y^4)^2}\\
+%&= \frac{2x^3y^2+2xy^6 - 2x^3y^2-2xy^8}{(x^2+y^4)^2}\\
+%&= \frac{2xy^6 -2xy^8}{(x^2+y^4)^2}\\
+%\end{align*}
+%\begin{align*}
+%\frac{\partial f}{\partial y} &= \frac{(2yx^2 + 8y^7)(x^2+y^4)- (x^2y^2+y^8)(4y^3)}{(x^2+y^4)^2}\\
+%&= \frac{2yx^4 + 8y^5x^4 +8x^2y^2 + 8y^6-4x^2y^5 - 4y^{11}}{(x^2+y^4)^2}\\
+%\end{align*}
 
 $g$ ist als Komposition differenzierbarer Funktionen auf $\R^2\setminus{\{(0,0)\}}$ differenzierbar und somit dort auch partiell differenzierbar. Bleibt dies noch für den Punkt $\vec x_0 = (0,1)$ zu zeigen.
 \begin{align*}
@@ -117,6 +118,8 @@ Z.z. $\lim_{\vectwo{x}{y} \to \vectwo{0}{0}} \frac{\frac{x^2y^2+y^8}{x^2 + y^4}}
 &= \lim_{\Delta \vec x \to \vec 0} \frac{\frac{x^2y^2+y^8}{x^2 + y^4}}{\sqrt{x^2+y^2}} \\ 
 \textrm{echt keine Ahnung}
 \end{align*}
+
+Da $g$ -- wie in der Analysis-Aufgabe der letzten Woche bewiesen -- nicht stetig ist, kann es auch nicht differenzierbar sein.
 \end{enumerate}
 \end{document}
 
