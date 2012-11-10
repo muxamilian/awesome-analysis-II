@@ -45,7 +45,6 @@ top=2.0cm, bottom=2.0cm]{geometry}
 \DeclareCaptionFont{white}{\color{white}}
 \DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43, 0.35, 0.35,0.01}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
 \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={bf,footnotesize}}
-
 \usepackage{color}
 \usepackage{enumerate}
 \setlength{\unitlength}{1cm}
@@ -57,8 +56,8 @@ top=2.0cm, bottom=2.0cm]{geometry}
 \title{Analysis 2 - Hausaufgabe 3}
 
 % new commands for vectors
-\newcommand{\vectwo}[2]{\left(\begin {array} {c} #1 \\ #2 \\ \end {array} \right)}
-\newcommand{\vecthree}[3]{\left(\begin {array} {c} #1 \\ #2 \\ #3\\ \end {array} \right) }
+\newcommand{\vectwo}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}}
+\newcommand{\vecthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3 \end{bmatrix} }
 
 \begin{document}
 \begin{center}
@@ -121,6 +120,31 @@ Z.z. $\lim_{\vectwo{x}{y} \to \vectwo{0}{0}} \frac{\frac{x^2y^2+y^8}{x^2 + y^4}}
 
 Da $g$ -- wie in der Analysis-Aufgabe der letzten Woche bewiesen -- nicht stetig ist, kann es auch nicht differenzierbar sein.
 \end{enumerate}
+\section{Aufgabe}
+$h$ ist für $(x,y) \neq (0,0)$ differenzierbar da Komposition aus differenzierbaren Funktion. Dort sind die partiellen Ableitungen:
+\begin{align*}
+\frac{\partial h(x,y)}{\partial x} &= \frac{4\sin^3(x)\cos(x)\sin^4(y) (x^2 + y^2) - 2x\sin^4(x)\sin^4(y)}{(x^2 + y^2)^2} \\
+\frac{\partial h(x,y)}{\partial y} &= \frac{\sin^4(x)4\sin^3(y)\cos(y) (x^2 + y^2) - 2y\sin^4(x)\sin^4(y)}{(x^2 + y^2)^2}
+\end{align*}
+
+
+Sei der Punkt $(0,0)$ zu überprüfen. 
+\begin{align*}
+\frac{\partial h}{\partial x}(0,0) &=  \lim_{t \to 0} \frac{f(x +t,y) - f(0,0)}{t} \\
+&=  \lim_{t \to 0} \frac{\frac{\sin^4(t) - \sin^4(0)}{t^2 + 0^4}}{t} \\
+&= \lim_{t \to 0} \frac{\sin^4(t)}{t} \\
+&\stackrel{l'h}{=}   \lim_{t \to 0} 4\sin^3(t)\cos(t) \\
+&=0 \\
+\frac{\partial h}{\partial y}(0,0) &= \lim_{t \to 0} \frac{f(x,y+t) - f(0,0)}{t} \\
+&=  \lim_{t \to 0} \frac{\frac{\sin^4(0) - \sin^4(t)}{0^2 + t^4}}{t} \\
+&=  \lim_{t \to 0} \frac{\sin^4(t)}{t^3} \\
+&\stackrel{l'h}{=}   \lim_{t \to 0} \frac{ 4\sin^3(t)\cos(t)}{3t^2} \\
+&\stackrel{l'h}{=}   \lim_{t \to 0} \frac{ 4\sin^2(t)(2\cos(2t)+1)}{6t} \\
+&\stackrel{l'h}{=}   \lim_{t \to 0} \frac{ 8\sin(t)(\cos(t)+2\cos(3t))}{6} \\
+&= 0
+\end{align*}
+Da die Grenzwerte existieren, existieren die partiellen Ableitungen in $\mathbb{R}$. Damit ist $h$ partiell differenzierbar (auf dem ganzen Definitionsbereich).
+
 \end{document}
 
 
