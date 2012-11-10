@@ -110,12 +110,16 @@ $g$ ist als Komposition differenzierbarer Funktionen auf $\R^2\setminus{\{(0,0)\
 $\textrm{Rest} = f(x,y) - f(0,0) - f'(0,0) \Delta \vec x = \frac{x^2y^2+y^8}{x^2 + y^4} - 0 - (0,0) \vectwo{x}{y} = \frac{x^2y^2+y^8}{x^2 + y^4}$
 
 % Kleines Problem mit den Vektoren ;)
-Z.z. $\lim_{\vectwo{x}{y} \to \vectwo{0}{0}} \frac{\frac{x^2y^2+y^8}{x^2 + y^4}}{\left|\vectwo{x}{y}\right|} = 0$
+Z.z. $\lim_{\vectwo{x}{y} \to \vectwo{0}{0}} \left|\frac{\frac{x^2y^2+y^8}{x^2 + y^4}}{\left|\vectwo{x}{y}\right|}\right| = 0$
 
 \begin{align*}
-0 &\le \lim_{\Delta \vec x \to \vec 0} \frac{\frac{x^2y^2+y^8}{x^2 + y^4}}{\left|\vectwo{x}{y}\right|}\\
-&= \lim_{\Delta \vec x \to \vec 0} \frac{\frac{x^2y^2+y^8}{x^2 + y^4}}{\sqrt{x^2+y^2}} \\ 
-\textrm{echt keine Ahnung}
+0 &\le \lim_{\Delta \vec x \to \vec 0} \left|\frac{\frac{x^2y^2+y^8}{x^2 + y^4}}{\left|\vectwo{x}{y}\right|}\right|\\
+&= \lim_{\Delta \vec x \to \vec 0} \left|\frac{\frac{x^2y^2+y^8}{x^2 + y^4}}{\sqrt{x^2+y^2}}\right| \\ 
+&\le \lim_{\Delta \vec x \to \vec 0} \left|\frac{\frac{x^2y^2+y^8}{2xy^2}}{\sqrt{x^2+y^2}}\right| \\ 
+&\le \lim_{\Delta \vec x \to \vec 0} \left|\frac{\frac{x^2y^2+y^8}{xy^2}}{\sqrt{x^2+y^2}}\right| \\ 
+&= \lim_{\Delta \vec x \to \vec 0} \left|\frac{\frac{x^2+y^6}{x}}{\sqrt{x^2+y^2}}\right| \\ 
+&= \lim_{\Delta \vec x \to \vec 0} \left|\frac{x+\frac{y^6}{x}}{\sqrt{x^2+y^2}}\right| \\ 
+& \text{Ich geb vorerst auf -- Max}
 \end{align*}
 
 Da $g$ -- wie in der Analysis-Aufgabe der letzten Woche bewiesen -- nicht stetig ist, kann es auch nicht differenzierbar sein.
