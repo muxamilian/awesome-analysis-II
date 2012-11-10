@@ -140,15 +140,18 @@ Z.z. $\lim_{\vectwo{x}{y} \to \vectwo{0}{0}} \left|\frac{\frac{\text{sin}^4(x)\t
 &= \lim_{\Delta \vec x \to \vec 0} \left|\frac{\text{sin}^4(x)\text{sin}^4(y)}{(x^2 + y^2)^{\frac{3}{2}}}\right| \\
 &\le \lim_{\Delta \vec x \to \vec 0} \left|\frac{\text{sin}^4(x)\text{sin}^4(y)}{(2xy)^{\frac{3}{2}}}\right| \\
 \end{align*}
+TODO: In der Angabe steht nur "begründen", vielleicht müssen wirs also nicht beweisen, dass es differenzierbar ist. Das ist nämlich extrem schwer :/ 
+
 Somit ist $h$ total differenzierbar.
 
-\begin{align*}
-\frac{\partial h}{\partial x} = \frac{4cos(x)sin^3(x)sin^4(y)(x^2 + y^2) - sin^4(x)sin^4(y)2x}{(x^2 + y^2)^2}
-\end{align*}
-
-\begin{align*}
-\frac{\partial h}{\partial y} = \frac{4cos(y)sin^3(y)sin^4(x)(x^2 + y^2) - sin^4(x)sin^4(y)2y}{(x^2 + y^2)^2}
-\end{align*}
+% So hab ich die part. Ableitungen ausgerechnet. 
+%\begin{align*}
+%\frac{\partial h}{\partial x} = \frac{4cos(x)sin^3(x)sin^4(y)(x^2 + y^2) - sin^4(x)sin^4(y)2x}{(x^2 + y^2)^2}
+%\end{align*}
+%
+%\begin{align*}
+%\frac{\partial h}{\partial y} = \frac{4cos(y)sin^3(y)sin^4(x)(x^2 + y^2) - sin^4(x)sin^4(y)2y}{(x^2 + y^2)^2}
+%\end{align*}
 
 \[
 h'(x,y): \mathbb{R}^2\setminus{\{(0,0)\}} \to \mathbb{R}, 
