@@ -142,6 +142,28 @@ Z.z. $\lim_{\vectwo{x}{y} \to \vectwo{0}{0}} \left|\frac{\frac{\text{sin}^4(x)\t
 \end{align*}
 Somit ist $h$ total differenzierbar.
 
+\begin{align*}
+\frac{\partial h}{\partial x} = \frac{4cos(x)sin^3(x)sin^4(y)(x^2 + y^2) - sin^4(x)sin^4(y)2x}{(x^2 + y^2)^2}
+\end{align*}
+
+\begin{align*}
+\frac{\partial h}{\partial y} = \frac{4cos(y)sin^3(y)sin^4(x)(x^2 + y^2) - sin^4(x)sin^4(y)2y}{(x^2 + y^2)^2}
+\end{align*}
+
+\[
+h'(x,y): \mathbb{R}^2\setminus{\{(0,0)\}} \to \mathbb{R}, 
+\]
+\[
+(x,y) \mapsto \left( \begin{array}{cc} 
+\frac{4cos(x)sin^3(x)sin^4(y)(x^2 + y^2) - sin^4(x)sin^4(y)2x}{(x^2 + y^2)^2} &
+\frac{4cos(y)sin^3(y)sin^4(x)(x^2 + y^2) - sin^4(x)sin^4(y)2y}{(x^2 + y^2)^2}
+\end{array}\right)
+\]
+
+Der Gradient am gegebenen Punkt ist gleichbedeutend mit dem der Richtung des steilsten Anstiegs dort. \(\nabla h(\frac{\pi}{2},\frac{\pi}{2}) = \vectwo{\frac{4\pi}{\pi^4}}{\frac{4\pi}{\pi^4}}\) BITTE NACHRECHNEN
+
+TODO: das mit \(\vec v \)
+
 \section{Aufgabe}
 $h$ ist differenzierbar, da auf dem definierten Definitionsbereich die Komposition der Funktionen differenzierbar ist. Die Ableitungsmatrix ist:
 $$h' =\begin{pmatrix}
