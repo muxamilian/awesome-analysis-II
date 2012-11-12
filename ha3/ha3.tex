@@ -3,50 +3,12 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-\usepackage{tikz}
 \usepackage{mathpazo}
-\usetikzlibrary{patterns}
 \usepackage[a4paper,
 left=3.0cm, right=3.0cm,
 top=2.0cm, bottom=2.0cm]{geometry}
 \usepackage{fullpage}
 \usepackage[german]{babel}
-\usepackage{pst-all}
-\usepackage{pstricks}
-\usepackage{floatflt}
-\usepackage{listings}
-\usepackage{courier}
- \lstset{
-         basicstyle=\footnotesize\ttfamily, % Standardschrift
-         %numbers=left, % Ort der Zeilennummern
-         numberstyle=\tiny, % Stil der Zeilennummern
-         %stepnumber=2, % Abstand zwischen den Zeilennummern
-         numbersep=5pt, % Abstand der Nummern zum Text
-         tabsize=2, % Groesse von Tabs
-         extendedchars=true, %
-         breaklines=true, % Zeilen werden Umgebrochen
-         keywordstyle=\color{red},
-     frame=b,
- % keywordstyle=[1]\textbf, % Stil der Keywords
- % keywordstyle=[2]\textbf, %
- % keywordstyle=[3]\textbf, %
- % keywordstyle=[4]\textbf, \sqrt{\sqrt{}} %
-         stringstyle=\color{white}\ttfamily, % Farbe der String
-         showspaces=false, % Leerzeichen anzeigen ?
-         showtabs=false, % Tabs anzeigen ?
-         xleftmargin=17pt,
-         framexleftmargin=17pt,
-         framexrightmargin=5pt,
-         framexbottommargin=4pt,
-         %backgroundcolor=\color{lightgray},
-         showstringspaces=false % Leerzeichen in Strings anzeigen ?
- }
- \usepackage{caption}
-\DeclareCaptionFont{white}{\color{white}}
-\DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43, 0.35, 0.35,0.01}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
-\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, \text{sin}glelinecheck=false, margin=0pt, font={bf,footnotesize}}
-
-\usepackage{color}
 \usepackage{enumerate}
 \setlength{\unitlength}{1cm}
 \newcommand{\N}{\mathbb{N}}
@@ -106,26 +68,28 @@ $g$ ist als Komposition differenzierbarer Funktionen auf $\R^2\setminus{\{(0,0)\
 &= \lim_{t \to 0} \frac{\frac{0}{(0^2+t^2)^3} - 0}{t}\\
 &= \lim_{t \to 0} \frac{0}{t} = 0
 \end{align*}
-
+\newpage
 \item
 Da f überall auf $\mathbb R^2\setminus{\{(0,0)\}}$ eine Komposition differenzierbarer Funktionen ist, ist sie dort auch differenzierbar. Bleibt dies noch für den Punkt (0,0) zu zeigen.
 
-$\text{Rest} = f(x,y) - f(0,0) - f'(0,0) \Delta \vec x = \frac{x^2y^2+y^8}{x^2 + y^4} - 0 - (0,0) \vectwo{x}{y} = \frac{x^2y^2+y^8}{x^2 + y^4}$
+$$\text{Rest} = f(x,y) - f(0,0) - f'(0,0) \Delta \vec x = \frac{x^2y^2+y^8}{x^2 + y^4} - 0 - (0,0) \vectwo{x}{y} = \frac{x^2y^2+y^8}{x^2 + y^4}$$
 
 % Kleines Problem mit den Vektoren ;)
-Z.z. $\lim_{\vectwo{x}{y} \to \vectwo{0}{0}} \left|\frac{\frac{x^2y^2+y^8}{x^2 + y^4}}{\left|\vectwo{x}{y}\right|}\right| = 0$
+Es ist Z.z. $$\lim_{\vectwo{x}{y} \to \vectwo{0}{0}} \left|\frac{\frac{x^2y^2+y^8}{x^2 + y^4}}{\left|\vectwo{x}{y}\right|}\right| = 0$$
 
 \begin{align*}
 0 &\le \lim_{\Delta \vec x \to \vec 0} \left|\frac{\frac{x^2y^2+y^8}{x^2 + y^4}}{\left|\vectwo{x}{y}\right|}\right|\\
 &= \lim_{\Delta \vec x \to \vec 0} \left|\frac{\frac{x^2y^2+y^8}{x^2 + y^4}}{\sqrt{x^2+y^2}}\right| \\
-&\le \lim_{\Delta \vec x \to \vec 0} \left|\frac{\frac{x^2y^2+y^8}{2xy^2}}{\sqrt{x^2+y^2}}\right| \\
-&\le \lim_{\Delta \vec x \to \vec 0} \left|\frac{\frac{x^2y^2+y^8}{xy^2}}{\sqrt{x^2+y^2}}\right| \\
-&= \lim_{\Delta \vec x \to \vec 0} \left|\frac{\frac{x^2+y^6}{x}}{\sqrt{x^2+y^2}}\right| \\
-&= \lim_{\Delta \vec x \to \vec 0} \left|\frac{x+\frac{y^6}{x}}{\sqrt{x^2+y^2}}\right| \\
-& \text{Ich geb vorerst auf -- Max}
+&= \lim_{\Delta \vec x \to \vec 0} \left|\frac{x^2y^2+y^8}{(x^2 + y^4)\sqrt{x^2+y^2}}\right| \\
+&\le \lim_{\Delta \vec x \to \vec 0} \left|\frac{x^2y^2+y^8}{y^4\sqrt{y^2}}\right| \\
+&= \lim_{\Delta \vec x \to \vec 0} \left|\frac{x^2y^2+y^8}{y^5}\right| \\
+&= \lim_{\Delta \vec x \to \vec 0} \left|\frac{x^2y+y^7}{y^4}\right| \text{ mit } (y^2 -1)^2 \ge 0 \Leftrightarrow y^4 - 2y^2 + 1 \ge 0 \Leftrightarrow y^4 \ge 2y^2 -1\\
+&\le \lim_{\Delta \vec x \to \vec 0} \left|\frac{x^2y+y^7}{2y^2 -1}\right| \\
+&= \frac{0}{-1} = 0
 \end{align*}
 
 Da $g$ -- wie in der Analysis-Aufgabe der letzten Woche bewiesen -- nicht stetig ist, kann es auch nicht differenzierbar sein.
+\newpage
 \section{Aufgabe}
 Da h überall auf $\mathbb R^2\setminus{\{(0,0)\}}$ eine Komposition differenzierbarer Funktionen ist, ist sie dort auch differenzierbar. Bleibt dies noch für den Punkt (0,0) zu zeigen.
 
@@ -139,10 +103,10 @@ Z.z. $\lim_{\vectwo{x}{y} \to \vectwo{0}{0}} \left|\frac{\frac{\text{sin}^4(x)\t
 &= \lim_{\Delta \vec x \to \vec 0} \left|\frac{\text{sin}^4(x)\text{sin}^4(y)}{(x^2 + y^2)\sqrt{x^2+y^2}}\right| \\
 &= \lim_{\Delta \vec x \to \vec 0} \left|\frac{\text{sin}^4(x)\text{sin}^4(y)}{(x^2 + y^2)^{\frac{3}{2}}}\right| \\
 &\le \lim_{\Delta \vec x \to \vec 0} \left|\frac{\text{sin}^4(x)\text{sin}^4(y)}{(2xy)^{\frac{3}{2}}}\right| \\
-&\le \lim_{\Delta \vec x \to \vec 0} \left|\frac{x^2y^2}{(2xy)^{\frac{3}{2}}}\right| \\
-&= \lim_{\Delta \vec x \to \vec 0} \left|\frac{(xy)^2}{(2xy)^{\frac{3}{2}}}\right| \\
-&\le \lim_{\Delta \vec x \to \vec 0} \left|\frac{(2xy)^2}{(2xy)^{\frac{3}{2}}}\right| \\
-&= \lim_{\Delta \vec x \to \vec 0} \left|\sqrt{2xy}\right| \\
+&\le \lim_{\Delta \vec x \to \vec 0} \left|\frac{x^4y^4}{(2xy)^{\frac{3}{2}}}\right| \\
+&= \lim_{\Delta \vec x \to \vec 0} \left|\frac{(xy)^4}{(2xy)^{\frac{3}{2}}}\right| \\
+&\le \lim_{\Delta \vec x \to \vec 0} \left|\frac{(2xy)^4}{(2xy)^{\frac{3}{2}}}\right| \\
+&= \lim_{\Delta \vec x \to \vec 0} \left|(2xy)^{\frac{5}{2}}\right| \\
 &= 0
 \end{align*}
 Somit ist $h$ total differenzierbar.
