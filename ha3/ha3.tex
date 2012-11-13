@@ -19,8 +19,8 @@ top=2.0cm, bottom=2.0cm]{geometry}
 \title{Analysis 2 - Hausaufgabe 3}
 
 % new commands for vectors
-\newcommand{\vectwo}[2]{\left(\begin {array} {c} #1 \\ #2 \\ \end {array} \right)}
-\newcommand{\vecthree}[3]{\left(\begin {array} {c} #1 \\ #2 \\ #3\\ \end {array} \right) }
+\newcommand{\vectwo}[2]{\left(\begin {array} {c}#1\\#2\\\end {array} \right)}
+\newcommand{\vecthree}[3]{\left(\begin {array} {c}#1\\#2\\#3\\\end {array} \right) }
 
 \begin{document}
 \begin{center}
@@ -119,6 +119,27 @@ Es ist zu zeigen: $$\lim_{\begin{pmatrix}x\\y\end{pmatrix} \to \begin{pmatrix}0\
 &= 0
 \end{align*}
 Somit ist $h$ total differenzierbar.
+
+\[
+h'(x,y): \mathbb{R}^2\setminus{\{(0,0)\}} \to \mathbb{R}, 
+\]
+\[
+(x,y) \mapsto \left( \begin{array}{cc} 
+\frac{4cos(x)sin^3(x)sin^4(y)(x^2 + y^2) - sin^4(x)sin^4(y)2x}{(x^2 + y^2)^2}, &
+\frac{4cos(y)sin^3(y)sin^4(x)(x^2 + y^2) - sin^4(x)sin^4(y)2y}{(x^2 + y^2)^2}
+\end{array}\right)
+\]
+
+Der Gradient am gegebenen Punkt ist gleichbedeutend mit der Richtung des steilsten Anstiegs dort. \(\nabla h(\frac{\pi}{2},\frac{\pi}{2}) = \vectwo{\frac{4\pi}{\pi^4}}{\frac{4\pi}{\pi^4}}\) BITTE NACHRECHNEN
+
+\begin{align*}
+\frac{\partial h}{\partial \vec v} (P) &= < \nabla h \vectwo{\frac{\pi}{2}}{\frac{\pi}{2}}, \vectwo{v_1}{v_2} >\\
+ &= < \vectwo{\frac{4cos(\frac{\pi}{2})sin^3(\frac{\pi}{2})sin^4(\frac{\pi}{2})(\frac{\pi}{2}^2 + \frac{\pi}{2}^2) - sin^4(\frac{\pi}{2})sin^4(\frac{\pi}{2})2\frac{\pi}{2}}{(\frac{\pi}{2}^2 + \frac{\pi}{2}^2)^2}}{\frac{4cos(\frac{\pi}{2})sin^3(\frac{\pi}{2})sin^4(\frac{\pi}{2})(\frac{\pi}{2}^2 + \frac{\pi}{2}^2) - sin^4(\frac{\pi}{2})sin^4(\frac{\pi}{2})2\frac{\pi}{2}}{(\frac{\pi}{2}^2 + \frac{\pi}{2}^2)^2}}, \vectwo{v_1}{v_2} >\\
+ &= < \vectwo{\frac{1}{\pi^3}}{\frac{1}{\pi^3}}, \vectwo{v_1}{v_2} > \\
+ &= \frac{v_1}{\pi^3} + \frac{v_2}{\pi^3} \\ \\
+ 0 &= \frac{0}{\pi^3} + \frac{0}{\pi^3}
+\end{align*}
+$\vec v = \vectwo{0}{0}$ ist also ein Vektor, bei dem die Richtungsableitung im Punkt P den Wert 0 annimmt.
 
 \section{Aufgabe}
 \begin{align*}
