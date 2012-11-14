@@ -101,7 +101,7 @@ Wir benötigen zunächst die partiellen Ableitungen an der Stelle $(0,0)$.
 \frac{\partial h}{\partial x} (0,0) &= \lim_{t \to 0} \frac{f(0+t,0)-f(0,0)}{t} = \lim_{t \to 0} \frac{\frac{\sin^4(t)\cdot 0}{t^2+0}-0}{t} = 0\\
 \frac{\partial h}{\partial y} (0,0) &= \lim_{t \to 0} \frac{f(0,0+t) - f(0,0)}{t} = \lim_{t \to 0} \frac{\frac{\sin^4(t)\cdot 0}{t^2+0}-0}{t} = 0
 \end{align*}
-Ausserdem dem partiellen Ableitungen an den Punkten $(x,y) \in \mathbb{R}\setminus\{(0,0)\}$:
+Außerdem gilt für  die partiellen Ableitungen in den Punkten $(x,y) \in \mathbb{R}\setminus\{(0,0)\}$:
 \begin{align*}
 \frac{\partial h}{\partial x} (x,y) &= \frac{4\cos(x)\sin^3(x)\sin^4(y)(x^2 + y^2) - \sin^4(x)\sin^4(y)2x}{(x^2 + y^2)^2}\\
 \frac{\partial h}{\partial y} (x,y) &= \frac{4\cos(y)\sin^3(y)\sin^4(x)(x^2 + y^2) - \sin^4(x)\sin^4(y)2y}{(x^2 + y^2)^2}
@@ -150,7 +150,7 @@ Der Gradient am gegebenen Punkt ist gleichbedeutend mit der Richtung des steilst
  0 &= \frac{-4v_1}{\pi^3} + \frac{-4v_2}{\pi^3}\\
  &= v_1 + v_2 \Rightarrow \vec{v} = \begin{pmatrix} -\frac 1{\sqrt{2}} \\ \frac1{\sqrt{2}}\end{pmatrix}
 \end{align*}
-$\vec v = \begin{pmatrix}\frac 1{-\sqrt{2}} \\ \frac1{\sqrt{2}}\end{pmatrix}$ ist also ein Vektor, bei dem die Richtungsableitung im Punkt P den Wert 0 annimmt.
+$\vec v = \begin{pmatrix}-\frac 1{\sqrt{2}} \\ \frac1{\sqrt{2}}\end{pmatrix}$ ist also ein Vektor, bei dem die Richtungsableitung im Punkt P den Wert 0 annimmt.
 
 \section{Aufgabe}
 \begin{align*}
@@ -158,7 +158,7 @@ $\vec v = \begin{pmatrix}\frac 1{-\sqrt{2}} \\ \frac1{\sqrt{2}}\end{pmatrix}$ is
 \frac{\partial h_2}{\partial x}(x,y,z) &= 2x-yz &\frac{\partial h_2}{\partial y}(x,y,z) = -xz &&\frac{\partial h_2}{\partial z}(x,y,z) = -xy\\
 \frac{\partial h_3}{\partial x}(x,y,z) &= yze^{xyz} &\frac{\partial h_3}{\partial y}(x,y,z) = xze^{xyz} &&\frac{\partial h_3}{\partial z}(x,y,z) = xye^{xyz}
 \end{align*}
-Die partiellen Ableitungen existieren und sind alle stetig, da $y \in \left]0,\infty\right[$ und der Nenner bei den ``$h_1$-Ableitungen'' somit stets größer null ist. Alle anderen partiellen Ableitungen sind Kompositionen stetiger Funktionen und deshalb auch stetig. $h$ ist somit differentierbar.
+Die partiellen Ableitungen existieren und sind alle stetig, da $y \in \left]0,\infty\right[$ und der Nenner bei den ``$h_1$-Ableitungen'' somit stets größer null ist. Alle anderen partiellen Ableitungen sind Kompositionen stetiger Funktionen und deshalb auch stetig. $h$ ist somit differenzierbar.
 %$h$ ist differenzierbar, da auf dem definierten Definitionsbereich die Komposition der Funktionen differenzierbar ist. 
 Die Ableitungsmatrix ist:
 $$h' =\begin{pmatrix}
