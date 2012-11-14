@@ -125,18 +125,18 @@ h'(x,y): \mathbb{R}^2\setminus{\{(0,0)\}} \to \mathbb{R},
 \]
 \[
 (x,y) \mapsto \left( \begin{array}{cc} 
-\frac{4cos(x)sin^3(x)sin^4(y)(x^2 + y^2) - sin^4(x)sin^4(y)2x}{(x^2 + y^2)^2}, &
-\frac{4cos(y)sin^3(y)sin^4(x)(x^2 + y^2) - sin^4(x)sin^4(y)2y}{(x^2 + y^2)^2}
+\frac{4\cos(x)\sin^3(x)\sin^4(y)(x^2 + y^2) - \sin^4(x)\sin^4(y)2x}{(x^2 + y^2)^2}, &
+\frac{4\cos(y)\sin^3(y)\sin^4(x)(x^2 + y^2) - \sin^4(x)\sin^4(y)2y}{(x^2 + y^2)^2}
 \end{array}\right)
 \]
 
-Der Gradient am gegebenen Punkt ist gleichbedeutend mit der Richtung des steilsten Anstiegs dort. \(\nabla h(\frac{\pi}{2},\frac{\pi}{2}) = \vectwo{\frac{4\pi}{\pi^4}}{\frac{4\pi}{\pi^4}}\) BITTE NACHRECHNEN
+Der Gradient am gegebenen Punkt ist gleichbedeutend mit der Richtung des steilsten Anstiegs dort. \(\nabla h(\frac{\pi}{2},\frac{\pi}{2}) = \vectwo{\frac{-4}{\pi^3}}{\frac{-4}{\pi^3}}\)
 
 \begin{align*}
-\frac{\partial h}{\partial \vec v} (P) &= < \nabla h \vectwo{\frac{\pi}{2}}{\frac{\pi}{2}}, \vectwo{v_1}{v_2} >\\
- &= < \vectwo{\frac{4cos(\frac{\pi}{2})sin^3(\frac{\pi}{2})sin^4(\frac{\pi}{2})(\frac{\pi}{2}^2 + \frac{\pi}{2}^2) - sin^4(\frac{\pi}{2})sin^4(\frac{\pi}{2})2\frac{\pi}{2}}{(\frac{\pi}{2}^2 + \frac{\pi}{2}^2)^2}}{\frac{4cos(\frac{\pi}{2})sin^3(\frac{\pi}{2})sin^4(\frac{\pi}{2})(\frac{\pi}{2}^2 + \frac{\pi}{2}^2) - sin^4(\frac{\pi}{2})sin^4(\frac{\pi}{2})2\frac{\pi}{2}}{(\frac{\pi}{2}^2 + \frac{\pi}{2}^2)^2}}, \vectwo{v_1}{v_2} >\\
- &= < \vectwo{\frac{1}{\pi^3}}{\frac{1}{\pi^3}}, \vectwo{v_1}{v_2} > \\
- &= \frac{v_1}{\pi^3} + \frac{v_2}{\pi^3} \\ \\
+\frac{\partial h}{\partial \vec v} (P) &= \left< \nabla h \vectwo{\frac{\pi}{2}}{\frac{\pi}{2}}, \vectwo{v_1}{v_2} \right>\\
+ &= \left< \vectwo{\frac{4\cos(\frac{\pi}{2})\sin^3(\frac{\pi}{2})\sin^4(\frac{\pi}{2})(\frac{\pi}{2}^2 + \frac{\pi}{2}^2) - \sin^4(\frac{\pi}{2})\sin^4(\frac{\pi}{2})2\frac{\pi}{2}}{(\frac{\pi}{2}^2 + \frac{\pi}{2}^2)^2}}{\frac{4\cos(\frac{\pi}{2})\sin^3(\frac{\pi}{2})\sin^4(\frac{\pi}{2})(\frac{\pi}{2}^2 + \frac{\pi}{2}^2) - \sin^4(\frac{\pi}{2})\sin^4(\frac{\pi}{2})2\frac{\pi}{2}}{(\frac{\pi}{2}^2 + \frac{\pi}{2}^2)^2}}, \vectwo{v_1}{v_2} \right>\\
+ &= \left< \vectwo{\frac{-4}{\pi^3}}{\frac{-4}{\pi^3}}, \vectwo{v_1}{v_2} \right> \\
+ &= \frac{-4v_1}{\pi^3} + \frac{-4v_2}{\pi^3} \\ \\
  0 &= \frac{0}{\pi^3} + \frac{0}{\pi^3}
 \end{align*}
 $\vec v = \vectwo{0}{0}$ ist also ein Vektor, bei dem die Richtungsableitung im Punkt P den Wert 0 annimmt.
@@ -147,7 +147,7 @@ $\vec v = \vectwo{0}{0}$ ist also ein Vektor, bei dem die Richtungsableitung im 
 \frac{\partial h_2}{\partial x}(x,y,z) &= 2x-yz &\frac{\partial h_2}{\partial y}(x,y,z) = -xz &&\frac{\partial h_2}{\partial z}(x,y,z) = -xy\\
 \frac{\partial h_3}{\partial x}(x,y,z) &= yze^{xyz} &\frac{\partial h_3}{\partial y}(x,y,z) = xze^{xyz} &&\frac{\partial h_3}{\partial z}(x,y,z) = xye^{xyz}
 \end{align*}
-Die partiellen Ableitungen existieren und sind alle stetig, da $y \in \left]0,\infty\right[$ und der Nenner bei den "$h_1$-Ableitungen" somit stets größer null ist. $h$ ist somit differentierbar.
+Die partiellen Ableitungen existieren und sind alle stetig, da $y \in \left]0,\infty\right[$ und der Nenner bei den ``$h_1$-Ableitungen'' somit stets größer null ist. $h$ ist somit differentierbar.
 %$h$ ist differenzierbar, da auf dem definierten Definitionsbereich die Komposition der Funktionen differenzierbar ist. 
 Die Ableitungsmatrix ist:
 $$h' =\begin{pmatrix}
