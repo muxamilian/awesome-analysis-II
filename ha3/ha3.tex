@@ -99,11 +99,14 @@ Da $g$ -- wie in der Analysis-Aufgabe der letzten Woche bewiesen -- nicht stetig
 Wir benötigen zunächst die partiellen Ableitungen an der Stelle $(0,0)$.
 \begin{align*}
 \frac{\partial h}{\partial x} (0,0) &= \lim_{t \to 0} \frac{f(0+t,0)-f(0,0)}{t} = \lim_{t \to 0} \frac{\frac{\sin^4(t)\cdot 0}{t^2+0}-0}{t} = 0\\
-\\
 \frac{\partial h}{\partial y} (0,0) &= \lim_{t \to 0} \frac{f(0,0+t) - f(0,0)}{t} = \lim_{t \to 0} \frac{\frac{\sin^4(t)\cdot 0}{t^2+0}-0}{t} = 0
 \end{align*}
+Ausserdem dem partiellen Ableitungen an den Punkten $(x,y) \in \mathbb{R}\setminus\{(0,0)\}$:
+\begin{align*}
+\frac{\partial h}{\partial x} (x,y) &= \frac{4\cos(x)\sin^3(x)\sin^4(y)(x^2 + y^2) - \sin^4(x)\sin^4(y)2x}{(x^2 + y^2)^2}\\
+\frac{\partial h}{\partial y} (x,y) &= \frac{4\cos(y)\sin^3(y)\sin^4(x)(x^2 + y^2) - \sin^4(x)\sin^4(y)2y}{(x^2 + y^2)^2}
+\end{align*}
 Da h überall auf $\mathbb R^2\setminus{\{(0,0)\}}$ eine Komposition differenzierbarer Funktionen ist, ist sie dort auch differenzierbar. Bleibt dies noch für den Punkt (0,0) zu zeigen.
-TODO: partielle Ableitungen
 \begin{align*}
 \text{Rest} &= h(x,y) - h(0,0) - h'(0,0) \Delta \vec x\\
 &= \frac{\text{sin}^4(x)\text{sin}^4(y)}{x^2 + y^2} - 0 - \left(\frac{\partial h}{\partial x}(0,0),\frac{\partial h}{\partial y}(0,0)\right) \begin{pmatrix}x\\y\end{pmatrix}\\
@@ -135,7 +138,7 @@ h'(x,y): \mathbb{R}^2\setminus{\{(0,0)\}} \to \mathbb{R},
 \end{array}\right)
 \]
 
-Der Gradient am gegebenen Punkt ist gleichbedeutend mit der Richtung des steilsten Anstiegs dort. \(\nabla h(\frac{\pi}{2},\frac{\pi}{2}) = \vectwo{\frac{4\pi}{\pi^4}}{\frac{4\pi}{\pi^4}}\) BITTE NACHRECHNEN
+Der Gradient am gegebenen Punkt ist gleichbedeutend mit der Richtung des steilsten Anstiegs dort. \(\nabla h(\frac{\pi}{2},\frac{\pi}{2}) = \vectwo{\frac{4\pi}{\pi^4}}{\frac{4\pi}{\pi^4}}\) 
 
 \begin{align*}
 \frac{\partial h}{\partial \vec v} (P) &= \text{grad}_{(\frac{\pi}{2},\frac{\pi}{2})}h \cdot \begin{pmatrix}v_1\\v_2\end{pmatrix}\\
