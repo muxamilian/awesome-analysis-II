@@ -1,0 +1,61 @@
+\documentclass[10pt,a4paper,parskip=half]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathpazo}
+\usepackage[a4paper,
+left=3.0cm, right=3.0cm,
+top=2.0cm, bottom=2.0cm]{geometry}
+\usepackage{fullpage}
+\usepackage[german]{babel}
+\usepackage{enumerate}
+\setlength{\unitlength}{1cm}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\R}{\mathbb{R}}
+\parindent 0mm
+\author{Tom}
+\title{Analysis 2 - Hausaufgabe 3}
+
+% new commands for vectors
+\newcommand{\vectwo}[2]{\left(\begin {array} {c}#1\\#2\\\end {array} \right)}
+\newcommand{\vecthree}[3]{\left(\begin {array} {c}#1\\#2\\#3\\\end {array} \right) }
+
+% Füllt man nach Spalte und dann nach Zeile. Dann kann man besser von Vektoren kopieren
+\newcommand{\mattwotwo}[4]{\left(\begin {array} {cc}#1 & #3\\#2 & #4\\\end {array} \right)}
+\newcommand{\dettwotwo}[4]{\left|\begin {array} {cc}#1 & #3\\#2 & #4\\\end {array} \right|}
+
+\begin{document}
+\begin{center}
+\textsc{\Large{Analysis 2 - Hausaufgabe 3}} \\
+\end{center}
+\begin{tabbing}
+Tom Nick \hspace{1.4cm}\= 342225\\
+Tom Lehmann\> 340621\\
+Maximilian Bachl\> 341455
+\end{tabbing}
+\section*{Aufgabe 1}
+\begin{enumerate}[(a)]
+\item
+Wir haben dann eine Scheibe. Ich bin aber gerade zu faul eine zu malen...
+\item
+$$ \frac{\partial \vec f}{\partial r} = \vectwo{\cos(\varphi)}{\sin(\varphi)}$$
+$$ \frac{\partial \vec f}{\partial \varphi} = \vectwo{-r\sin(\varphi)}{\cos(\varphi)}$$
+
+Zum Zeichnen hab ich wieder keine Lust. bei (a) ein Kreis und bei (b) kann ich es mir gerade nicht vorstellen.
+\item
+$$ \vec f'(\vectwo{r}{\varphi}) = \mattwotwo{\cos(\varphi)}{\sin(\varphi)}{-r\sin(\varphi)}{\cos(\varphi)} $$
+$$\dettwotwo{\cos(\varphi)}{\sin(\varphi)}{-r\sin(\varphi)}{\cos(\varphi)} = \cos^2(\varphi) + r\sin^2(\varphi)$$
+\end{enumerate}
+\section*{Aufgabe 2}
+\begin{enumerate}[(a)]
+\item
+$\vec f \circ g$ ist die einzige mögliche Komposition, da nur so der Bildraum der inneren Funktion auf den Urbildraum der äußeren abbildet.
+\item
+$$ (\vec f \circ g)' = (\vec f' \circ g) \cdot g'$$
+$$ \vec f' = ... \text{keine Lust mehr} $$
+\item
+\end{enumerate}
+\section*{Aufgabe 3}
+\end{document}
