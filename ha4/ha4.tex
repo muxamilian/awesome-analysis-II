@@ -1,0 +1,173 @@
+\documentclass[10pt,a4paper,parskip=half]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathpazo}
+\usepackage[a4paper,
+left=3.0cm, right=3.0cm,
+top=2.0cm, bottom=2.0cm]{geometry}
+\usepackage{fullpage}
+\usepackage[german]{babel}
+\usepackage{enumerate}
+\setlength{\unitlength}{1cm}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\R}{\mathbb{R}}
+\parindent 0mm
+\author{Tom}
+\title{Analysis 2 - Hausaufgabe 3}
+
+% new commands for vectors
+\newcommand{\vectwo}[2]{\left(\begin {array} {c}#1\\#2\\\end {array} \right)}
+\newcommand{\vecthree}[3]{\left(\begin {array} {c}#1\\#2\\#3\\\end {array} \right) }
+
+\begin{document}
+\begin{center}
+\textsc{\Large{Analysis 2 - Hausaufgabe 3}} \\
+\end{center}
+\begin{tabbing}
+Tom Nick \hspace{1.4cm}\= 342225\\
+Tom Lehmann\> 340621\\
+Maximilian Bachl\> 341455
+\end{tabbing}
+\section{Aufgabe}
+\begin{enumerate}[(i)]
+\item
+$f$ ist als Komposition differenzierbarer Funktionen auf $\R^2\setminus{\{(0,0)\}}$ differenzierbar und somit dort auch partiell differenzierbar. Bleibt dies noch für den Punkt $\vec x_0 = (0,0)$ zu zeigen.
+\begin{align*}
+\frac{\partial f}{\partial x} (0,0)&= \lim_{t \to 0} \frac{f(0+t,0)-f(0,0)}{t}\\
+&= \lim_{t \to 0} \frac{\frac{t^20^2+0^8}{t^2+0^4} -0}{t} = 0
+\end{align*}
+\begin{align*}
+\frac{\partial f}{\partial y} (0,0)&= \lim_{t \to 0} \frac{f(0,0+t)-f(0,0)}{t}\\
+&= \lim_{t \to 0} \frac{\frac{0+t^8}{t^4} - 0}{t} \\
+&= \lim_{t \to 0} \frac{t^4}{t} \\
+&= \lim_{t \to 0} t^3 = 0
+\end{align*}
+Somit wurde gezeigt, dass f auch im Punkt (0,0) partiell differenzierbar ist.
+% Unnötig
+%\begin{align*}
+%\frac{\partial f}{\partial x} &= \frac{2xy^2(x^2+y^4) - (x^2y^2+y^8)2x}{(x^2+y^4)^2}\\
+%&= \frac{2x^3y^2+2xy^6 - 2x^3y^2-2xy^8}{(x^2+y^4)^2}\\
+%&= \frac{2xy^6 -2xy^8}{(x^2+y^4)^2}\\
+%\end{align*}
+%\begin{align*}
+%\frac{\partial f}{\partial y} &= \frac{(2yx^2 + 8y^7)(x^2+y^4)- (x^2y^2+y^8)(4y^3)}{(x^2+y^4)^2}\\
+%&= \frac{2yx^4 + 8y^5x^4 +8x^2y^2 + 8y^6-4x^2y^5 - 4y^{11}}{(x^2+y^4)^2}\\
+%\end{align*}
+
+$g$ ist als Komposition differenzierbarer Funktionen auf $\R^2\setminus{\{(0,0)\}}$ differenzierbar und somit dort auch partiell differenzierbar. Bleibt dies noch für den Punkt $\vec x_0 = (0,1)$ zu zeigen.
+\begin{align*}
+\frac{\partial g}{\partial x} (0,1)&= \lim_{t \to 0} \frac{g(0+t,1)-g(0,1)}{t}\\
+&= \lim_{t \to 0} \frac{\frac{t^40^2+t^30^3}{(t^2+0^2)^3} - 1}{t}\\
+&= \lim_{t \to 0} \frac{0}{t} = -\infty
+\end{align*}
+\begin{align*}
+\frac{\partial g}{\partial y} (0,1)&= \lim_{t \to 0} \frac{g(0,1+t)-g(0,1)}{t}\\
+&= \lim_{t \to 0} \frac{\frac{0}{(0^2+t^2)^3} - 1}{t}\\
+&= \lim_{t \to 0} \frac{-1}{t} = -\infty
+\end{align*}
+Da die Grenzwerte und damit auch $\frac {\partial g}{\partial x} (0,1)$ und $\frac {\partial g}{\partial y}(0,1)$ nicht existieren, ist g nicht partiell differenzierbar und damit auch nicht total differenzierbar. 
+\newpage
+\item
+Da f überall auf $\mathbb R^2\setminus{\{(0,0)\}}$ eine Komposition differenzierbarer Funktionen ist, ist sie dort auch differenzierbar. Bleibt dies noch für den Punkt (0,0) zu zeigen.
+\begin{align*}
+{Rest} &= f(x,y) - f(0,0) - f'(0,0) \Delta \vec x\\
+&= \frac{x^2y^2+y^8}{x^2 + y^4} - 0 - \left(\frac{\partial f}{\partial x}(0,0),\frac{\partial f}{\partial y}(0,0)\right) \begin{pmatrix}x\\y\end{pmatrix}\\
+&= \frac{x^2y^2+y^8}{x^2 + y^4} - 0 -(0,0)\begin{pmatrix}x\\y\end{pmatrix}\\
+&=\frac{x^2y^2+y^8}{x^2 + y^4}
+\end{align*}
+% Kleines Problem mit den Vektoren ;)
+% verbessert mit \begin{pmatrix} a \\ b \end{pmatrix}
+Es ist zu zeigen: $$\lim_{\begin{pmatrix}x\\y\end{pmatrix} \to \begin{pmatrix}0\\0\end{pmatrix}} \left|\frac{\frac{x^2y^2+y^8}{x^2 + y^4}}{\left|\begin{pmatrix}x\\y\end{pmatrix}\right|}\right| = 0$$
+
+\begin{align*}
+0 &\le \lim_{\Delta \vec x \to \vec 0} \left|\frac{\frac{x^2y^2+y^8}{x^2 + y^4}}{\left|\begin{pmatrix}x\\y\end{pmatrix}\right|}\right|\\
+&= \lim_{\Delta \vec x \to \vec 0} \left|\frac{\frac{x^2y^2+y^8}{x^2 + y^4}}{\sqrt{x^2+y^2}}\right| \\
+&= \lim_{\Delta \vec x \to \vec 0} \left|\frac{x^2y^2+y^8}{(x^2 + y^4)\sqrt{x^2+y^2}}\right| \\
+&\le \lim_{\Delta \vec x \to \vec 0} \left|\frac{x^2y^2+y^8}{y^4\sqrt{y^2}}\right| \\
+&= \lim_{\Delta \vec x \to \vec 0} \left|\frac{x^2y^2+y^8}{y^5}\right| \\
+&= \lim_{\Delta \vec x \to \vec 0} \left|\frac{x^2y+y^7}{y^4}\right| \text{ mit } (y^2 -1)^2 \ge 0 \Leftrightarrow y^4 - 2y^2 + 1 \ge 0 \Leftrightarrow y^4 \ge 2y^2 -1\\
+&\le \lim_{\Delta \vec x \to \vec 0} \left|\frac{x^2y+y^7}{2y^2 -1}\right| \\
+&= \frac{0}{-1} = 0
+\end{align*}
+Die Funktion $f$ ist somit total auf $\mathbb{R}$ differenzierbar.\\
+
+Da $g$ -- wie in der Analysis-Aufgabe der letzten Woche bewiesen -- nicht stetig ist, kann es auch nicht differenzierbar sein.
+\newpage
+\section{Aufgabe}
+Wir benötigen zunächst die partiellen Ableitungen an der Stelle $(0,0)$.
+\begin{align*}
+\frac{\partial h}{\partial x} (0,0) &= \lim_{t \to 0} \frac{f(0+t,0)-f(0,0)}{t} = \lim_{t \to 0} \frac{\frac{\sin^4(t)\cdot 0}{t^2+0}-0}{t} = 0\\
+\frac{\partial h}{\partial y} (0,0) &= \lim_{t \to 0} \frac{f(0,0+t) - f(0,0)}{t} = \lim_{t \to 0} \frac{\frac{\sin^4(t)\cdot 0}{t^2+0}-0}{t} = 0
+\end{align*}
+Außerdem gilt für  die partiellen Ableitungen in den Punkten $(x,y) \in \mathbb{R}\setminus\{(0,0)\}$:
+\begin{align*}
+\frac{\partial h}{\partial x} (x,y) &= \frac{4\cos(x)\sin^3(x)\sin^4(y)(x^2 + y^2) - \sin^4(x)\sin^4(y)2x}{(x^2 + y^2)^2}\\
+\frac{\partial h}{\partial y} (x,y) &= \frac{4\cos(y)\sin^3(y)\sin^4(x)(x^2 + y^2) - \sin^4(x)\sin^4(y)2y}{(x^2 + y^2)^2}
+\end{align*}
+Da h überall auf $\mathbb R^2\setminus{\{(0,0)\}}$ eine Komposition differenzierbarer Funktionen ist, ist sie dort auch differenzierbar. Bleibt dies noch für den Punkt (0,0) zu zeigen.
+\begin{align*}
+\text{Rest} &= h(x,y) - h(0,0) - h'(0,0) \Delta \vec x\\
+&= \frac{\text{sin}^4(x)\text{sin}^4(y)}{x^2 + y^2} - 0 - \left(\frac{\partial h}{\partial x}(0,0),\frac{\partial h}{\partial y}(0,0)\right) \begin{pmatrix}x\\y\end{pmatrix}\\
+&= \frac{\text{sin}^4(x)\text{sin}^4(y)}{x^2 + y^2} - 0 - (0,0) \begin{pmatrix}x\\y\end{pmatrix}\\
+&= \frac{\text{sin}^4(x)\text{sin}^4(y)}{x^2 + y^2}
+\end{align*}
+Es ist zu zeigen: $$\lim_{\begin{pmatrix}x\\y\end{pmatrix} \to \begin{pmatrix}0\\0\end{pmatrix}} \left|\frac{\frac{\text{sin}^4(x)\text{sin}^4(y)}{x^2 + y^2}}{\left|\begin{pmatrix}x\\y\end{pmatrix}\right|}\right| = 0$$
+\begin{align*}
+0 &\le\lim_{\Delta \vec x \to \vec 0} \left|\frac{\frac{\text{sin}^4(x)\text{sin}^4(y)}{x^2 + y^2}}{\left|\begin{pmatrix}x\\y\end{pmatrix} \right|}\right| \\
+&= \lim_{\Delta \vec x \to \vec 0} \left|\frac{\frac{\text{sin}^4(x)\text{sin}^4(y)}{x^2 + y^2}}{\sqrt{x^2+y^2}}\right| \\
+&= \lim_{\Delta \vec x \to \vec 0} \left|\frac{\text{sin}^4(x)\text{sin}^4(y)}{(x^2 + y^2)\sqrt{x^2+y^2}}\right| \\
+&= \lim_{\Delta \vec x \to \vec 0} \left|\frac{\text{sin}^4(x)\text{sin}^4(y)}{(x^2 + y^2)^{\frac{3}{2}}}\right| \\
+&\le \lim_{\Delta \vec x \to \vec 0} \left|\frac{\text{sin}^4(x)\text{sin}^4(y)}{(2xy)^{\frac{3}{2}}}\right| \\
+&\le \lim_{\Delta \vec x \to \vec 0} \left|\frac{x^4y^4}{(2xy)^{\frac{3}{2}}}\right| \\
+&= \lim_{\Delta \vec x \to \vec 0} \left|\frac{(xy)^4}{(2xy)^{\frac{3}{2}}}\right| \\
+&\le \lim_{\Delta \vec x \to \vec 0} \left|\frac{(2xy)^4}{(2xy)^{\frac{3}{2}}}\right| \\
+&= \lim_{\Delta \vec x \to \vec 0} \left|(2xy)^{\frac{5}{2}}\right| \\
+&= 0
+\end{align*}
+Somit ist $h$ total differenzierbar.
+
+\[
+h'(x,y): \mathbb{R}^2\setminus{\{(0,0)\}} \to \mathbb{R}, 
+\]
+\[
+(x,y) \mapsto \left( \begin{array}{cc} 
+\frac{4\cos(x)\sin^3(x)\sin^4(y)(x^2 + y^2) - \sin^4(x)\sin^4(y)2x}{(x^2 + y^2)^2}, &
+\frac{4\cos(y)\sin^3(y)\sin^4(x)(x^2 + y^2) - \sin^4(x)\sin^4(y)2y}{(x^2 + y^2)^2}
+\end{array}\right)
+\]
+
+Der Gradient am gegebenen Punkt ist gleichbedeutend mit der Richtung des steilsten Anstiegs dort. \(\nabla h(\frac{\pi}{2},\frac{\pi}{2}) = \vectwo{\frac{4\pi}{\pi^4}}{\frac{4\pi}{\pi^4}}\) 
+
+\begin{align*}
+\frac{\partial h}{\partial \vec v} (P) &= \text{grad}_{(\frac{\pi}{2},\frac{\pi}{2})}h \cdot \begin{pmatrix}v_1\\v_2\end{pmatrix}\\
+ &= \begin{pmatrix}\frac{4\cos(\frac{\pi}{2})\sin^3(\frac{\pi}{2})\sin^4(\frac{\pi}{2})\left(\left(\frac{\pi}{2}\right)^2 + \left(\frac{\pi}{2}\right)^2\right)^2 - \sin^4(\frac{\pi}{2})\sin^4(\frac{\pi}{2})2\frac{\pi}{2}}{{\left(\left(\frac{\pi}{2}\right)^2 + \left(\frac{\pi}{2}\right)^2\right)^2}}\\
+ \frac{4\cos(\frac{\pi}{2})\sin^3(\frac{\pi}{2})\sin^4(\frac{\pi}{2})\left(\left(\frac{\pi}{2}\right)^2 + \left(\frac{\pi}{2}\right)^2\right)^2 - \sin^4(\frac{\pi}{2})\sin^4(\frac{\pi}{2})2\frac{\pi}{2}}{\left(\left(\frac{\pi}{2}\right)^2 + \left(\frac{\pi}{2}\right)^2\right)^2}\end{pmatrix} \cdot \begin{pmatrix}v_1\\v_2\end{pmatrix}\\
+ &= \begin{pmatrix}\frac{-4}{\pi^3}\\\frac{-4}{\pi^3}\end{pmatrix} \cdot \begin{pmatrix}v_1\\v_2\end{pmatrix}\\
+ &= \frac{-4v_1}{\pi^3} + \frac{-4v_2}{\pi^3}
+ \intertext{Da wir einen Vektor finden sollen, für den die Richtungsableitung der Funktion $h$ im Punkt P den Wert 0 annnimmt, muss gelten:}
+ 0 &= \frac{-4v_1}{\pi^3} + \frac{-4v_2}{\pi^3}\\
+ &= v_1 + v_2 \Rightarrow \vec{v} = \begin{pmatrix} -\frac 1{\sqrt{2}} \\ \frac1{\sqrt{2}}\end{pmatrix}
+\end{align*}
+$\vec v = \begin{pmatrix}-\frac 1{\sqrt{2}} \\ \frac1{\sqrt{2}}\end{pmatrix}$ ist also ein Vektor, bei dem die Richtungsableitung im Punkt P den Wert 0 annimmt.
+
+\section{Aufgabe}
+\begin{align*}
+\frac{\partial h_1}{\partial x}(x,y,z) &= \frac {2x}{x^2+y^2+z^2} &\frac{\partial h_1}{\partial y}(x,y,z) = \frac{2y}{x^2+y^2+z^2} &&\frac{\partial h_1}{\partial z}(x,y,z) = \frac{2z}{x^2+y^2+z^2}\\
+\frac{\partial h_2}{\partial x}(x,y,z) &= 2x-yz &\frac{\partial h_2}{\partial y}(x,y,z) = -xz &&\frac{\partial h_2}{\partial z}(x,y,z) = -xy\\
+\frac{\partial h_3}{\partial x}(x,y,z) &= yze^{xyz} &\frac{\partial h_3}{\partial y}(x,y,z) = xze^{xyz} &&\frac{\partial h_3}{\partial z}(x,y,z) = xye^{xyz}
+\end{align*}
+Die partiellen Ableitungen existieren und sind alle stetig, da $y \in \left]0,\infty\right[$ und der Nenner bei den ``$h_1$-Ableitungen'' somit stets größer null ist. Alle anderen partiellen Ableitungen sind Kompositionen stetiger Funktionen und deshalb auch stetig. $h$ ist somit differenzierbar.
+%$h$ ist differenzierbar, da auf dem definierten Definitionsbereich die Komposition der Funktionen differenzierbar ist. 
+Die Ableitungsmatrix ist:
+$$h' =\begin{pmatrix}
+\frac{2x}{x^2 + y^2 + z^2} & \frac{2y}{x^2 + y^2 + z^2} & \frac{2z}{x^2 + y^2 + z^2} \\
+2x - yz & -xz & -xy \\
+yze^{xyz}  & xze^{xyz} & xye^{xyz} 
+\end{pmatrix}  $$
+
+
+\end{enumerate}
+\end{document}
