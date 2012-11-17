@@ -20,12 +20,11 @@ top=2.0cm, bottom=2.0cm]{geometry}
 \title{Analysis 2 - Hausaufgabe 3}
 
 % new commands for vectors
-\newcommand{\vectwo}[2]{\left(\begin {array} {c}#1\\#2\\\end {array} \right)}
-\newcommand{\vecthree}[3]{\left(\begin {array} {c}#1\\#2\\#3\\\end {array} \right) }
+\newcommand{\vectwo}[2]{\begin{pmatrix}#1\\#2\\\end {pmatrix}}
+\newcommand{\vecthree}[3]{\begin{pmatrix}#1\\#2\\#3\\\end {pmatrix}}
 
 % Füllt man nach Spalte und dann nach Zeile. Dann kann man besser von Vektoren kopieren
-\newcommand{\mattwotwo}[4]{\left(\begin {array} {cc}#1 & #3\\#2 & #4\\\end {array} \right)}
-\newcommand{\dettwotwo}[4]{\left|\begin {array} {cc}#1 & #3\\#2 & #4\\\end {array} \right|}
+\newcommand{\mattwotwo}[4]{\begin{pmatrix}#1 & #3\\#2 & #4\\\end {pmatrix}}
 
 \begin{document}
 \begin{center}
@@ -55,9 +54,6 @@ Die Ableitungsmatrix $\vec {f'}(r ,\varphi)$ ist demnach:
 &= r \left( \cos^2(\varphi) + \sin^2(\varphi)\right)\\
 &= r
 \end{align*}
-\item
-$$ \vec f'(\vectwo{r}{\varphi}) = \mattwotwo{\cos(\varphi)}{\sin(\varphi)}{-r\sin(\varphi)}{\cos(\varphi)} $$
-$$\dettwotwo{\cos(\varphi)}{\sin(\varphi)}{-r\sin(\varphi)}{\cos(\varphi)} = \cos^2(\varphi) + r\sin^2(\varphi)$$
 \end{enumerate}
 \section*{Aufgabe 2}
 \begin{enumerate}[(a)]
@@ -71,21 +67,71 @@ Die Komposition $\vec f \circ \vec f$ ist nicht erklärt, da der Urbildraum Elem
 g'(\vecthree{x}{y}{z}) &= \left(e^{y-z}, xe^{y-z}, -xe^{y-z}\right)
 \end{align*}
 \begin{align*} 
-(\vec f \circ g)' &= (\vec f' \circ g) \cdot g \\
+(\vec f \circ g)' &= (\vec f' \circ g) \cdot g' \\
 &= \vec f'(xe^{y-z}) \cdot \left(e^{y-z}, xe^{y-z}, -xe^{y-z}\right) \\
 &= \vecthree{e^{xe^{y-z}}}{1}{2} \cdot \left(e^{y-z}, xe^{y-z}, -xe^{y-z}\right) \ \lightning\ \text{da diese Multiplikation gar nicht möglich ist}
 \end{align*}
 Hätte man das mit dem Widerspruch auch früher rausfinden können? -- Max
 \begin{align*} 
 (g \circ \vec f)' &= (g' \circ \vec f) \cdot \vec f' \\
-&= g'(\vecthree{e^t}{t}{2t}) \cdot \vecthree{e^2}{1}{2} \\
-&= \left(e^{-t}, e^te^{-n}, -e^te^{-n}\right) \cdot \vecthree{e^2}{1}{2} \\
-&= \left(e^{-t}, e^{t-n}, -e^{t-n}\right) \cdot \vecthree{e^2}{1}{2} \\
-&= e^{-2t} + e^{t-n} - 2e^{t-n}\\
-&= e^{-2t} - e^{t-n}\\
-g(\vec f(t))' &= e^{-2t} - e^{t-n}
+&= g'(\vecthree{e^t}{t}{2t}) \cdot \vecthree{e^t}{1}{2} \\
+&= \left(e^{-t}, e^te^{-t}, -e^te^{-t}\right) \cdot \vecthree{e^t}{1}{2} \\
+&= \left(e^{-t}, 1, -1\right) \cdot \vecthree{e^t}{1}{2} \\
+&= 1 + 1 - 2\\
+&= 0\\
+g(\vec f(t))' &= 0
 \end{align*}
 \item
+Da wir vorher gezeigt dass das mit $(\vec f \circ g)'$ gar nicht geht, jetzt gleich $(g \circ \vec f)'$:
+\begin{align*}
+g(f(t))' &= g(\vecthree{e^t}{t}{2t})' \\
+&= (e^te^{-t})' \\
+&= (e^0)' \\
+&= 1' \\
+&= 0
+\end{align*}
+Somit kommt bei beiden Lösungswegen das gleiche Ergebnis heraus.
 \end{enumerate}
 \section*{Aufgabe 3}
+\begin{enumerate}[(a)]
+\item
+\begin{align*}
+e'(x,y) &= (2xy,x^2) \\
+f'(x,y) &= (e^xy^2,2e^xy) \\
+\nabla(e\cdot f)(1,1) &= f(1,1) \cdot \nabla e(1,1) + \nabla  f(1,1) \cdot e(1,1) \\
+&= e \cdot \vectwo{2}{1} + \vectwo{e}{2e} \cdot 1 \\
+&= \vectwo{2e}{1e} + \vectwo{e}{2e} \\
+&= \vectwo{3e}{3e}
+\end{align*}
+
+\item
+Ich nehme mal einfach an, dass die Vektoren eigentlich Spaltenvektoren sein sollen, weil sonst hat das ja gar keinen Sinn...
+\begin{align*}
+\vec g \times \vec h &= \vecthree{xy^2}{0}{\sin (x)} \times \vecthree{y}{x^2}{0} \\
+&= \vecthree{-x^2 \sin x}{y\sin x}{x^3y^2} \\
+\vecthree{-x^2 \sin x}{y \sin x}{x^3y^2}' &= 
+\begin{pmatrix}
+-2x \sin x - x^2 \cos x& 0 \\
+y \cos x & \sin x \\
+3x^2y^2 & x^32y\\
+\end{pmatrix}\\
+(\vec g \times \vec h)'(0,1) &= \begin{pmatrix}
+0 & 0 \\
+1 & 0 \\
+0 & 0 \\
+\end{pmatrix}
+\end{align*}
+\item
+Ich nehme mal einfach an, dass die Vektoren eigentlich Spaltenvektoren sein sollen, weil sonst hat das ja gar keinen Sinn...
+\begin{align*}
+\vec u \cdot \vec v &= \vectwo{xyz}{y^3} \cdot \vectwo{\sin(x)z}{y^3} \\
+&= xyz^2\sin(x) + y^6 \\
+(\vec u \cdot \vec v)' &= (xyz^2\sin(x) + y^6)' \\
+&= \begin{pmatrix}
+yz^2\cos(x) - xyz^2\sin(x) & xz^2\cos(x) + 6y^5 & 2xyz\sin(x)
+\end{pmatrix} \\
+(\vec u \cdot \vec v)'(2\pi, 2\pi, 2\pi) &= \begin{pmatrix}\pi^3 \over 8 & \frac{\pi^3}{8} + 6 \frac{\pi^5}{32} & 0\end{pmatrix}
+\end{align*}
+\end{enumerate}
+Bitte überprüft das noch, da sind sicher ein paar Fehler irgendwo...
 \end{document}
