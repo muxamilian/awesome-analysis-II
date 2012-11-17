@@ -32,4 +32,27 @@ Tom Lehmann\> 340621\\
 Maximilian Bachl\> 341455
 \end{tabbing}
 \section{Aufgabe}
+\subsubsection*{\textbf{(a)}}
+\subsubsection*{\textbf{(b)}}
+\begin{align*}
+\frac{\partial \vec f}{\partial r}(r, \varphi) &= \begin{pmatrix}\cos(\varphi) \\ \sin(\varphi)\end{pmatrix}\\
+\frac{\partial \vec f}{\partial \varphi}(r,\varphi) &= \begin{pmatrix}-r\sin(\varphi) \\ r \cos(\varphi)\end{pmatrix} 
+\end{align*}
+\subsubsection*{\textbf{(c)}}
+Die Ableitungsmatrix $\vec {f'}(r ,\varphi)$ ist demnach:
+\begin{align*}
+\vec {f'}(r, \varphi) &= \begin{pmatrix}\cos(\varphi) & -r \sin(\varphi) \\ \sin(\varphi) & r \cos(\varphi)\end{pmatrix}
+\intertext{Für die Determinante gilt deshalb:}
+\det(\vec {f'}(r, \varphi)) &= \det \begin{pmatrix}\cos(\varphi) & -r \sin(\varphi) \\ \sin(\varphi) & r \cos(\varphi)\end{pmatrix}\\
+&= r\cos^2(\varphi) + r \sin^2(\varphi)\\
+&= r \left( \cos^2(\varphi) + \sin^2(\varphi)\right)\\
+&= r
+\end{align*}
+\section{Aufgabe}
+\subsubsection*{\textbf{(a)}}
+Die Komposition $g \circ g$ ist nicht erklärt, da der Urbildraum Elemente des $\mathbb{\R}^3$ verlangt, die Funktionswerte von $g$ jedoch nur aus $\mathbb{\R}$ sind.\\
+Die Komposition $g \circ \vec f$ ist erklärt, da sowohl die Funktionswerte von $f$ als auch der Urbildraum von $g$ Elemente des $\mathbb{\R}^3$ sind.\\
+Die Komposition $\vec f \circ g$ ist erklärt, da sowohl die Funktionswerte von $g$ als auch der Urbildraum von $f$ Elemente des $\mathbb{\R}$ sind.\\
+Die Komposition $\vec f \circ \vec f$ ist nicht erklärt, da der Urbildraum Elemente des $\mathbb{\R}$ verlangt, die Funktionswerte von $\vec f$ jedoch aus $\mathbb{\R}^3$ sind.
+
 \end{document}
