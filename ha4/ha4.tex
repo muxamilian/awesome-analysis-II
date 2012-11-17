@@ -16,21 +16,50 @@ top=2.0cm, bottom=2.0cm]{geometry}
 \newcommand{\R}{\mathbb{R}}
 \parindent 0mm
 \author{Tom}
-\title{Analysis 2 - Hausaufgabe 4}
+\title{Analysis 2 - Hausaufgabe 3}
 
 % new commands for vectors
 \newcommand{\vectwo}[2]{\left(\begin {array} {c}#1\\#2\\\end {array} \right)}
 \newcommand{\vecthree}[3]{\left(\begin {array} {c}#1\\#2\\#3\\\end {array} \right) }
 
+% Füllt man nach Spalte und dann nach Zeile. Dann kann man besser von Vektoren kopieren
+\newcommand{\mattwotwo}[4]{\left(\begin {array} {cc}#1 & #3\\#2 & #4\\\end {array} \right)}
+\newcommand{\dettwotwo}[4]{\left|\begin {array} {cc}#1 & #3\\#2 & #4\\\end {array} \right|}
+
 \begin{document}
 \begin{center}
-\textsc{\Large{Analysis 2 - Hausaufgabe 4}} \\
+\textsc{\Large{Analysis 2 - Hausaufgabe 3}} \\
 \end{center}
 \begin{tabbing}
 Tom Nick \hspace{1.4cm}\= 342225\\
 Tom Lehmann\> 340621\\
 Maximilian Bachl\> 341455
 \end{tabbing}
+<<<<<<< HEAD
+\section*{Aufgabe 1}
+\begin{enumerate}[(a)]
+\item
+Wir haben dann eine Scheibe. Ich bin aber gerade zu faul eine zu malen...
+\item
+$$ \frac{\partial \vec f}{\partial r} = \vectwo{\cos(\varphi)}{\sin(\varphi)}$$
+$$ \frac{\partial \vec f}{\partial \varphi} = \vectwo{-r\sin(\varphi)}{\cos(\varphi)}$$
+
+Zum Zeichnen hab ich wieder keine Lust. bei (a) ein Kreis und bei (b) kann ich es mir gerade nicht vorstellen.
+\item
+$$ \vec f'(\vectwo{r}{\varphi}) = \mattwotwo{\cos(\varphi)}{\sin(\varphi)}{-r\sin(\varphi)}{\cos(\varphi)} $$
+$$\dettwotwo{\cos(\varphi)}{\sin(\varphi)}{-r\sin(\varphi)}{\cos(\varphi)} = \cos^2(\varphi) + r\sin^2(\varphi)$$
+\end{enumerate}
+\section*{Aufgabe 2}
+\begin{enumerate}[(a)]
+\item
+$\vec f \circ g$ ist die einzige mögliche Komposition, da nur so der Bildraum der inneren Funktion auf den Urbildraum der äußeren abbildet.
+\item
+$$ (\vec f \circ g)' = (\vec f' \circ g) \cdot g'$$
+$$ \vec f' = ... \text{keine Lust mehr} $$
+\item
+\end{enumerate}
+\section*{Aufgabe 3}
+=======
 \section{Aufgabe}
 \subsubsection*{\textbf{(a)}}
 \subsubsection*{\textbf{(b)}}
@@ -55,4 +84,8 @@ Die Komposition $g \circ \vec f$ ist erklärt, da sowohl die Funktionswerte von 
 Die Komposition $\vec f \circ g$ ist erklärt, da sowohl die Funktionswerte von $g$ als auch der Urbildraum von $f$ Elemente des $\mathbb{\R}$ sind.\\
 Die Komposition $\vec f \circ \vec f$ ist nicht erklärt, da der Urbildraum Elemente des $\mathbb{\R}$ verlangt, die Funktionswerte von $\vec f$ jedoch aus $\mathbb{\R}^3$ sind.
 
+<<<<<<< HEAD
+=======
+>>>>>>> aufgabe 1 und 2a
+>>>>>>> asdfasdfasdf
 \end{document}
