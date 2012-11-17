@@ -46,6 +46,8 @@ INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/mathpazo.sty
 INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/mathpazo.sty
+INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
+INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
 INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/geometry/geometry.sty
 INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/geometry/geometry.sty
 INPUT /usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifpdf.sty
@@ -104,6 +106,11 @@ INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm
+INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/stmaryrd/Ustmry.fd
+INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/stmaryrd/Ustmry.fd
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/stmaryrd/stmary8.tfm
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/stmaryrd/stmary6.tfm
 OUTPUT ha4.pdf
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/adobe/palatino/pplrc7t.vf
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
@@ -129,6 +136,18 @@ INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/public/mathpazo/zplmr7m.vf
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/mathpazo/fplmri.tfm
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/public/mathpazo/zplmr7m.vf
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/mathpazo/fplmri.tfm
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/public/mathpazo/zplmr7y.vf
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm
 INPUT ha4.aux
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
@@ -137,5 +156,6 @@ INPUT /usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb

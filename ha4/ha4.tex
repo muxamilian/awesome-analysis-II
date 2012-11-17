@@ -4,6 +4,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{mathpazo}
+\usepackage{stmaryrd} % Für den Widerspruchsblitz :D
 \usepackage[a4paper,
 left=3.0cm, right=3.0cm,
 top=2.0cm, bottom=2.0cm]{geometry}
@@ -51,10 +52,28 @@ $$\dettwotwo{\cos(\varphi)}{\sin(\varphi)}{-r\sin(\varphi)}{\cos(\varphi)} = \co
 \section*{Aufgabe 2}
 \begin{enumerate}[(a)]
 \item
-$\vec f \circ g$ ist die einzige mögliche Komposition, da nur so der Bildraum der inneren Funktion auf den Urbildraum der äußeren abbildet.
+$\vec f \circ g$ und $ g \circ \vec f$ sind die einzigen möglichen Kompositionen, da nur so der Bildraum der inneren Funktion auf den Urbildraum der äußeren abbildet.
 \item
-$$ (\vec f \circ g)' = (\vec f' \circ g) \cdot g'$$
-$$ \vec f' = ... \text{keine Lust mehr} $$
+\begin{align*}
+\vec f'(t) &= \vecthree{e^t}{1}{2} \\
+g'(\vecthree{x}{y}{z}) &= \left(e^{y-z}, xe^{y-z}, -xe^{y-z}\right)
+\end{align*}
+\begin{align*} 
+(\vec f \circ g)' &= (\vec f' \circ g) \cdot g \\
+&= \vec f'(xe^{y-z}) \cdot \left(e^{y-z}, xe^{y-z}, -xe^{y-z}\right) \\
+&= \vecthree{e^{xe^{y-z}}}{1}{2} \cdot \left(e^{y-z}, xe^{y-z}, -xe^{y-z}\right) \ \lightning\ \text{da diese Multiplikation gar nicht möglich ist}
+\end{align*}
+Hätte man das mit dem Widerspruch auch früher rausfinden können? -- Max
+\begin{align*} 
+(g \circ \vec f)' &= (g' \circ \vec f) \cdot \vec f' \\
+&= g'(\vecthree{e^t}{t}{2t}) \cdot \vecthree{e^2}{1}{2} \\
+&= \left(e^{-t}, e^te^{-n}, -e^te^{-n}\right) \cdot \vecthree{e^2}{1}{2} \\
+&= \left(e^{-t}, e^{t-n}, -e^{t-n}\right) \cdot \vecthree{e^2}{1}{2} \\
+&= e^{-2t} + e^{t-n} - 2e^{t-n}\\
+&= e^{-2t} - e^{t-n}\\
+g(\vec f(t))' &= e^{-2t} - e^{t-n}
+\end{align*}
+
 \item
 \end{enumerate}
 \section*{Aufgabe 3}
