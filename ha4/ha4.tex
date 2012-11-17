@@ -36,16 +36,25 @@ Tom Nick \hspace{1.4cm}\= 342225\\
 Tom Lehmann\> 340621\\
 Maximilian Bachl\> 341455
 \end{tabbing}
-<<<<<<< HEAD
 \section*{Aufgabe 1}
 \begin{enumerate}[(a)]
 \item
 Wir haben dann eine Scheibe. Ich bin aber gerade zu faul eine zu malen...
 \item
-$$ \frac{\partial \vec f}{\partial r} = \vectwo{\cos(\varphi)}{\sin(\varphi)}$$
-$$ \frac{\partial \vec f}{\partial \varphi} = \vectwo{-r\sin(\varphi)}{\cos(\varphi)}$$
-
-Zum Zeichnen hab ich wieder keine Lust. bei (a) ein Kreis und bei (b) kann ich es mir gerade nicht vorstellen.
+\begin{align*}
+\frac{\partial \vec f}{\partial r}(r, \varphi) &= \begin{pmatrix}\cos(\varphi) \\ \sin(\varphi)\end{pmatrix}\\
+\frac{\partial \vec f}{\partial \varphi}(r,\varphi) &= \begin{pmatrix}-r\sin(\varphi) \\ r \cos(\varphi)\end{pmatrix} 
+\end{align*}
+\item
+Die Ableitungsmatrix $\vec {f'}(r ,\varphi)$ ist demnach:
+\begin{align*}
+\vec {f'}(r, \varphi) &= \begin{pmatrix}\cos(\varphi) & -r \sin(\varphi) \\ \sin(\varphi) & r \cos(\varphi)\end{pmatrix}
+\intertext{Für die Determinante gilt deshalb:}
+\det(\vec {f'}(r, \varphi)) &= \det \begin{pmatrix}\cos(\varphi) & -r \sin(\varphi) \\ \sin(\varphi) & r \cos(\varphi)\end{pmatrix}\\
+&= r\cos^2(\varphi) + r \sin^2(\varphi)\\
+&= r \left( \cos^2(\varphi) + \sin^2(\varphi)\right)\\
+&= r
+\end{align*}
 \item
 $$ \vec f'(\vectwo{r}{\varphi}) = \mattwotwo{\cos(\varphi)}{\sin(\varphi)}{-r\sin(\varphi)}{\cos(\varphi)} $$
 $$\dettwotwo{\cos(\varphi)}{\sin(\varphi)}{-r\sin(\varphi)}{\cos(\varphi)} = \cos^2(\varphi) + r\sin^2(\varphi)$$
@@ -53,8 +62,10 @@ $$\dettwotwo{\cos(\varphi)}{\sin(\varphi)}{-r\sin(\varphi)}{\cos(\varphi)} = \co
 \section*{Aufgabe 2}
 \begin{enumerate}[(a)]
 \item
-$\vec f \circ g$ und $ g \circ \vec f$ sind die einzigen möglichen Kompositionen, da nur so der Bildraum der inneren Funktion auf den Urbildraum der äußeren abbildet.
-\item
+Die Komposition $g \circ g$ ist nicht erklärt, da der Urbildraum Elemente des $\mathbb{\R}^3$ verlangt, die Funktionswerte von $g$ jedoch nur aus $\mathbb{\R}$ sind.\\
+Die Komposition $g \circ \vec f$ ist erklärt, da sowohl die Funktionswerte von $f$ als auch der Urbildraum von $g$ Elemente des $\mathbb{\R}^3$ sind.\\
+Die Komposition $\vec f \circ g$ ist erklärt, da sowohl die Funktionswerte von $g$ als auch der Urbildraum von $f$ Elemente des $\mathbb{\R}$ sind.\\
+Die Komposition $\vec f \circ \vec f$ ist nicht erklärt, da der Urbildraum Elemente des $\mathbb{\R}$ verlangt, die Funktionswerte von $\vec f$ jedoch aus $\mathbb{\R}^3$ sind.\item
 \begin{align*}
 \vec f'(t) &= \vecthree{e^t}{1}{2} \\
 g'(\vecthree{x}{y}{z}) &= \left(e^{y-z}, xe^{y-z}, -xe^{y-z}\right)
@@ -74,37 +85,7 @@ Hätte man das mit dem Widerspruch auch früher rausfinden können? -- Max
 &= e^{-2t} - e^{t-n}\\
 g(\vec f(t))' &= e^{-2t} - e^{t-n}
 \end{align*}
-
 \item
 \end{enumerate}
 \section*{Aufgabe 3}
-=======
-\section{Aufgabe}
-\subsubsection*{\textbf{(a)}}
-\subsubsection*{\textbf{(b)}}
-\begin{align*}
-\frac{\partial \vec f}{\partial r}(r, \varphi) &= \begin{pmatrix}\cos(\varphi) \\ \sin(\varphi)\end{pmatrix}\\
-\frac{\partial \vec f}{\partial \varphi}(r,\varphi) &= \begin{pmatrix}-r\sin(\varphi) \\ r \cos(\varphi)\end{pmatrix} 
-\end{align*}
-\subsubsection*{\textbf{(c)}}
-Die Ableitungsmatrix $\vec {f'}(r ,\varphi)$ ist demnach:
-\begin{align*}
-\vec {f'}(r, \varphi) &= \begin{pmatrix}\cos(\varphi) & -r \sin(\varphi) \\ \sin(\varphi) & r \cos(\varphi)\end{pmatrix}
-\intertext{Für die Determinante gilt deshalb:}
-\det(\vec {f'}(r, \varphi)) &= \det \begin{pmatrix}\cos(\varphi) & -r \sin(\varphi) \\ \sin(\varphi) & r \cos(\varphi)\end{pmatrix}\\
-&= r\cos^2(\varphi) + r \sin^2(\varphi)\\
-&= r \left( \cos^2(\varphi) + \sin^2(\varphi)\right)\\
-&= r
-\end{align*}
-\section{Aufgabe}
-\subsubsection*{\textbf{(a)}}
-Die Komposition $g \circ g$ ist nicht erklärt, da der Urbildraum Elemente des $\mathbb{\R}^3$ verlangt, die Funktionswerte von $g$ jedoch nur aus $\mathbb{\R}$ sind.\\
-Die Komposition $g \circ \vec f$ ist erklärt, da sowohl die Funktionswerte von $f$ als auch der Urbildraum von $g$ Elemente des $\mathbb{\R}^3$ sind.\\
-Die Komposition $\vec f \circ g$ ist erklärt, da sowohl die Funktionswerte von $g$ als auch der Urbildraum von $f$ Elemente des $\mathbb{\R}$ sind.\\
-Die Komposition $\vec f \circ \vec f$ ist nicht erklärt, da der Urbildraum Elemente des $\mathbb{\R}$ verlangt, die Funktionswerte von $\vec f$ jedoch aus $\mathbb{\R}^3$ sind.
-
-<<<<<<< HEAD
-=======
->>>>>>> aufgabe 1 und 2a
->>>>>>> asdfasdfasdf
 \end{document}
