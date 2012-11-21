@@ -68,20 +68,22 @@ g'(\vecthree{x}{y}{z}) &= \left(e^{y-z}, xe^{y-z}, -xe^{y-z}\right)
 \end{align*}
 \begin{align*} 
 (\vec f \circ g)' &= (\vec f' \circ g) \cdot g' \\
-&= \vec f'(xe^{y-z}) \cdot \left(e^{y-z}, xe^{y-z}, -xe^{y-z}\right) \\
-&= \vecthree{e^{xe^{y-z}}}{1}{2} \cdot \left(e^{y-z}, xe^{y-z}, -xe^{y-z}\right) \ \lightning\ \text{da diese Multiplikation gar nicht möglich ist}
-\end{align*}
-Hätte man das mit dem Widerspruch auch früher rausfinden können? -- Max
-\begin{align*} 
+&= \vec f'(xe^{y-z}) \cdot \begin{pmatrix}e^{y-z} & xe^{y-z} & -xe^{y-z}\end{pmatrix} \\
+&= \begin{pmatrix}e^{xe^{y-z}} \\ 1\\2 \end{pmatrix} \cdot \begin{pmatrix}e^{y-z} & xe^{y-z} &  -xe^{y-z}\end{pmatrix}\\
+&= \begin{pmatrix}e^{xe^{y-z}+\left(y-z\right)} & xe^{xe^{y-z}+\left(y-z\right)} & -xe^{xe^{y-z}+\left(y-z\right)} \\ e^{y-z} & xe^{y-z} &  -xe^{y-z} \\ 2e^{y-z} & 2xe^{y-z} &  -2xe^{y-z}\end{pmatrix}\\
+%\end{align*}
+%Hätte man das mit dem Widerspruch auch früher rausfinden können? -- Max
+%\begin{align*} 
 (g \circ \vec f)' &= (g' \circ \vec f) \cdot \vec f' \\
-&= g'(\vecthree{e^t}{t}{2t}) \cdot \vecthree{e^t}{1}{2} \\
-&= \left(e^{-t}, e^te^{-t}, -e^te^{-t}\right) \cdot \vecthree{e^t}{1}{2} \\
+&= g'(\vecthree{e^t}{t}{2t}) \cdot \begin{pmatrix}e^t \\1 \\2 \end{pmatrix}\\
+&= \begin{pmatrix}e^{-t} & e^te^{-t} & -e^te^{-t}\end{pmatrix} \cdot \vecthree{e^t}{1}{2} \\
 &= \left(e^{-t}, 1, -1\right) \cdot \vecthree{e^t}{1}{2} \\
 &= 1 + 1 - 2\\
 &= 0\\
 g(\vec f(t))' &= 0
 \end{align*}
 \item
+TODO\\
 Da wir vorher gezeigt dass das mit $(\vec f \circ g)'$ gar nicht geht, jetzt gleich $(g \circ \vec f)'$:
 \begin{align*}
 g(f(t))' &= g(\vecthree{e^t}{t}{2t})' \\
