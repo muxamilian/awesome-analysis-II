@@ -18,6 +18,39 @@ top=2.0cm, bottom=2.0cm]{geometry}
 \parindent 0mm
 \author{Tom}
 \title{Analysis 2 - Hausaufgabe 4}
+\usepackage{tikz}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{courier}
+ \lstset{
+         basicstyle=\footnotesize\ttfamily, % Standardschrift
+         %numbers=left, % Ort der Zeilennummern
+         numberstyle=\tiny, % Stil der Zeilennummern
+         %stepnumber=2, % Abstand zwischen den Zeilennummern
+         numbersep=5pt, % Abstand der Nummern zum Text
+         tabsize=2, % Groesse von Tabs
+         extendedchars=true, %
+         breaklines=true, % Zeilen werden Umgebrochen
+         keywordstyle=\color{red},
+     frame=b,
+ % keywordstyle=[1]\textbf, % Stil der Keywords
+ % keywordstyle=[2]\textbf, %
+ % keywordstyle=[3]\textbf, %
+ % keywordstyle=[4]\textbf, \sqrt{\sqrt{}} %
+         stringstyle=\color{white}\ttfamily, % Farbe der String
+         showspaces=false, % Leerzeichen anzeigen ?
+         showtabs=false, % Tabs anzeigen ?
+         xleftmargin=17pt,
+         framexleftmargin=17pt,
+         framexrightmargin=5pt,
+         framexbottommargin=4pt,
+         %backgroundcolor=\color{lightgray},
+         showstringspaces=false % Leerzeichen in Strings anzeigen ?
+ }
+ \usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43, 0.35, 0.35,0.01}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={bf,footnotesize}}
 
 % new commands for vectors
 \newcommand{\vectwo}[2]{\begin{pmatrix}#1\\#2\\\end {pmatrix}}
@@ -28,7 +61,7 @@ top=2.0cm, bottom=2.0cm]{geometry}
 
 \begin{document}
 \begin{center}
-\textsc{\Large{Analysis 2 - Hausaufgabe 4}} \\
+\textsc{\Large{Analysis 2 - Hausaufgabe 3}} \\
 \end{center}
 \begin{tabbing}
 Tom Nick \hspace{1.4cm}\= 342225\\
@@ -37,8 +70,20 @@ Maximilian Bachl\> 341455
 \end{tabbing}
 \section*{Aufgabe 1}
 \begin{enumerate}[(a)]
-\item
-Wir haben dann eine Scheibe. Ich bin aber gerade zu faul eine zu malen...
+\item \ \\
+\begin{minipage}{0.50\columnwidth}
+Da $r$ im Gegenteil zur Hausaufgabe 2 nicht begrenzt ist, wäre es eine unendliche Scheibe. Diese würde ungefähr so aussehen, würde man versuchen sie zu zeichnen:
+\begin{lstlisting}[caption= Mathematica Code für den Graph von h]
+ParametricPlot[{{ r Cos[t], r Sin[t]}}, {t, 0, 2 Pi}, {r, 0, 300},
+ PlotRange -> {{-100, 100}, {-100, 100}},
+ AxesLabel -> {r, \[CurlyPhi]}]
+\end{lstlisting}
+\end{minipage}
+\begin{minipage}{0.49\columnwidth}
+\begin{center}
+\includegraphics[scale=0.7]{1i.eps}
+\end{center}
+\end{minipage}
 \item
 \begin{align*}
 \frac{\partial \vec f}{\partial r}(r, \varphi) &= \begin{pmatrix}\cos(\varphi) \\ \sin(\varphi)\end{pmatrix}\\
