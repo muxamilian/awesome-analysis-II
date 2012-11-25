@@ -37,7 +37,26 @@ Maximilian Bachl\> 341455
 \end{tabbing}
 \section*{Aufgabe 1}
 \begin{enumerate}[(a)]
-\item
+\item Da $s = \frac g2 t^2$, gilt:
+\begin{align*}
+g &= \frac {2s}{t^2} = \frac {2 \cdot 44,5 \text{m}}{\left( 3,0\text{s}\right)^2} \approx 9,\overline{8} \frac {\text{m}}{\text{s}^2}
+\end{align*}
+\item Da wir den Fehlerschrankensatz anwenden sollen, benötigen wir zunächst die partiellen Ableitungen.
+\begin{align*}
+\frac {\partial g}{\partial s}(s,t) &= \frac 2{t^2}\\
+\frac {\partial g}{\partial t}(s,t) &= \frac{-4s}{t^3}
+\intertext{Als nächstes bestimmen wir $M_1$ sowie $M_2$:}
+M_1 &= \sup_{\substack{s\in \left[s_0- \Delta s,s_0+\Delta s\right] \\ t \in \left[t_0 -\Delta t,t_0 + \Delta t\right]}}  \left| \frac{\partial g}{\partial s} (s,t) \right|\\
+&= \sup_{\substack{s \in \left[44,4\text{m};44,6\text{m}\right] \\ t \in \left[2,9 \text{s};3,1\text{s}\right]}} \left| \frac 2{t^2} \right| \\
+&=  \frac 2{2,9^2} = 0,238\\
+M_2 &= \sup_{\substack{s\in \left[s_0- \Delta s,s_0+\Delta s\right] \\ t \in \left[t_0 -\Delta t,t_0 + \Delta t\right]}}  \left| \frac{\partial g}{\partial t} (s,t) \right|\\
+&= \sup_{\substack{s \in \left[44,4\text{m};44,6\text{m}\right] \\ t \in \left[2,9 \text{s};3,1\text{s}\right]}} \left| \frac {4s}{t^3}\right| \\
+&= \frac{-4 \cdot 44,6}{2,9^3} = 7,315
+\intertext{Es gilt nun:}
+\left| \Delta g \right| &= \left| \Delta g(s_0  + \Delta s, t_0 + \Delta t) - g(s_0,t_0) \right|\\
+&\leq  M_1 |\Delta s| + M_2 |\Delta t | \\
+&\leq 0,238 \cdot 0,1 + 7,315 \cdot 0,1 = 0,755
+\end{align*}
 \end{enumerate}
 \section*{Aufgabe 2}
 
