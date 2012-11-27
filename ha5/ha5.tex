@@ -116,13 +116,13 @@ Man kann nun in einer Matrix die möglichen Nullstellen von $\nabla f$ darstelle
 	\begin{array}{c|cc}
 	 & x^3 - 3x - 2y  = 0  \\
 	 \hline
-	 y = 0 & (0,0)\\
+	 y = 0 & (0,0),(\sqrt{3},0),(-\sqrt{3},0)\\
 	 x = 1 & (1,-1)\\
 	 x = -1 & (-1,1)
 	\end{array}
 \end{math}
 \end{center}
-Also sind die kritischen Punkte bei $(0,0), (1,-1),(-1,1)$. Gesucht sind nun globale/lokale Extrama:
+Also sind die kritischen Punkte bei $(0,0), (1,-1),(-1,1),(0,\sqrt{3}),(0,-\sqrt{3})$. Gesucht sind nun globale/lokale Extrama:
 	\[H_f = 
 	\begin{pmatrix}
 		6xy & 3x^2 - 3 \\
@@ -159,5 +159,25 @@ Also sind die kritischen Punkte bei $(0,0), (1,-1),(-1,1)$. Gesucht sind nun glo
 				-6 & 0 \\
 				0 & 2		
 			\end{pmatrix} = -12 \Rightarrow \text{ indefinit, Sattelpunkt}\]
+		\item 	$(\sqrt{3},0)$
+			\[H_f(\sqrt{3},0) = 
+			\begin{pmatrix}
+				6\sqrt{3} & 6 \\
+				6 & 2		
+			\end{pmatrix} \Rightarrow 
+			\det \begin{pmatrix}
+				6\sqrt{3} & 6 \\
+				6 & 2	
+			\end{pmatrix} \approx 2.7 \Rightarrow \text{positiv definit, lokales Minimum}\]
+		\item  	$(-\sqrt{3},0)$
+			\[H_f(-\sqrt{3},0) = 
+			\begin{pmatrix}
+				-6\sqrt{3} & -12 \\
+				-12 & 2		
+			\end{pmatrix} \Rightarrow 
+			\det \begin{pmatrix}
+				-6\sqrt{3} & -12 \\
+				-12 & 2	
+			\end{pmatrix} \approx -164.7 \Rightarrow \text{ indefinit, Sattelpunkt}\]
 	\end{itemize}	
 \end{document}
