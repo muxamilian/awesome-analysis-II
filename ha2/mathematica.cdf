@@ -20,10 +20,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       835,         17]
-NotebookDataLength[    672637,      11228]
-NotebookOptionsPosition[    672289,      11200]
-NotebookOutlinePosition[    672648,      11216]
-CellTagsIndexPosition[    672605,      11213]
+NotebookDataLength[    673094,      11243]
+NotebookOptionsPosition[    672705,      11214]
+NotebookOutlinePosition[    673062,      11230]
+CellTagsIndexPosition[    673019,      11227]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -11196,10 +11196,24 @@ Cell[BoxData[{
    3.561471051619341*^9}, {3.561471112561633*^9, 3.561471254453218*^9}, {
    3.561471338800408*^9, 3.561471392366105*^9}, {3.5614714225506563`*^9, 
    3.561471423182303*^9}, {3.561471506182825*^9, 3.561471522950821*^9}, {
-   3.561471572642333*^9, 3.561471598312723*^9}}]
+   3.561471572642333*^9, 3.561471598312723*^9}}],
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"x", "^", "3"}], "y"}], " ", "-", " ", 
+     RowBox[{"3", "xy"}], " ", "+", " ", 
+     RowBox[{"y", "^", "2"}], " ", "+", " ", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y"}], "}"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.563045171278467*^9, 3.563045224356583*^9}}]
 },
 WindowSize->{1260, 859},
-WindowMargins->{{Automatic, 256}, {-3, Automatic}},
+WindowMargins->{{5, Automatic}, {Automatic, 19}},
 FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (February 23, \
 2011)",
 StyleDefinitions->"Default.nb"
@@ -11239,11 +11253,12 @@ Cell[636193, 10590, 1224, 26, 27, "Input"],
 Cell[637420, 10618, 33124, 530, 415, "Output"]
 }, Open  ]],
 Cell[670559, 11151, 94, 1, 27, "Input"],
-Cell[670656, 11154, 1629, 44, 73, "Input"]
+Cell[670656, 11154, 1629, 44, 73, "Input"],
+Cell[672288, 11200, 413, 12, 27, "Input"]
 }
 ]
 *)
 
 (* End of internal cache information *)
 
-(* NotebookSignature PxDamq#UrSxlmBKTa8kk2oHI *)
+(* NotebookSignature HwTWJUTIndzTACwknkDHkwso *)
