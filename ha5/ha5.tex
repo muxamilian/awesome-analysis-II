@@ -61,7 +61,7 @@ Für die Gravitationskonstange  $g$ gilt also:
 \end{align*}
 \end{enumerate}
 \section*{Aufgabe 2}
-Der näherungsweise Wert beträgt von  $e^{0.1}\cos(0.2)$ beträgt $1.083141$ (wir gehen von rad für den Winkel aus.
+Der näherungsweise Wert beträgt von  $e^{0.1}\cos(0.2)$ beträgt $1.083141$ (wir gehen von rad für den Winkel aus).
 
 Wir definieren die Funktion $f(x,\psi) = e^x\cos(\psi)$. Dann ist
 \begin{align*}
@@ -89,6 +89,109 @@ T_{\vec 0}(\vec x) &= 1 + \begin{pmatrix}1 & 0\end{pmatrix}\vectwo{x}{\psi} +\fr
 &= 1 + x + \frac{1}{2}(x^2 - \phi^2)
 \end{align*}
 
-Somit ist $T_{\vec 0}(0.1, 0.2) = 1 + 0.1 + \frac{1}{2}(0.1^2 - 0.2^2) = 1.085$.
+Somit ist $T_{\vec 0}(0.1, 0.2) = 1 + 0.1 + \frac{1}{2}(0.1^2 - 0.2^2) = 1.085$. Die Abweichung dieser Abschätzung zur tatsächlichen Berechnung beträgt also $1.085 - 1.083141 = 0.001859$.
+\section*{Aufgabe 3}
+\begin{enumerate}[(i)]
+	\item 	\(f\) ist eine zweimal partiell differenzierbare Funktion, da \(f\) eine Komposition aus zweimal partiell differenzierbaren Funktionen ist. Somit können wir, falls vorhanden, Extrema von $f$ finden. Jedes Extremum hat als notwendige Bedingung: $\nabla f(\vec x) = \vec 0$
+	\[ \nabla f (\vec x) = 
+	\begin{pmatrix}
+		3x^2y - 3y \\
+		x^3 - 3x + 2y 
+	\end{pmatrix} =  
+	\begin{pmatrix}
+		y(3x^2 - 3) \\
+		x^3 - 3x + 2y 
+	\end{pmatrix}  \]
+Nun müssen wir die Nullstellen finden.
+Für \( y(3x^2 -3) = 0 \) gibt es 3 Lösungen:
+\begin{enumerate}
+	\item offenichtlich bei $y = 0$
+	\item  und \(3x^2 - 3 = 0 \Leftrightarrow x^2 - 1 = 0 \Leftrightarrow x^2 = 1 \Rightarrow x = \pm 1\)
+\end{enumerate}
+Für \( x^3 - 3x + 2y  = 0 \) kann man keine direkten Nullstellen bestimmen.
+Man kann nun in einer Matrix die möglichen Nullstellen von $\nabla f$ darstellen: \\
+\begin{center}
+\begin{math}
+	\begin{array}{c|cc}
+	 & x^3 - 3x + 2y  = 0  \\
+	 \hline
+	 y = 0 & (0,0),(\sqrt{3},0),(-\sqrt{3},0)\\
+	 x = 1 & (1,-1)\\
+	 x = -1 & (-1,1)
+	\end{array}
+\end{math}
+\end{center}
+Also sind die kritischen Punkte bei $(0,0), (1,-1),(-1,1),(0,\sqrt{3}),(0,-\sqrt{3})$. Gesucht sind nun globale/lokale Extrema:
+	\[H_f = 
+	\begin{pmatrix}
+		6xy & 3x^2 - 3 \\
+		3x^2 - 3 & 2	
+	\end{pmatrix} \]
+	\begin{itemize}
+		\item 	$(0,0)$
+			\[H_f(0,0) = 
+			\begin{pmatrix}
+				0 & -3 \\
+				-3 & 2		
+			\end{pmatrix} \Rightarrow 
+			\det \begin{pmatrix}
+				0 & -3 \\
+				-3 & 2		
+			\end{pmatrix} = -9 \Rightarrow \text{ indefinit, Sattelpunkt}\]
+		\item 	$(1,-1)$
+			\[H_f(1,-1) = 
+			\begin{pmatrix}
+				-6 & 0 \\
+				0 & 2		
+			\end{pmatrix} \Rightarrow 
+			\det \begin{pmatrix}
+				-6 & 0 \\
+				0 & 2		
+			\end{pmatrix} = -12 \Rightarrow \text{ indefinit, Sattelpunkt}\]
+		\item  	$(-1,1)$
+			\[H_f(-1,1) = 
+			\begin{pmatrix}
+				-6 & 0 \\
+				0 & 2		
+			\end{pmatrix} \Rightarrow 
+			\det \begin{pmatrix}
+				-6 & 0 \\
+				0 & 2		
+			\end{pmatrix} = -12 \Rightarrow \text{ indefinit, Sattelpunkt}\]
+		\item 	$(\sqrt{3},0)$
+			\[H_f(\sqrt{3},0) = 
+			\begin{pmatrix}
+				6\sqrt{3} & 6 \\
+				6 & 2		
+			\end{pmatrix} \Rightarrow 
+			\det \begin{pmatrix}
+				6\sqrt{3} & 6 \\
+				6 & 2	
+			\end{pmatrix} \approx 2.7 \Rightarrow \text{positiv definit, lokales Minimum}\]
+		\item  	$(-\sqrt{3},0)$
+			\[H_f(-\sqrt{3},0) = 
+			\begin{pmatrix}
+				-6\sqrt{3} & -12 \\
+				-12 & 2		
+			\end{pmatrix} \Rightarrow 
+			\det \begin{pmatrix}
+				-6\sqrt{3} & -12 \\
+				-12 & 2	
+			\end{pmatrix} \approx -164.7 \Rightarrow \text{ indefinit, Sattelpunkt}\]
+	\end{itemize}
+	
+	\item	
+\(g\) ist eine zweimal partiell differenzierbare Funktion, da \(g\) eine Komposition aus zweimal partiell differenzierbaren Funktionen ist. Somit können wir, falls vorhanden, Extrema von $g$ finden. Jedes Extremum hat als notwendige Bedingung: $\nabla g(\vec x) = \vec 0$
+	\[ \nabla f (\vec x) = 
+	\begin{pmatrix}
+		\text{TODO} \\
+		\text{TODO} 
+	\end{pmatrix} =  
+	\begin{pmatrix}
+		\text{TODO} \\
+		\text{TODO} 
+	\end{pmatrix}  \]
+Nun müssen wir die Nullstellen finden.
 
+	\end{enumerate}
 \end{document}
