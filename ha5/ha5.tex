@@ -116,8 +116,8 @@ Man kann nun in einer Matrix die möglichen Nullstellen von $\nabla f$ darstelle
 	 & x^3 - 3x + 2y  = 0  \\
 	 \hline
 	 y = 0 & (0,0),(\sqrt{3},0),(-\sqrt{3},0)\\
-	 x = 1 & (1,-1)\\
-	 x = -1 & (-1,1)
+	 x = 1 & (1,1)\\
+	 x = -1 & (-1,-1)
 	\end{array}
 \end{math}
 \end{center}
@@ -138,26 +138,30 @@ Also sind die kritischen Punkte bei $(0,0), (1,-1),(-1,1),(\sqrt{3},0),(-\sqrt{3
 				0 & -3 \\
 				-3 & 2		
 			\end{pmatrix} = -9 \Rightarrow \text{ indefinit, Sattelpunkt}\]
-		\item 	$(1,-1)$
-			\[H_f(1,-1) = 
+		\item 	$(1,1)$
+			\begin{align*}H_f(1,1) &= 
 			\begin{pmatrix}
-				-6 & 0 \\
+				6 & 0 \\
 				0 & 2		
 			\end{pmatrix} \Rightarrow 
 			\det \begin{pmatrix}
-				-6 & 0 \\
+				6 & 0 \\
 				0 & 2		
-			\end{pmatrix} = -12 \Rightarrow \text{ indefinit, Sattelpunkt}\]
-		\item  	$(-1,1)$
-			\[H_f(-1,1) = 
+			\end{pmatrix} = 12 \\
+			&\Rightarrow \frac{\partial^2 f}{\partial x^2}(1,1) \text{ zu überprüfen. } \frac{\partial^2 f}{\partial x^2}(1,1) = 6 \Rightarrow \text{lokales Minimum}\\
+			&f(1,1) = 0 \end{align*}
+		\item  	$(-1,-1)$
+			\begin{align*}H_f(-1,-1) &= 
 			\begin{pmatrix}
-				-6 & 0 \\
+				6 & 0 \\
 				0 & 2		
 			\end{pmatrix} \Rightarrow 
 			\det \begin{pmatrix}
-				-6 & 0 \\
+				6 & 0 \\
 				0 & 2		
-			\end{pmatrix} = -12 \Rightarrow \text{ indefinit, Sattelpunkt}\]
+			\end{pmatrix} = 12 \\
+			&\Rightarrow \frac{\partial^2 f}{\partial x^2}(-1,-1) \text{ zu überprüfen. } \frac{\partial^2 f}{\partial x^2}(-1,-1) = 6 \Rightarrow \text{lokales Minimum} \\
+			&f(-1,-1) = 0 \end{align*}
 		\item 	$(\sqrt{3},0)$
 			\[H_f(\sqrt{3},0) = 
 			\begin{pmatrix}
@@ -179,6 +183,9 @@ Also sind die kritischen Punkte bei $(0,0), (1,-1),(-1,1),(\sqrt{3},0),(-\sqrt{3
 				6 & 2	
 			\end{pmatrix} \approx -36 \Rightarrow \text{ indefinit, Sattelpunkt}\]
 	\end{itemize}
+	
+	Bleibt noch zu überprüfen, ob die beiden gefunden lok. Minima auch glob. Minima sind.
+	Das ist nicht so, da $\lim_{x \to \infty} f(x,1) = -\infty$ und $-\infty < f(1,1) = 0$ und $-\infty < f(-1,-1) = 0$.
 	
 	\item	
 \(g\) ist eine zweimal partiell differenzierbare Funktion, da \(g\) eine Komposition aus zweimal partiell differenzierbaren Funktionen ist. Somit können wir, falls vorhanden, Extrema von $g$ finden. Jedes Extremum hat als notwendige Bedingung: $\nabla g(\vec x) = \vec 0$
