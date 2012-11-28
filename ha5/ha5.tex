@@ -203,6 +203,48 @@ Nun müssen wir die Nullstellen finden. Für $x(8x^2+4y^2)$:
 \item offensichtlich bei $x=0$
 \item und $8x^2+4y^2 = 0 \Leftrightarrow 2x^2 = -y^2 \Leftrightarrow y = \pm \sqrt{-2} x$
 \end{enumerate}
+Für $y(4x^2 +  4y^2)$:
+\begin{enumerate}
+\item offensichtlich bei $y=0$
+\item und $4x^2 +  4y^2 = 0 \Leftrightarrow 4x^2 = 4y^2 \Leftrightarrow y = x$
+\end{enumerate} 
 
-	\end{enumerate}
+Man kann nun in einer Matrix die möglichen Nullstellen von $\nabla g$ darstellen: \\
+\begin{center}
+\begin{math}
+	\begin{array}{c|ccc}
+	 & x = 0 & y = \sqrt{-2} x & y = - \sqrt{-2} x\\
+	 \hline
+	 y = 0 & (0,0) & (0,0) & (0,0) \\
+	 y = x & (0,0) & \lightning & \lightning
+	\end{array}
+\end{math}
+\end{center}
+Also sind die kritischen Punkte bei $(0,0)$. Gesucht sind nun globale/lokale Extrema:
+	\[H_g = 
+	\begin{pmatrix}
+		24x^2 + 4y^2 & 8xy \\
+		8xy & 4x^2 + 12y^2
+	\end{pmatrix} \]
+	\begin{itemize}
+		\item 	$(0,0)$
+			\[H_g(0,0) = 
+			\begin{pmatrix}
+				0 & 0 \\
+				0 & 0		
+			\end{pmatrix} \Rightarrow 
+			\det \begin{pmatrix}
+				0 & 0 \\
+				0 & 0		
+			\end{pmatrix} = 0 \Rightarrow \text{ also können wir keine Aussage treffen.}\]\\
+			$g(0,0) = 0$
+			
+			Da aber g eine Komposition von geraden Potenzen ist, die niemals kleiner als 0 werden können kann g niemals kleiner als 0 werden. Somit muss bei $(0,0)$ ein globales und lokales Minimum liegen.
+	\end{itemize}
+\end{enumerate}
 \end{document}
+
+
+
+
+
