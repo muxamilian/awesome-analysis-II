@@ -121,7 +121,7 @@ Man kann nun in einer Matrix die möglichen Nullstellen von $\nabla f$ darstelle
 	\end{array}
 \end{math}
 \end{center}
-Also sind die kritischen Punkte bei $(0,0), (1,-1),(-1,1),(0,\sqrt{3}),(0,-\sqrt{3})$. Gesucht sind nun globale/lokale Extrema:
+Also sind die kritischen Punkte bei $(0,0), (1,-1),(-1,1),(\sqrt{3},0),(-\sqrt{3},0)$. Gesucht sind nun globale/lokale Extrema:
 	\[H_f = 
 	\begin{pmatrix}
 		6xy & 3x^2 - 3 \\
@@ -161,37 +161,41 @@ Also sind die kritischen Punkte bei $(0,0), (1,-1),(-1,1),(0,\sqrt{3}),(0,-\sqrt
 		\item 	$(\sqrt{3},0)$
 			\[H_f(\sqrt{3},0) = 
 			\begin{pmatrix}
-				6\sqrt{3} & 6 \\
+				0 & 6 \\
 				6 & 2		
 			\end{pmatrix} \Rightarrow 
 			\det \begin{pmatrix}
-				6\sqrt{3} & 6 \\
+				0 & 6 \\
 				6 & 2	
-			\end{pmatrix} \approx 2.7 \Rightarrow \text{positiv definit, lokales Minimum}\]
+			\end{pmatrix} = -36 \Rightarrow \text{indefinit, Sattelpunkt}\]
 		\item  	$(-\sqrt{3},0)$
 			\[H_f(-\sqrt{3},0) = 
 			\begin{pmatrix}
-				-6\sqrt{3} & -12 \\
-				-12 & 2		
+				0 & 6 \\
+				6 & 2		
 			\end{pmatrix} \Rightarrow 
 			\det \begin{pmatrix}
-				-6\sqrt{3} & -12 \\
-				-12 & 2	
-			\end{pmatrix} \approx -164.7 \Rightarrow \text{ indefinit, Sattelpunkt}\]
+				0 & 6 \\
+				6 & 2	
+			\end{pmatrix} \approx -36 \Rightarrow \text{ indefinit, Sattelpunkt}\]
 	\end{itemize}
 	
 	\item	
 \(g\) ist eine zweimal partiell differenzierbare Funktion, da \(g\) eine Komposition aus zweimal partiell differenzierbaren Funktionen ist. Somit können wir, falls vorhanden, Extrema von $g$ finden. Jedes Extremum hat als notwendige Bedingung: $\nabla g(\vec x) = \vec 0$
 	\[ \nabla f (\vec x) = 
 	\begin{pmatrix}
-		\text{TODO} \\
-		\text{TODO} 
+		8x^3  +4xy^2\\
+		 4x^2y + 4y^3
 	\end{pmatrix} =  
 	\begin{pmatrix}
-		\text{TODO} \\
-		\text{TODO} 
+		x(8x^2+4y^2) \\
+		y(4x^2 +  4y^2)
 	\end{pmatrix}  \]
-Nun müssen wir die Nullstellen finden.
+Nun müssen wir die Nullstellen finden. Für $x(8x^2+4y^2)$:
+\begin{enumerate}
+\item offensichtlich bei $x=0$
+\item und $8x^2+4y^2 = 0 \Leftrightarrow 2x^2 = -y^2 \Leftrightarrow y = \pm \sqrt{-2} x$
+\end{enumerate}
 
 	\end{enumerate}
 \end{document}
