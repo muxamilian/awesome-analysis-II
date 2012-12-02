@@ -20,10 +20,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       835,         17]
-NotebookDataLength[    673094,      11243]
-NotebookOptionsPosition[    672705,      11214]
-NotebookOutlinePosition[    673062,      11230]
-CellTagsIndexPosition[    673019,      11227]
+NotebookDataLength[    677462,      11381]
+NotebookOptionsPosition[    676654,      11339]
+NotebookOutlinePosition[    677013,      11355]
+CellTagsIndexPosition[    676970,      11352]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -11198,22 +11198,147 @@ Cell[BoxData[{
    3.561471423182303*^9}, {3.561471506182825*^9, 3.561471522950821*^9}, {
    3.561471572642333*^9, 3.561471598312723*^9}}],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
- RowBox[{"D", "[", 
+ RowBox[{"Root", "[", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"x", "^", "3"}], "y"}], " ", "-", " ", 
+      RowBox[{"3", "xy"}], " ", "+", " ", 
+      RowBox[{"y", "^", "2"}], " ", "+", " ", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y"}], "}"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.563045171278467*^9, 3.563045224356583*^9}, {
+  3.5630466002610064`*^9, 3.563046603306449*^9}, {3.563046755595408*^9, 
+  3.5630468056204576`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Root", "::", "trsp"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Nonpolynomial root specification \
+\[NoBreak]\\!\\({\\({\\(\\(3\\\\ x\\^2\\\\ y\\)\\), \\(\\(x\\^3 + \\(\\(2\\\\ \
+y\\)\\)\\)\\)}\\)}\\)\[NoBreak] is not a list with two elements. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Root\\\", ButtonNote -> \
+\\\"Root::trsp\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.5630467743099003`*^9, 3.563046806765518*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Root", "[", 
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"3", " ", 
+      SuperscriptBox["x", "2"], " ", "y"}], ",", 
+     RowBox[{
+      SuperscriptBox["x", "3"], "+", 
+      RowBox[{"2", " ", "y"}]}]}], "}"}], "}"}], "]"}]], "Output",
+ CellChangeTimes->{{3.563046757920907*^9, 3.563046806768511*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FindMaximum", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", "-", 
+     RowBox[{"3", " ", "xy"}], "+", 
+     RowBox[{
+      SuperscriptBox["x", "3"], " ", "y"}], "+", 
+     SuperscriptBox["y", "2"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5630466119539223`*^9, 3.56304662687458*^9}, {
+  3.5630466630924463`*^9, 3.5630466657634172`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"FindMaximum", "::", "nrnum"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The function value \[NoBreak]\\!\\(\\(\\(-3.`\\)\\) + \
+\\(\\(3\\\\ xy\\)\\)\\)\[NoBreak] is not a real number at \[NoBreak]\\!\\({x, \
+y}\\)\[NoBreak] = \[NoBreak]\\!\\({1.`, 1.`}\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/FindMaximum\\\", ButtonNote -> \
+\\\"FindMaximum::nrnum\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5630466666226273`*^9}],
+
+Cell[BoxData[
+ RowBox[{"FindMaximum", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", "-", 
+     RowBox[{"3", " ", "xy"}], "+", 
+     RowBox[{
+      SuperscriptBox["x", "3"], " ", "y"}], "+", 
+     SuperscriptBox["y", "2"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}]}], "]"}]], "Output",
+ CellChangeTimes->{{3.563046615507753*^9, 3.563046627851256*^9}, 
+   3.563046666628545*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"3", " ", 
+      SuperscriptBox["x", "2"], " ", "y"}], " ", "-", 
+     RowBox[{"3", "y"}]}], "\[Equal]", "0"}], "&&", " ", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "3"], "-", 
+     RowBox[{"2", " ", "y"}], " ", "-", 
+     RowBox[{"3", "x"}]}], " ", "\[Equal]", " ", "0"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5630468515134907`*^9, 3.563046880011754*^9}, {
+  3.563046914545693*^9, 3.563046943844203*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
   RowBox[{
    RowBox[{"{", 
     RowBox[{
-     RowBox[{
-      RowBox[{"x", "^", "3"}], "y"}], " ", "-", " ", 
-     RowBox[{"3", "xy"}], " ", "+", " ", 
-     RowBox[{"y", "^", "2"}], " ", "+", " ", "1"}], "}"}], ",", 
+     RowBox[{"y", "\[Rule]", 
+      RowBox[{"-", "1"}]}], ",", 
+     RowBox[{"x", "\[Rule]", "1"}]}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"{", 
-     RowBox[{"x", ",", "y"}], "}"}], "}"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.563045171278467*^9, 3.563045224356583*^9}}]
+    RowBox[{
+     RowBox[{"y", "\[Rule]", "0"}], ",", 
+     RowBox[{"x", "\[Rule]", "0"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"y", "\[Rule]", "0"}], ",", 
+     RowBox[{"x", "\[Rule]", 
+      RowBox[{"-", 
+       SqrtBox["3"]}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"y", "\[Rule]", "0"}], ",", 
+     RowBox[{"x", "\[Rule]", 
+      SqrtBox["3"]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"y", "\[Rule]", "1"}], ",", 
+     RowBox[{"x", "\[Rule]", 
+      RowBox[{"-", "1"}]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.563046882006989*^9, {3.563046924031043*^9, 3.563046944696404*^9}}]
+}, Open  ]]
 },
 WindowSize->{1260, 859},
-WindowMargins->{{5, Automatic}, {Automatic, 19}},
+WindowMargins->{{Automatic, 237}, {41, Automatic}},
 FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (February 23, \
 2011)",
 StyleDefinitions->"Default.nb"
@@ -11254,11 +11379,24 @@ Cell[637420, 10618, 33124, 530, 415, "Output"]
 }, Open  ]],
 Cell[670559, 11151, 94, 1, 27, "Input"],
 Cell[670656, 11154, 1629, 44, 73, "Input"],
-Cell[672288, 11200, 413, 12, 27, "Input"]
+Cell[CellGroupData[{
+Cell[672310, 11202, 556, 15, 27, "Input"],
+Cell[672869, 11219, 563, 11, 30, "Message"],
+Cell[673435, 11232, 341, 10, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[673813, 11247, 433, 12, 33, InheritFromParent],
+Cell[674249, 11261, 577, 11, 23, "Message"],
+Cell[674829, 11274, 406, 12, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[675272, 11291, 505, 14, 33, "Input"],
+Cell[675780, 11307, 858, 29, 35, "Output"]
+}, Open  ]]
 }
 ]
 *)
 
 (* End of internal cache information *)
 
-(* NotebookSignature HwTWJUTIndzTACwknkDHkwso *)
+(* NotebookSignature Aw0ohkxds#eECAwQfO#PzDte *)

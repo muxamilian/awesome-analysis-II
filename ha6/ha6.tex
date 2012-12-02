@@ -66,4 +66,50 @@ D_1 &= \det (6) = 6 > 0\\
 D_2 &= \det \begin{pmatrix} 6 & -2 \\ -2 & 2\end{pmatrix} = 8 > 0
 \end{align*}
 Damit ist $H_f(\vec x)$ positiv definit, woraus schlusszufolgern ist, dass die Funktion $f$ bei $f(0,0) = 0$ ein lokales Minimum besitzt. Da $f(x,y)$ eine Komposition aus $(x-y)^2 > 0 \; \; \forall x,y \in \mathbb{R}$ und $2x^2 > 0 \; \; \forall x \in \mathbb{R}$ ist, ist $f(0,0) = 0$ sogar ein globales Minimum.
+\subsection*{Aufgabe 2}
+Um lokale Extrema einer mehrdimensionalen Funktion zu bestimmen, müssen wir 1. die kritischen Punkte finden und 2. diese als Funtkionswerte der Hessematrix übergeben.
+\begin{enumerate}
+	\item kritische Punkte sind alle Funktionswerte die $\nabla f(x,y,z) = \vec0$ erfüllen.
+	\[\nabla f(x,y,z) = 
+	\begin{pmatrix}
+		4x \\ 
+		4z + 2y \\
+		4y + 10z	
+	\end{pmatrix} \overset{\text{DGL}}{\Rightarrow}
+	\begin{pmatrix}
+		4 & 0 & 0 \\
+		0 & 2 & 4 \\
+		0 & 4 & 10 
+	\end{pmatrix} \overset{\text{Gauss}}{\Rightarrow}
+	\begin{pmatrix}
+		1 & 0 & 0 \\
+		0 & 1 & 0 \\
+		0 & 0 & 1
+	\end{pmatrix}\]
+	Der Kern der Einheitsmatrix ist der Null-Vektor. Dies ist auch der einzige kritische Punkt demnach.
+	\item Hesse-Matrix berechnen und kritische Punkte einfügen:
+	\[H_f(x,y,z) =
+	\begin{pmatrix}
+		4 & 0 & 0 \\
+		0 & 2 & 4 \\
+		0 & 4 & 10
+	\end{pmatrix}
+	\] Da die Hesse Matrix konstant ist, müssen wir den Punkt offensichtlich nicht einsetzen. Mit dem Hurwitzkritirium kann nun überprüft, was der kritische Punkt nun ist. 
+	\begin{align*}
+	 	&\det(4) = 4 \\
+	 	&\det \begin{pmatrix}
+	 		4 & 0 \\
+	 		0 & 2	
+	 	\end{pmatrix} = 8 \\
+	 	&\det \begin{pmatrix}
+	 		4 & 0 & 0 \\
+			0 & 2 & 4 \\
+			0 & 4 & 10
+	 	\end{pmatrix} = 4*2*10 + 0*.. + 0*.. - 0 * .. - 0 *.. - 4 * 2 * 4 = 80 - 32 = 48 
+	 \end{align*} Damit ist $H_f(0,0,0)$ positiv definit. Somit ist ein lokales Minimum bei $\vec 0$. Ist es auch ein globales Minimum? 
+	$2x^2$, $y^2$ und $5z^2$ werden nie negativ. Also kann nur $4yz$ negativ werden. Da aber $4yz  + y^2 + 5z^2 \ge 0$ für alle $(x,y) \in \mathbb{R}^2$ offensichtlich gilt, kann $f$ keine negativen Funktionswerte haben, somit muss $\vec 0$ ein globales Minimum sein.
+
+
+\end{enumerate}
+
 \end{document}
