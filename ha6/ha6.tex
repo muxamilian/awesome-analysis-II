@@ -33,10 +33,37 @@ Tom Lehmann\> 340621\\
 Maximilian Bachl\> 341455
 \end{tabbing}
 \section*{Aufgabe 1}
-
+Es handelt sich hier um die Suche nach Extrema mit Nebenbedinung, weshalb wir zunächst nach Extrema auf dem Rand des Kreises suchen.\\\\
+Die Nebenbedingung lautet: $g(x,y) = x^2 + y^2 - 1 = 0$.
+\begin{enumerate}
+\item {Singulärer Fall:}
+\begin{align*}
+\nabla g(\vec x) &= \vec 0 = \begin{pmatrix}2x \\ 2y\end{pmatrix}  \Rightarrow (x,y) = (0,0)
+\intertext{Da $g(0,0) = -1 \neq 0$ gibt es hier keinen singulären Fall.}
+\end{align*}
+\item {$\nabla f( \vec x) = \lambda \cdot \nabla g(\vec x)$}
+\begin{align*}
+\nabla f(\vec x) &= \begin{pmatrix}6x-2y \\ -2x + 2y \end{pmatrix}= \lambda \begin{pmatrix}2x \\ 2y\end{pmatrix} = \lambda \cdot \nabla g(\vec x)
+\intertext{Also:}
+6x-2y &= \lambda \cdot 2x \Rightarrow x \text{TODO}\\
+-2x + 2y &= \lambda \cdot 2y
+\end{align*}
+TODO
+\end{enumerate}
+Wir prüfen zunächst die notwendige Bedingung für kritische Punkte$\nabla f(\vec x_k) = 0$:
+\begin{align*}
+\nabla f( \vec x) &= \vec 0 = \begin{pmatrix}2\left(x-y\right) + 4x \\ -2\left(x-y\right) \end{pmatrix} = \begin{pmatrix} 6x -2y \\ -2x + 2y\end{pmatrix}
+\intertext{Also:}
+0 &= 6x-2y	\text{Evtl. Nummerierung hinzufügen}\\
+0 &= -2x + 2y \\
+\Rightarrow 0 &= 4x \Rightarrow x=0 \Rightarrow y=0
+\end{align*}
+Wir erhalten deshalb einen kritischen Punkt: $x_{k1} = \begin{pmatrix}0 \\ 0\end{pmatrix}$.\\
+Die Hessematrix ist, da es sich bei $f$ um eine zweimal stetig partiell differentierbare Funktion handelt, gemäß dem Satz von Schwarz, invertierbar.
+\begin{align*}
+f''(\vec x) &= H_f(\vec x) =  \begin{pmatrix}6 & -2 \\ -2 & 2\end{pmatrix}\\
+D_1 &= \det (6) = 6 > 0\\
+D_2 &= \det \begin{pmatrix} 6 & -2 \\ -2 & 2\end{pmatrix} = 8 > 0
+\end{align*}
+Damit ist $H_f(\vec x)$ positiv definit, woraus schlusszufolgern ist, dass die Funktion $f$ bei $f(0,0) = 0$ ein lokales Minimum besitzt. Da $f(x,y)$ eine Komposition aus $(x-y)^2 > 0 \; \; \forall x,y \in \mathbb{R}$ und $2x^2 > 0 \; \; \forall x \in \mathbb{R}$ ist, ist $f(0,0) = 0$ sogar ein globales Minimum.
 \end{document}
-
-
-
-
-
