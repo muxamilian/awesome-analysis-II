@@ -45,25 +45,6 @@ Die Nebenbedingung lautet: $g(x,y) = x^2 + y^2 - 1 = 0$.
 \begin{align*}
 \nabla f(\vec x) &= \begin{pmatrix}6x-2y \\ -2x + 2y \end{pmatrix}= \lambda \begin{pmatrix}2x \\ 2y\end{pmatrix} = \lambda \cdot \nabla g(\vec x)
 \intertext{Also:}
-<<<<<<< HEAD
-6x-2y &= \lambda \cdot 2x \Rightarrow -2y = x(2 \lambda - 6) \Leftrightarrow y = x(3- \lambda)\\
--2x + 2y &= \lambda \cdot 2y \Rightarrow -2x = y(2 \lambda - 2) \Leftrightarrow x = y(1-\lambda)
-\end{align*}
-Also:
-\begin{align*}
-x &= x (3-\lambda) (1-\lambda) \Rightarrow 1 = 3 -4 \lambda + \lambda ^2 \\
-\Rightarrow \lambda_{1/2} &= 2 \pm \sqrt{4-2}\\
-\lambda_1 &= 2 + \sqrt{2}\\
-\lambda_2 &= 2 - \sqrt{2}
-\intertext{Einsetzen in die Nebenbedingung mit $\lambda = 2 + \sqrt{2}$:}
-0 &= y^2(1-2-\sqrt{2})^2 + y^2 - 1\\
-&= y^2(1 + 2 \sqrt{2} + 2 + 1) -1\\
-&= 2y^2(2 + \sqrt{2}) -1\\
-\Rightarrow y &= \sqrt{\tfrac 1{2(2+\sqrt{2})}}
-\intertext{Einsetzen in die Nebenbedingung mit $\lambda = 2 -\sqrt{2}$:}
-\text{TODO}
-\end{align*}
-=======
 \text{I: }&6x-2y = \lambda \cdot 2x \Leftrightarrow 3- \frac{y}{x} = \lambda \Leftrightarrow -\frac{y}{x} = \lambda -3\\
 \text{II: }&-2x + 2y = \lambda \cdot 2y \Leftrightarrow -\frac{x}{y} +1 = \lambda \Leftrightarrow -\frac{x}{y} = \lambda -1\\
 \Leftrightarrow& \frac{y}{x} = -\frac{1}{\lambda -1}\\
@@ -72,7 +53,6 @@ x &= x (3-\lambda) (1-\lambda) \Rightarrow 1 = 3 -4 \lambda + \lambda ^2 \\
 Addiert man nun I und II so erhält man $0 = \lambda -3 -\frac{1}{\lambda -1} \Leftrightarrow 0 = \lambda^2 -4\lambda +2 \Leftrightarrow \lambda = 2 \pm \sqrt 2$.
 
 Somit ist 
->>>>>>> f1c797011b4fcdb6162db6ae9f637509dd086031
 \end{enumerate}
 Wir prüfen zunächst die notwendige Bedingung für kritische Punkte$\nabla f(\vec x_k) = 0$:
 \begin{align*}
@@ -119,7 +99,7 @@ Um lokale Extrema einer mehrdimensionalen Funktion zu bestimmen, müssen wir 1. 
 		0 & 4 & 10
 	\end{pmatrix}
 	\] 
-	TODO: Satz von Schwarz\\
+	Die Hessematrix ist, da es sich bei $f$ um eine zweimal stetig partiell differenzierbare Funktion handelt, gemäß dem Satz von Schwarz, symmetrisch.\\
 	Da die Hesse Matrix konstant ist, müssen wir den Punkt offensichtlich nicht einsetzen. Mit dem Hurwitzkritirium kann nun überprüft, was der kritische Punkt nun ist. 
 	\begin{align*}
 	 	&\det(4) = 4 \\
@@ -140,12 +120,12 @@ Wir haben die Nebenbedingung $g(a,b) = a + b -10 = 0$. Außerdem haben wir die F
 
 Wir überprüfen, ob ein singulärer Fall vorliegt: 
 \begin{align*}
-\nabla g &= \vectwo{1}{1} = \vectwo{0}{0} \text{ Da es hierfür keine Lösung gibt, liegt kein singulärer Fall vor.}
+\nabla g(a,b) &= \vectwo{1}{1} = \vectwo{0}{0} \text{ Da es hierfür keine Lösung gibt, liegt kein singulärer Fall vor.}
 \end{align*}
 
 Als nächstes überprüfen wir auf andere Extrema am Rand.
 \begin{align*}
-\nabla f(a,b) = \vectwo{b}{a} &= \lambda \vectwo{1}{1} = \lambda \nabla g \\
+\nabla f(a,b) = \vectwo{b}{a} &= \lambda \vectwo{1}{1} = \lambda \nabla g(a,b) \\
 \text{Es gilt: } a + b - 10 &= 0 \\
 \text{Daraus folgt: }& a = \lambda \\
 & b = \lambda \\
@@ -153,5 +133,14 @@ Als nächstes überprüfen wir auf andere Extrema am Rand.
 \end{align*}
 
 Es gibt somit den zu untersuchenden kritischen Punkt $\vec x_{k_1} = \vectwo{5}{5}$
+\begin{align*}
+f''(a,b) = \begin{pmatrix}
+0 & 1 \\
+1 & 0 \\
+\end{pmatrix}
+\end{align*}
+Da $det_1 = 0$ und $det_2 < 0$ ist die Hesse-Matrix semidefinit und somit kann man bei $\vectwo{5}{5}$ keine Aussage machen. Da man sich die Funktion $f(a,b) = ab$ aber gut vorstellen kann, weiß man, dass es keine Extrema gibt. 
+Da $f$ bei $a$ und $b$ größer 0 s.m.w ist, muss es sich bei $\vectwo{5}{5}$ um ein globales Extremum (mit der Beschränkung $g$) handeln.
+
 
 \end{document}
