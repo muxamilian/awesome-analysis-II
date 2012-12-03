@@ -45,10 +45,14 @@ Die Nebenbedingung lautet: $g(x,y) = x^2 + y^2 - 1 = 0$.
 \begin{align*}
 \nabla f(\vec x) &= \begin{pmatrix}6x-2y \\ -2x + 2y \end{pmatrix}= \lambda \begin{pmatrix}2x \\ 2y\end{pmatrix} = \lambda \cdot \nabla g(\vec x)
 \intertext{Also:}
-6x-2y &= \lambda \cdot 2x \Rightarrow x \text{TODO}\\
--2x + 2y &= \lambda \cdot 2y
+\text{I: }&6x-2y = \lambda \cdot 2x \Leftrightarrow 3- \frac{y}{x} = \lambda \Leftrightarrow -\frac{y}{x} = \lambda -3\\
+\text{II: }&-2x + 2y = \lambda \cdot 2y \Leftrightarrow -\frac{x}{y} +1 = \lambda \Leftrightarrow -\frac{x}{y} = \lambda -1\\
+\Leftrightarrow& \frac{y}{x} = -\frac{1}{\lambda -1}\\
+\text{III: }&x^2 + y^2 -1 = 0\\
 \end{align*}
-TODO
+Addiert man nun I und II so erhält man $0 = \lambda -3 -\frac{1}{\lambda -1} \Leftrightarrow 0 = \lambda^2 -4\lambda +2 \Leftrightarrow \lambda = 2 \pm \sqrt 2$.
+
+Somit ist 
 \end{enumerate}
 Wir prüfen zunächst die notwendige Bedingung für kritische Punkte$\nabla f(\vec x_k) = 0$:
 \begin{align*}
@@ -59,14 +63,14 @@ Wir prüfen zunächst die notwendige Bedingung für kritische Punkte$\nabla f(\v
 \Rightarrow 0 &= 4x \Rightarrow x=0 \Rightarrow y=0
 \end{align*}
 Wir erhalten deshalb einen kritischen Punkt: $x_{k1} = \begin{pmatrix}0 \\ 0\end{pmatrix}$.\\
-Die Hessematrix ist, da es sich bei $f$ um eine zweimal stetig partiell differentierbare Funktion handelt, gemäß dem Satz von Schwarz, symmetrisch.
+Die Hessematrix ist, da es sich bei $f$ um eine zweimal stetig partiell differenzierbare Funktion handelt, gemäß dem Satz von Schwarz, symmetrisch.
 \begin{align*}
 f''(\vec x) &= H_f(\vec x) =  \begin{pmatrix}6 & -2 \\ -2 & 2\end{pmatrix}\\
 D_1 &= \det (6) = 6 > 0\\
 D_2 &= \det \begin{pmatrix} 6 & -2 \\ -2 & 2\end{pmatrix} = 8 > 0
 \end{align*}
 Damit ist $H_f(\vec x)$ positiv definit, woraus schlusszufolgern ist, dass die Funktion $f$ bei $f(0,0) = 0$ ein lokales Minimum besitzt. Da $f(x,y)$ eine Komposition aus $(x-y)^2 > 0 \; \; \forall x,y \in \mathbb{R}$ und $2x^2 > 0 \; \; \forall x \in \mathbb{R}$ ist, ist $f(0,0) = 0$ sogar ein globales Minimum.
-\subsection*{Aufgabe 2}
+\section*{Aufgabe 2}
 Um lokale Extrema einer mehrdimensionalen Funktion zu bestimmen, müssen wir 1. die kritischen Punkte finden und 2. diese als Funktionswerte der Hessematrix übergeben.
 \begin{enumerate}
 	\item kritische Punkte sind alle Funktionswerte die $\nabla f(x,y,z) = \vec0$ erfüllen.
@@ -107,11 +111,27 @@ Um lokale Extrema einer mehrdimensionalen Funktion zu bestimmen, müssen wir 1. 
 	 		4 & 0 & 0 \\
 			0 & 2 & 4 \\
 			0 & 4 & 10
-	 	\end{pmatrix} = 4*2*10 + 0*.. + 0*.. - 0 * .. - 0 *.. - 4 * 2 * 4 = 80 - 32 = 48 
+	 	\end{pmatrix} \overset{\text{nach Laplace}}{=} 4\cdot (2\cdot10 - 4\cdot4) = 16
 	 \end{align*} Damit ist $H_f(0,0,0)$ positiv definit. Somit ist ein lokales Minimum bei $\vec 0$. Ist es auch ein globales Minimum? 
 	$2x^2$, $y^2$ und $5z^2$ werden nie negativ. Also kann nur $4yz$ negativ werden. Da aber $4yz  + y^2 + 5z^2 \ge 0$ für alle $(x,y) \in \mathbb{R}^2$ offensichtlich gilt, kann $f$ keine negativen Funktionswerte haben,  und muss somit, da $f(0,0,0) = 0$, an der Stelle $(0,0,0)$ ein globales Minimum haben.
-
-
 \end{enumerate}
+\section*{Aufgabe 3}
+Wir haben die Nebenbedingung $g(a,b) = a + b -10 = 0$. Außerdem haben wir die Funktion $f(a,b) = ab$. Da der von g gebildete Körper kein Inneres besitzt, kann es in diesem auch keine Extrema geben.
+
+Wir überprüfen, ob ein singulärer Fall vorliegt: 
+\begin{align*}
+\nabla g &= \vectwo{1}{1} = \vectwo{0}{0} \text{ Da es hierfür keine Lösung gibt, liegt kein singulärer Fall vor.}
+\end{align*}
+
+Als nächstes überprüfen wir auf andere Extrema am Rand.
+\begin{align*}
+\nabla f(a,b) = \vectwo{b}{a} &= \lambda \vectwo{1}{1} = \lambda \nabla g \\
+\text{Es gilt: } a + b - 10 &= 0 \\
+\text{Daraus folgt: }& a = \lambda \\
+& b = \lambda \\
+& \lambda = 5 \Rightarrow a = 5 \land b = 5
+\end{align*}
+
+Es gibt somit den zu untersuchenden kritischen Punkt $\vec x_{k_1} = \vectwo{5}{5}$
 
 \end{document}
