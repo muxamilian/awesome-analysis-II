@@ -51,9 +51,15 @@ Die Nebenbedingung lautet: $g(x,y) = x^2 + y^2 - 1 = 0$.
 \text{III: }&x^2 + y^2 -1 = 0\\
 \end{align*}
 Addiert man nun I und II so erhält man $0 = \lambda -3 -\frac{1}{\lambda -1} \Leftrightarrow 0 = \lambda^2 -4\lambda +2 \Leftrightarrow \lambda = 2 \pm \sqrt 2$.
-Somit ist $x = \pm\frac{1}{2} \sqrt{2-\sqrt{2}}$ und $y = \frac{1}{2} \left(\pm3 \sqrt{2-\sqrt{2}}+\left(2-\sqrt{2}\right)^{3/2}\right)$.
 
-\textbf{Das kann nicht stimmen, ist aber der Mathematica-Output. Hab mich sicher nicht vertippt.}
+Durch Einsetzen erhält man für $\lambda = 2 - \sqrt 2$, dass $x = -\frac{1}{2} \sqrt{2-\sqrt{2}}$ und $y = \frac{1}{2} \left(-3 \sqrt{2-\sqrt{2}}+\left(2-\sqrt{2}\right)^{\frac{3}{2}}\right)$.\\
+Für $\lambda = 2 + \sqrt 2$ ist $x = \frac{1}{2} \sqrt{2-\sqrt{2}}$ und $y = \frac{1}{2} \left(3 \sqrt{2-\sqrt{2}}+\left(2-\sqrt{2}\right)^{\frac{3}{2}}\right)$. 
+
+$$\vec x_{k_1} = \vectwo{-\frac{1}{2} \sqrt{2-\sqrt{2}}}{\frac{1}{2} \left(-3 \sqrt{2-\sqrt{2}}+\left(2-\sqrt{2}\right)^{\frac{3}{2}}\right)}$$
+$$\vec x_{k_2} = \vectwo{\frac{1}{2} \sqrt{2-\sqrt{2}}}{\frac{1}{2} \left(3 \sqrt{2-\sqrt{2}}+\left(2-\sqrt{2}\right)^{\frac{3}{2}}\right)}$$
+
+$$f(\vec x_{k_1}) = 2 + \sqrt 2$$
+$$f(\vec x_{k_2}) = 14+9 \sqrt{2}$$
 \end{enumerate}
 Wir prüfen zunächst die notwendige Bedingung für kritische Punkte$\nabla f(\vec x_k) = 0$:
 \begin{align*}
@@ -63,7 +69,7 @@ Wir prüfen zunächst die notwendige Bedingung für kritische Punkte$\nabla f(\v
 0 &= -2x + 2y \\
 \Rightarrow 0 &= 4x \Rightarrow x=0 \Rightarrow y=0
 \end{align*}
-Wir erhalten deshalb einen kritischen Punkt: $x_{k1} = \begin{pmatrix}0 \\ 0\end{pmatrix}$.\\
+Wir erhalten deshalb einen kritischen Punkt: $x_{k3} = \begin{pmatrix}0 \\ 0\end{pmatrix}$.\\
 Die Hessematrix ist, da es sich bei $f$ um eine zweimal stetig partiell differenzierbare Funktion handelt, gemäß dem Satz von Schwarz, symmetrisch.
 \begin{align*}
 f''(\vec x) &= H_f(\vec x) =  \begin{pmatrix}6 & -2 \\ -2 & 2\end{pmatrix}\\
@@ -71,6 +77,13 @@ D_1 &= \det (6) = 6 > 0\\
 D_2 &= \det \begin{pmatrix} 6 & -2 \\ -2 & 2\end{pmatrix} = 8 > 0
 \end{align*}
 Damit ist $H_f(\vec x)$ positiv definit, woraus schlusszufolgern ist, dass die Funktion $f$ bei $f(0,0) = 0$ ein lokales Minimum besitzt. Da $f(x,y)$ eine Komposition aus $(x-y)^2 > 0 \; \; \forall x,y \in \mathbb{R}$ und $2x^2 > 0 \; \; \forall x \in \mathbb{R}$ ist, ist $f(0,0) = 0$ sogar ein globales Minimum.
+
+Um nun über globale Extrema zu entscheiden, reicht es, die Funktionswerte von $f$ zu vergleichen, da die gegebene Menge kompakt ist und $f$ stetig ist.
+
+Da $f(x_{k_1}) = 2 + \sqrt 2$, $f(x_{k_2}) = 14+9 \sqrt{2}$ und $f(x_{k_3}) = 0$, ist bei $x_{k_3}$ ein globales Minimum und bei $x_{k_2}$ ein globales Maximum unter der Beschränkung.
+
+\textbf{\textsc{Müssen wir für $x_{k_1}$ noch irgendwas zeigen, oder reicht das? -- Max}}
+
 \section*{Aufgabe 2}
 Um lokale Extrema einer mehrdimensionalen Funktion zu bestimmen, müssen wir 1. die kritischen Punkte finden und 2. diese als Funktionswerte der Hessematrix übergeben.
 \begin{enumerate}
