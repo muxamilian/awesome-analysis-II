@@ -33,7 +33,7 @@ Tom Lehmann\> 340621\\
 Maximilian Bachl\> 341455
 \end{tabbing}
 \section*{Aufgabe 1}
-Es handelt sich hier um die Suche nach Extrema mit Nebenbedinung, weshalb wir zunächst nach Extrema auf dem Rand des Kreises suchen.\\\\
+Es handelt sich hier um die Suche nach Extrema mit Nebenbedingung, weshalb wir zunächst nach Extrema auf dem Rand des Kreises suchen.\\\\
 Die Nebenbedingung lautet: $g(x,y) = x^2 + y^2 - 1 = 0$.
 \begin{enumerate}
 \item {Singulärer Fall:}
@@ -50,6 +50,7 @@ Die Nebenbedingung lautet: $g(x,y) = x^2 + y^2 - 1 = 0$.
 \text{III: }&x^2 + y^2 -1 = 0\\
 \end{align*}
 Addiert man nun I und II so erhält man $0 = \lambda -3 -\frac{1}{\lambda -1} \Leftrightarrow 0 = \lambda^2 -4\lambda +2 \Leftrightarrow \lambda = 2 \pm \sqrt 2$.
+<<<<<<< HEAD
 Einsetzten von $\lambda = 2 + \sqrt{2}$ in I:
 \begin{align*}
 -\frac yx &= 2 + \sqrt{2} -3 = -1 + \sqrt{2}\\
@@ -62,18 +63,27 @@ Einsetzten von $\lambda = 2 + \sqrt{2}$ in I:
 \Rightarrow x^2 &= 0 \Leftrightarrow x=0 \Rightarrow y = \pm 1
 \end{align*}
 Somit ist $x = \pm\frac{1}{2} \sqrt{2-\sqrt{2}}$ und $y = \frac{1}{2} \left(\pm3 \sqrt{2-\sqrt{2}}+\left(2-\sqrt{2}\right)^{3/2}\right)$.
+=======
+>>>>>>> 1378ea1adfffddb64ac8db476f79fe9c35877874
 
-\textbf{Das kann nicht stimmen, ist aber der Mathematica-Output. Hab mich sicher nicht vertippt.}
+Durch Einsetzen erhält man für $\lambda = 2 - \sqrt 2$, dass $x = -\frac{1}{2} \sqrt{2-\sqrt{2}}$ und $y = \frac{1}{2} \left(-3 \sqrt{2-\sqrt{2}}+\left(2-\sqrt{2}\right)^{\frac{3}{2}}\right)$.\\
+Für $\lambda = 2 + \sqrt 2$ ist $x = \frac{1}{2} \sqrt{2-\sqrt{2}}$ und $y = \frac{1}{2} \left(3 \sqrt{2-\sqrt{2}}+\left(2-\sqrt{2}\right)^{\frac{3}{2}}\right)$. 
+
+$$\vec x_{k_1} = \vectwo{-\frac{1}{2} \sqrt{2-\sqrt{2}}}{\frac{1}{2} \left(-3 \sqrt{2-\sqrt{2}}+\left(2-\sqrt{2}\right)^{\frac{3}{2}}\right)}$$
+$$\vec x_{k_2} = \vectwo{\frac{1}{2} \sqrt{2-\sqrt{2}}}{\frac{1}{2} \left(3 \sqrt{2-\sqrt{2}}+\left(2-\sqrt{2}\right)^{\frac{3}{2}}\right)}$$
+
+$$f(\vec x_{k_1}) = 2 + \sqrt 2$$
+$$f(\vec x_{k_2}) = 14+9 \sqrt{2}$$
 \end{enumerate}
 Wir prüfen zunächst die notwendige Bedingung für kritische Punkte$\nabla f(\vec x_k) = 0$:
 \begin{align*}
 \nabla f( \vec x) &= \vec 0 = \begin{pmatrix}2\left(x-y\right) + 4x \\ -2\left(x-y\right) \end{pmatrix} = \begin{pmatrix} 6x -2y \\ -2x + 2y\end{pmatrix}
 \intertext{Also:}
-0 &= 6x-2y	\text{Evtl. Nummerierung hinzufügen}\\
+0 &= 6x-2y \\ % \text{Evtl. Nummerierung hinzufügen}\\
 0 &= -2x + 2y \\
 \Rightarrow 0 &= 4x \Rightarrow x=0 \Rightarrow y=0
 \end{align*}
-Wir erhalten deshalb einen kritischen Punkt: $x_{k1} = \begin{pmatrix}0 \\ 0\end{pmatrix}$.\\
+Wir erhalten deshalb einen kritischen Punkt: $x_{k3} = \begin{pmatrix}0 \\ 0\end{pmatrix}$.\\
 Die Hessematrix ist, da es sich bei $f$ um eine zweimal stetig partiell differenzierbare Funktion handelt, gemäß dem Satz von Schwarz, symmetrisch.
 \begin{align*}
 f''(\vec x) &= H_f(\vec x) =  \begin{pmatrix}6 & -2 \\ -2 & 2\end{pmatrix}\\
@@ -81,6 +91,13 @@ D_1 &= \det (6) = 6 > 0\\
 D_2 &= \det \begin{pmatrix} 6 & -2 \\ -2 & 2\end{pmatrix} = 8 > 0
 \end{align*}
 Damit ist $H_f(\vec x)$ positiv definit, woraus schlusszufolgern ist, dass die Funktion $f$ bei $f(0,0) = 0$ ein lokales Minimum besitzt. Da $f(x,y)$ eine Komposition aus $(x-y)^2 > 0 \; \; \forall x,y \in \mathbb{R}$ und $2x^2 > 0 \; \; \forall x \in \mathbb{R}$ ist, ist $f(0,0) = 0$ sogar ein globales Minimum.
+
+Um nun über globale Extrema zu entscheiden, reicht es, die Funktionswerte von $f$ zu vergleichen, da die gegebene Menge kompakt ist und $f$ stetig ist.
+
+Da $f(x_{k_1}) = 2 + \sqrt 2$, $f(x_{k_2}) = 14+9 \sqrt{2}$ und $f(x_{k_3}) = 0$, ist bei $x_{k_3}$ ein globales Minimum und bei $x_{k_2}$ ein globales Maximum unter der Beschränkung.
+
+\textbf{\textsc{Müssen wir für $x_{k_1}$ noch irgendwas zeigen, oder reicht das? -- Max}}
+
 \section*{Aufgabe 2}
 Um lokale Extrema einer mehrdimensionalen Funktion zu bestimmen, müssen wir 1. die kritischen Punkte finden und 2. diese als Funktionswerte der Hessematrix übergeben.
 \begin{enumerate}
@@ -143,15 +160,17 @@ Als nächstes überprüfen wir auf andere Extrema am Rand.
 & \lambda = 5 \Rightarrow a = 5 \land b = 5
 \end{align*}
 
-Es gibt somit den zu untersuchenden kritischen Punkt $\vec x_{k_1} = \vectwo{5}{5}$
-\begin{align*}
-f''(a,b) = \begin{pmatrix}
-0 & 1 \\
-1 & 0 \\
-\end{pmatrix}
-\end{align*}
-Da $det_1 = 0$ und $det_2 < 0$ ist die Hesse-Matrix semidefinit und somit kann man bei $\vectwo{5}{5}$ keine Aussage machen. Da man sich die Funktion $f(a,b) = ab$ aber gut vorstellen kann, weiß man, dass es keine Extrema gibt. 
-Da $f$ bei $a$ und $b$ größer 0 s.m.w ist, muss es sich bei $\vectwo{5}{5}$ um ein globales Extremum (mit der Beschränkung $g$) handeln.
+%Es gibt somit den zu untersuchenden kritischen Punkt $\vec x_{k_1} = \vectwo{5}{5}$
+%\begin{align*}
+%f''(a,b) = \begin{pmatrix}
+%0 & 1 \\
+%1 & 0 \\
+%\end{pmatrix}
+%\end{align*}
+%Da $det_1 = 0$ und $det_2 < 0$ ist die Hesse-Matrix semidefinit und somit kann man bei $\vectwo{5}{5}$ keine Aussage machen. Da man sich die Funktion $f(a,b) = ab$ aber gut vorstellen kann, weiß man, dass es keine Extrema gibt. 
+
+Somit haben wir als kritischen Punkt $x_{k_1} = \vectwo{5}{5}$.
+Da der Gradient von $f$ in allen Punkten außer (0,0), bei denen $a,b > 0$ größer als 0 ist, muss es sich bei (5,5) um ein globales Maximum handeln. 
 
 
 \end{document}
