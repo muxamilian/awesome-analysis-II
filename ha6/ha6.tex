@@ -58,14 +58,19 @@ Einsetzten von $\lambda = 2 + \sqrt{2}$ in I:
 \intertext{in III:}
 0 &= x^2 + (-x(\sqrt{2}-1))^2 - 1\\
 &= x^2 + x^2 \cdot \left( \sqrt{2} - 1 \right)^2 - 1\\
-&\text{\textbf{Was ist mit der -1 passiert?}}\\
-&= x^2 + x^2 \cdot \left( 2 - 2\sqrt{2} + 1 \right)\\
-&\text{\textbf{Diese Umformung haut nicht hin. Das von Mathematica stimmt.}}\\
-&= 2x^2 \left(2-\sqrt{2}\right)\\
-\Rightarrow x^2 &= 0 \Leftrightarrow x=0 \Rightarrow y = \pm 1
+&= x^2 + x^2 \cdot \left( 2 - 2\sqrt{2} + 1 \right)-1\\
+&= 2x^2 \left(2-\sqrt{2}\right)-1\\
+\Rightarrow x^2 &= \frac 1{2\left(2-\sqrt{2}\right)} \Leftrightarrow x= \pm \sqrt{\frac 1{2 \left(2-\sqrt{2} \right) }} \Rightarrow y = \pm \sqrt{\frac 1{2 \left(2-\sqrt{2} \right) } +1} 
+\intertext{Einsetzen von $\lambda = 2 + \sqrt{2}$ in I:}
+-\frac yx &= 2 - \sqrt{2} -3 = -1 - \sqrt{2}\\
+\Rightarrow y &= x(\sqrt{2} + 1)
+\intertext{in III:}
+0 &= x^2 + \left( x (\sqrt{2} + 1 ) \right)^2 - 1\\
+&= x^2 + x^2  \left(\sqrt{2} +1\right)^2 -1\\
+&= x^2 + x^2 \left(2 + 2\sqrt{2}+ 1 \right)\\
+&= 2x^2 \left( 2 + \sqrt{2} \right) \\\Rightarrow x^2 &= \frac 1{2\left(2+\sqrt{2}\right)} \Leftrightarrow x= \pm \sqrt{\frac 1{2 \left(2+\sqrt{2} \right) }} \Rightarrow y = \pm \sqrt{\frac 1{2 \left(2+\sqrt{2} \right) } +1}
 \end{align*}
 Somit ist $x = \pm\frac{1}{2} \sqrt{2-\sqrt{2}}$ und $y = \frac{1}{2} \left(\pm3 \sqrt{2-\sqrt{2}}+\left(2-\sqrt{2}\right)^{3/2}\right)$.
-
 Durch Einsetzen erhält man für $\lambda = 2 - \sqrt 2$, dass $x = -\frac{1}{2} \sqrt{2-\sqrt{2}}$ und $y = \frac{1}{2} \left(-3 \sqrt{2-\sqrt{2}}+\left(2-\sqrt{2}\right)^{\frac{3}{2}}\right)$.\\
 Für $\lambda = 2 + \sqrt 2$ ist $x = \frac{1}{2} \sqrt{2-\sqrt{2}}$ und $y = \frac{1}{2} \left(3 \sqrt{2-\sqrt{2}}+\left(2-\sqrt{2}\right)^{\frac{3}{2}}\right)$. 
 
