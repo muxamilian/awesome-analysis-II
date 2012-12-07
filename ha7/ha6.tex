@@ -1,0 +1,47 @@
+\documentclass[10pt,a4paper,parskip=half]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathpazo}
+\usepackage{stmaryrd} % Für den Widerspruchsblitz :D
+\usepackage[a4paper,
+left=3.0cm, right=3.0cm,
+top=2.0cm, bottom=2.0cm]{geometry}
+\usepackage{fullpage}
+\usepackage[german]{babel}
+\usepackage{enumerate}
+\setlength{\unitlength}{1cm}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\R}{\mathbb{R}}
+\parindent 0mm
+\author{Tom}
+\title{Analysis 2 - Hausaufgabe 7}
+
+% new commands for vectors
+\newcommand{\vectwo}[2]{\begin{pmatrix}#1\\#2\\\end {pmatrix}}
+\newcommand{\vecthree}[3]{\begin{pmatrix}#1\\#2\\#3\\\end {pmatrix}}
+
+\begin{document}
+\begin{center}
+\textsc{\Large{Analysis 2 - Hausaufgabe 6}} \\
+\end{center}
+\begin{tabbing}
+Tom Nick \hspace{1.4cm}\= 342225\\
+Tom Lehmann\> 340621\\
+Maximilian Bachl\> 341455
+\end{tabbing}
+\section*{Aufgabe 1}
+\section*{Aufgabe 2}
+Sei $\vec v(x,y,z) = \vecthree{v_1}{v_2}{v_3}$ und $\vec w(x,y,z) = \vecthree{w_1}{w_2}{w_3}$. 
+\begin{align*}
+&\text{div}\left(\vecthree{v_1}{v_2}{v_3} \times \vecthree{w_1}{w_2}{w_3}\right) = \left( \text{rot} \vecthree{v_1}{v_2}{v_3} \right) \cdot \vecthree{w_1}{w_2}{w_3} - \vecthree{v_1}{v_2}{v_3} \cdot \text{rot}\left( \vecthree{w_1}{w_2}{w_3} \right) \\
+\Leftrightarrow\; &\text{div}\left(\vecthree{v_2w_3 - v_3w_2}{-v_1w_3 + v_3w_1}{v_1w_2 - v_2w_1}\right) = \vecthree{\frac{\partial v_3}{\partial y} - \frac{\partial v_2}{\partial z}}{- \frac{\partial v_3}{\partial x} + \frac{\partial v_1}{\partial z}}{\frac{\partial v_2}{\partial x} - \frac{\partial v_1}{\partial y}} \cdot \vecthree{w_1}{w_2}{w_3} - \vecthree{v_1}{v_2}{v_3} \cdot \vecthree{\frac{\partial w_3}{\partial y} - \frac{\partial w_2}{\partial z}}{- \frac{\partial w_3}{\partial x} + \frac{\partial w_1}{\partial z}}{\frac{\partial w_2}{\partial x} - \frac{\partial w_1}{\partial y}} \\
+\Leftrightarrow\; &\frac{\partial (v_2w_3 - v_3w_2)}{\partial x} + \frac{\partial (-v_1w_3 + v_3w_1)}{\partial y} + \frac{\partial (v_1w_2 - v_2w_1)}{\partial z}\\
+&= w_1\frac{\partial v_3}{\partial y} - w_1\frac{\partial v_2}{\partial z} - w_2\frac{\partial v_3}{\partial x} + w_2\frac{\partial v_1}{\partial z} + w_3\frac{\partial v_2}{\partial x} - w_3\frac{\partial v_1}{\partial y}\\
+ &- v_1\frac{\partial w_3}{\partial y} + v_1\frac{\partial w_2}{\partial z} + v_2\frac{\partial w_3}{\partial x} - v_2\frac{\partial w_1}{\partial z} - v_3\frac{\partial w_2}{\partial x} + v_3\frac{\partial w_1}{\partial y}\\
+\end{align*}
+\section*{Aufgabe 3}
+
+\end{document}
