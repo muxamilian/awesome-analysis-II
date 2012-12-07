@@ -38,9 +38,16 @@ Sei $\vec v(x,y,z) = \vecthree{v_1}{v_2}{v_3}$ und $\vec w(x,y,z) = \vecthree{w_
 \begin{align*}
 &\text{div}\left(\vecthree{v_1}{v_2}{v_3} \times \vecthree{w_1}{w_2}{w_3}\right) = \left( \text{rot} \vecthree{v_1}{v_2}{v_3} \right) \cdot \vecthree{w_1}{w_2}{w_3} - \vecthree{v_1}{v_2}{v_3} \cdot \text{rot}\left( \vecthree{w_1}{w_2}{w_3} \right) \\
 \Leftrightarrow\; &\text{div}\left(\vecthree{v_2w_3 - v_3w_2}{-v_1w_3 + v_3w_1}{v_1w_2 - v_2w_1}\right) = \vecthree{\frac{\partial v_3}{\partial y} - \frac{\partial v_2}{\partial z}}{- \frac{\partial v_3}{\partial x} + \frac{\partial v_1}{\partial z}}{\frac{\partial v_2}{\partial x} - \frac{\partial v_1}{\partial y}} \cdot \vecthree{w_1}{w_2}{w_3} - \vecthree{v_1}{v_2}{v_3} \cdot \vecthree{\frac{\partial w_3}{\partial y} - \frac{\partial w_2}{\partial z}}{- \frac{\partial w_3}{\partial x} + \frac{\partial w_1}{\partial z}}{\frac{\partial w_2}{\partial x} - \frac{\partial w_1}{\partial y}} \\
-\Leftrightarrow\; &\frac{\partial (v_2w_3 - v_3w_2)}{\partial x} + \frac{\partial (-v_1w_3 + v_3w_1)}{\partial y} + \frac{\partial (v_1w_2 - v_2w_1)}{\partial z}\\
-&= w_1\frac{\partial v_3}{\partial y} - w_1\frac{\partial v_2}{\partial z} - w_2\frac{\partial v_3}{\partial x} + w_2\frac{\partial v_1}{\partial z} + w_3\frac{\partial v_2}{\partial x} - w_3\frac{\partial v_1}{\partial y}\\
- &- v_1\frac{\partial w_3}{\partial y} + v_1\frac{\partial w_2}{\partial z} + v_2\frac{\partial w_3}{\partial x} - v_2\frac{\partial w_1}{\partial z} - v_3\frac{\partial w_2}{\partial x} + v_3\frac{\partial w_1}{\partial y}\\
+&\text{Ich glaube ab da ist es schon falsch.}\\
+\Leftrightarrow\; &\frac{\partial }{\partial x}(v_2w_3 - v_3w_2) + \frac{\partial }{\partial y}(-v_1w_3 + v_3w_1) + \frac{\partial }{\partial z}(v_1w_2 - v_2w_1)\\
+&= \frac{\partial }{\partial y}v_3w_1 - \frac{\partial }{\partial z}v_2w_1 - \frac{\partial }{\partial x}v_3w_2 + \frac{\partial }{\partial z}v_1w_2 + \frac{\partial }{\partial x}v_2w_3 - \frac{\partial }{\partial y}v_1w_3\\
+ &- v_1\frac{\partial }{\partial y}w_3 + v_1\frac{\partial }{\partial z}w_2 + v_2\frac{\partial }{\partial x}w_3 - v_2\frac{\partial }{\partial z}w_1 - v_3\frac{\partial }{\partial x}w_2 + v_3\frac{\partial }{\partial y}w_1\\
+\Leftrightarrow\; &\frac{\partial }{\partial x}v_2w_3 - \frac{\partial }{\partial x}v_3w_2 - \frac{\partial }{\partial y}v_1w_3 + \frac{\partial }{\partial y}v_3w_1 + \frac{\partial }{\partial z}v_1w_2 - \frac{\partial }{\partial z}v_2w_1\\
+&= \frac{\partial }{\partial y}v_3w_1 - \frac{\partial }{\partial z}v_2w_1 - \frac{\partial }{\partial x}v_3w_2 + \frac{\partial }{\partial z}v_1w_2 + \frac{\partial }{\partial x}v_2w_3 - \frac{\partial }{\partial y}v_1w_3\\
+ &- v_1\frac{\partial }{\partial y}w_3 + v_1\frac{\partial }{\partial z}w_2 + v_2\frac{\partial }{\partial x}w_3 - v_2\frac{\partial }{\partial z}w_1 - v_3\frac{\partial }{\partial x}w_2 + v_3\frac{\partial }{\partial y}w_1\\
+\Leftrightarrow\; & 0\\
+&= - v_1\frac{\partial }{\partial y}w_3 + v_1\frac{\partial }{\partial z}w_2 + v_2\frac{\partial }{\partial x}w_3 - v_2\frac{\partial }{\partial z}w_1 - v_3\frac{\partial }{\partial x}w_2 + v_3\frac{\partial }{\partial y}w_1\\
+&\text{Irgendwie geht das nicht.}
 \end{align*}
 \section*{Aufgabe 3}
 
