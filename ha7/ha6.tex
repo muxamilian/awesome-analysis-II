@@ -38,17 +38,52 @@ Sei $\vec v(x,y,z) = \vecthree{v_1}{v_2}{v_3}$ und $\vec w(x,y,z) = \vecthree{w_
 \begin{align*}
 &\text{div}\left(\vecthree{v_1}{v_2}{v_3} \times \vecthree{w_1}{w_2}{w_3}\right) = \left( \text{rot} \vecthree{v_1}{v_2}{v_3} \right) \cdot \vecthree{w_1}{w_2}{w_3} - \vecthree{v_1}{v_2}{v_3} \cdot \text{rot}\left( \vecthree{w_1}{w_2}{w_3} \right) \\
 \Leftrightarrow\; &\text{div}\left(\vecthree{v_2w_3 - v_3w_2}{-v_1w_3 + v_3w_1}{v_1w_2 - v_2w_1}\right) = \vecthree{\frac{\partial v_3}{\partial y} - \frac{\partial v_2}{\partial z}}{- \frac{\partial v_3}{\partial x} + \frac{\partial v_1}{\partial z}}{\frac{\partial v_2}{\partial x} - \frac{\partial v_1}{\partial y}} \cdot \vecthree{w_1}{w_2}{w_3} - \vecthree{v_1}{v_2}{v_3} \cdot \vecthree{\frac{\partial w_3}{\partial y} - \frac{\partial w_2}{\partial z}}{- \frac{\partial w_3}{\partial x} + \frac{\partial w_1}{\partial z}}{\frac{\partial w_2}{\partial x} - \frac{\partial w_1}{\partial y}} \\
-&\text{Ich glaube ab da ist es schon falsch.}\\
 \Leftrightarrow\; &\frac{\partial }{\partial x}(v_2w_3 - v_3w_2) + \frac{\partial }{\partial y}(-v_1w_3 + v_3w_1) + \frac{\partial }{\partial z}(v_1w_2 - v_2w_1)\\
-&= \frac{\partial }{\partial y}v_3w_1 - \frac{\partial }{\partial z}v_2w_1 - \frac{\partial }{\partial x}v_3w_2 + \frac{\partial }{\partial z}v_1w_2 + \frac{\partial }{\partial x}v_2w_3 - \frac{\partial }{\partial y}v_1w_3\\
- &- v_1\frac{\partial }{\partial y}w_3 + v_1\frac{\partial }{\partial z}w_2 + v_2\frac{\partial }{\partial x}w_3 - v_2\frac{\partial }{\partial z}w_1 - v_3\frac{\partial }{\partial x}w_2 + v_3\frac{\partial }{\partial y}w_1\\
+&= \left(\frac{\partial }{\partial y}v_3\right)w_1 - \left(\frac{\partial }{\partial z}v_2\right)w_1 - \left(\frac{\partial }{\partial x}v_3\right)w_2 + \left(\frac{\partial }{\partial z}v_1\right)w_2 + \left(\frac{\partial }{\partial x}v_2\right)w_3 - \left(\frac{\partial }{\partial y}v_1\right)w_3\\
+ &- v_1\left(\frac{\partial }{\partial y}w_3\right) + v_1\left(\frac{\partial }{\partial z}w_2\right) + v_2\left(\frac{\partial }{\partial x}w_3\right) - v_2\left(\frac{\partial }{\partial z}w_1\right) - v_3\left(\frac{\partial }{\partial x}w_2\right) + v_3\left(\frac{\partial }{\partial y}w_1\right) \\
 \Leftrightarrow\; &\frac{\partial }{\partial x}v_2w_3 - \frac{\partial }{\partial x}v_3w_2 - \frac{\partial }{\partial y}v_1w_3 + \frac{\partial }{\partial y}v_3w_1 + \frac{\partial }{\partial z}v_1w_2 - \frac{\partial }{\partial z}v_2w_1\\
-&= \frac{\partial }{\partial y}v_3w_1 - \frac{\partial }{\partial z}v_2w_1 - \frac{\partial }{\partial x}v_3w_2 + \frac{\partial }{\partial z}v_1w_2 + \frac{\partial }{\partial x}v_2w_3 - \frac{\partial }{\partial y}v_1w_3\\
- &- v_1\frac{\partial }{\partial y}w_3 + v_1\frac{\partial }{\partial z}w_2 + v_2\frac{\partial }{\partial x}w_3 - v_2\frac{\partial }{\partial z}w_1 - v_3\frac{\partial }{\partial x}w_2 + v_3\frac{\partial }{\partial y}w_1\\
-\Leftrightarrow\; & 0\\
-&= - v_1\frac{\partial }{\partial y}w_3 + v_1\frac{\partial }{\partial z}w_2 + v_2\frac{\partial }{\partial x}w_3 - v_2\frac{\partial }{\partial z}w_1 - v_3\frac{\partial }{\partial x}w_2 + v_3\frac{\partial }{\partial y}w_1\\
-&\text{Irgendwie geht das nicht.}
+&= \left(\frac{\partial }{\partial y}v_3\right)w_1 - \left(\frac{\partial }{\partial z}v_2\right)w_1 - \left(\frac{\partial }{\partial x}v_3\right)w_2 + \left(\frac{\partial }{\partial z}v_1\right)w_2 + \left(\frac{\partial }{\partial x}v_2\right)w_3 - \left(\frac{\partial }{\partial y}v_1\right)w_3\\
+ &- v_1\left(\frac{\partial }{\partial y}w_3\right) + v_1\left(\frac{\partial }{\partial z}w_2\right) + v_2\left(\frac{\partial }{\partial x}w_3\right) - v_2\left(\frac{\partial }{\partial z}w_1\right) - v_3\left(\frac{\partial }{\partial x}w_2\right) + v_3\left(\frac{\partial }{\partial y}w_1\right) \\
+\Leftrightarrow\; &\text{...}\\
+\text{Komm grad nicht auf die Lösung}
 \end{align*}
 \section*{Aufgabe 3}
-
+\begin{enumerate}[(a)]
+\item
+\begin{align*}
+\text{div}\ \text{rot}\ \vec v &= \text{div}\ \text{rot}\ \vecthree{x^2 - y^2}{y^2 -z^2}{z^2 - x^2}\\
+&= \text{div}\ \vecthree{2z}{2x}{2y}\\
+&= 0 + 0 + 0 \\
+&= 0\\
+\\
+\text{rot}\ \text{grad}\ f &= \text{rot}\ \text{grad}\ e^{xy} \\
+&= \text{rot}\ \vecthree{ye^{xy}}{xe^{xy}}{0} \\
+&= \vecthree{0 -0}{0-0}{e^{xy} + xye^{xy} - e^{xy} - xye^{xy}} \\
+&= \vecthree{0}{0}{0}
+\end{align*}
+\item
+\begin{align*}
+\text{div}\ \text{grad}\ f &= \text{div}\ \text{grad}\ e^{xy}\\
+&= \text{div}\ \vecthree{ye^{xy}}{xe^{xy}}{0}\\
+&= y^2e^{xy} + x^2e^{xy}\\
+\\
+\Delta f &= \text{div}\ \text{grad}\ f\\
+&\overset{\text{siehe oben}}{=} y^2e^{xy} + x^2e^{xy}
+\end{align*}
+\item
+\begin{align*}
+fg &= xe^{xy} + y^2e^{xy} + z^3e^{xy} \\
+f \vec v &= \vecthree{x^2e^{xy}-y^2e^{xy}}{y^2e^{xy}-z^2e^{xy}}{z^2e^{xy}-x^2e^{xy}} \\
+\\
+\text{grad}\ fg &= \text{grad}\ xe^{xy} + y^2e^{xy} + z^3e^{xy} \\
+&= \vecthree{e^{xy} + xye^{xy} + y^3e^{xy} + yz^3e^{xy}}{x^2e^{xy} + 2ye^{xy} + y^2xe^{xy} + xz^3e^{xy}}{3z^2e^{xy}}\\
+\\
+\text{div}\ f\vec v &= \text{div}\ \vecthree{x^2e^{xy}-y^2e^{xy}}{y^2e^{xy}-z^2e^{xy}}{z^2e^{xy}-x^2e^{xy}}\\
+&= 2xe^{xy} + yx^2e^{xy} - y^3e^{xy} + 2ye^{xy} + y^2xe^{xy} - z^2xe^{xy} + 2ze^{xy}\\
+\\
+\text{rot}\ f\vec v &= \text{rot}\ \vecthree{x^2e^{xy}-y^2e^{xy}}{y^2e^{xy}-z^2e^{xy}}{z^2e^{xy}-x^2e^{xy}}\\
+&= \vecthree{z^2xe^{xy} - x^3e^{xy} + 2ze^{xy}}{-z^2ye^{xy} + 2xe^{xy} + x^2ye^{xy}}{y^3e^{xy} - z^2ye^{xy} - (x^3e^{xy} - 2ye^{xy} - y^2xe^{xy})}\\
+&\text{Bitte nochmal nachrechnen.}
+\end{align*}
+\end{enumerate}
 \end{document}
