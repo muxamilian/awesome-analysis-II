@@ -33,6 +33,41 @@ Tom Lehmann\> 340621\\
 Maximilian Bachl\> 341455
 \end{tabbing}
 \section*{Aufgabe 1}
+Da der Definitionsbereich von $f$ offen und konvex ist, muss nur noch überprüft werden, ob $\text{rot}\ \vec v = \vec 0$
+
+\begin{align*}
+\text{rot}\ \vec v &= \text{rot}\ \vecthree{f(x,y,z)}{x^2 + yz^2}{y^2z}\\
+&= \vecthree{2yz - 2zy}{-(0-\frac{\partial f}{\partial z})}{2x - \frac{\partial f}{\partial y}}\\
+&= \vecthree{0}{\frac{\partial f}{\partial z}}{2x - \frac{\partial f}{\partial y}}
+\end{align*}
+
+Damit $\vec v = \vec 0$ muss gelten, dass $f$ kein $z$ enthält, und dass es nur ein $y$ enthält. Somit muss $f(x,y,z) = 2xy + K(x)$, wobei $K(x)$ eine von $y$ und $z$ unabhängige Konstante ist.
+
+Daher muss gelten:
+\begin{align*}
+\text{grad}\ u &= - \vec v \\
+\Leftrightarrow \vecthree{\frac{\partial u}{\partial x}}{\frac{\partial u}{\partial y}}{\frac{\partial u}{\partial z}} &= - \vecthree{2xy + K(x)}{x^2 + yz^2}{y^2z}
+\end{align*}
+Daraus lassen sich zeilenweise Gleichungen aufstellen (Tom, wie macht man das mit \TeX, dass man neben den Vektor die Zahlen schreibt?).
+\begin{align*}
+\text{I: }\frac{\partial u}{\partial x} &= - 2xy + K(x)\\
+\text{II: }\frac{\partial u}{\partial y} &= -x^2 - yz^2\\
+\text{III: }\frac{\partial u}{\partial z} &= -y^2z\\
+\text{Wir integrieren I nach x: }&\\
+u &= -x^2y - \int K(x) \partial x + C_1(y,z)\\
+\text{Wir integrieren II nach $y$: }&\\
+u &= -x^2y - \frac{y^2z^2}{2} + C_2(x,z)\\
+\text{Wir integrieren III nach $z$: }&\\
+u &= -\frac{y^2z^2}{2} + C_3(x,y)\\
+\text{Man sieht, dass $u$ folgende Gestalt hat: }\\
+u &= -x^2y - \int K(x) \partial x - \frac{y^2z^2}{2} + C
+\end{align*}
+Bleibt das Ergebnis noch zu überprüfen:
+\begin{align*}
+\text{grad}\ \vecthree{\frac{\partial u}{\partial x}}{\frac{\partial u}{\partial y}}{\frac{\partial u}{\partial z}} &= \vecthree{-2xy - K(x)}{-x^2-yz^2}{-y^2z}\\
+&= -\vecthree{2xy + K(x)}{x^2+yz^2}{y^2z} = -\vec v
+\end{align*}
+Somit ist u das Potential von $\vec v$, falls dieses existiert (nach geeigneter Wahl von $f$).
 \section*{Aufgabe 2}
 Sei $\vec v(x,y,z) = \vecthree{v_1}{v_2}{v_3}$ und $\vec w(x,y,z) = \vecthree{w_1}{w_2}{w_3}$. 
 \begin{align*}
