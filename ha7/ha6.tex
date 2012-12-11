@@ -41,14 +41,14 @@ Da der Definitionsbereich von $f$ offen und konvex ist, muss nur noch überprüf
 &= \vecthree{0}{\frac{\partial f}{\partial z}}{2x - \frac{\partial f}{\partial y}}
 \end{align*}
 
-Damit $\vec v = \vec 0$ muss gelten, dass $f$ kein $z$ enthält, und dass es nur ein $y$ enthält. Somit muss $f(x,y,z) = 2xy + K(x)$, wobei $K(x)$ eine von $y$ und $z$ unabhängige Konstante ist.
+Damit $\text{rot}(\vec v) = \vec 0$ muss gelten, dass $f$ kein $z$ enthält (da sonst $\frac{\partial f}{\partial z}$ nicht 0 ist), und dass es nur ein $y$ enthält. Somit muss $f(x,y,z) = 2xy + K(x)$, wobei $K(x)$ eine von $y$ und $z$ unabhängige Konstante ist.
 
 Daher muss gelten:
 \begin{align*}
 \text{grad}\ u &= - \vec v \\
-\Leftrightarrow \vecthree{\frac{\partial u}{\partial x}}{\frac{\partial u}{\partial y}}{\frac{\partial u}{\partial z}} &= - \vecthree{2xy + K(x)}{x^2 + yz^2}{y^2z}
+\Leftrightarrow \vecthree{\frac{\partial u}{\partial x}}{\frac{\partial u}{\partial y}}{\frac{\partial u}{\partial z}} &= - \vecthree{2xy + K(x)}{x^2 + yz^2}{y^2z}\begin{array}{l} \text{I} \\ \text{II} \\ \text{III}\end{array}
 \end{align*}
-Daraus lassen sich zeilenweise Gleichungen aufstellen (Tom, wie macht man das mit \TeX, dass man neben den Vektor die Zahlen schreibt?).
+Daraus lassen sich zeilenweise Gleichungen aufstellen.
 \begin{align*}
 \text{I: }\frac{\partial u}{\partial x} &= - 2xy + K(x)\\
 \text{II: }\frac{\partial u}{\partial y} &= -x^2 - yz^2\\
@@ -80,7 +80,6 @@ Sei $\vec v(x,y,z) = \vecthree{v_1}{v_2}{v_3}$ und $\vec w(x,y,z) = \vecthree{w_
 &= \left(\frac{\partial }{\partial y}v_3\right)w_1 - \left(\frac{\partial }{\partial z}v_2\right)w_1 - \left(\frac{\partial }{\partial x}v_3\right)w_2 + \left(\frac{\partial }{\partial z}v_1\right)w_2 + \left(\frac{\partial }{\partial x}v_2\right)w_3 - \left(\frac{\partial }{\partial y}v_1\right)w_3\\
  &- v_1\left(\frac{\partial }{\partial y}w_3\right) + v_1\left(\frac{\partial }{\partial z}w_2\right) + v_2\left(\frac{\partial }{\partial x}w_3\right) - v_2\left(\frac{\partial }{\partial z}w_1\right) - v_3\left(\frac{\partial }{\partial x}w_2\right) + v_3\left(\frac{\partial }{\partial y}w_1\right) \\
 \Leftrightarrow\; &\text{...}\\
-\text{Komm grad nicht auf die Lösung}
 \end{align*}
 \section*{Aufgabe 3}
 \begin{enumerate}[(a)]
