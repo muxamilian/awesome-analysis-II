@@ -35,12 +35,26 @@ Maximilian Bachl\> 341455
 \section*{Aufgabe 1}
 \subsubsection*{\textbf{(b)}}
 \subsubsection*{(i)}
-Da $\vec v$ stetig differenzierbar ist und $D$ konvex sowie offen muss nur noch  geprüft werden ob  gilt:
+Da $\vec v$ stetig differenzierbar und $D$ konvex sowie offen ist, muss nur noch geprüft werden ob gilt:
 \begin{align*}
 \operatorname{div} ( \vec v ) &= 0\\
 &= \cos(x) + \frac 23(x+y)^{-\frac 13} - \cos (x) - \frac 23(x+y)^{-\frac 13} = 0\\
 \end{align*}
 Damit ist gezeigt, dass ein Vektorpotential für $\vec v$ existiert.
 \subsubsection*{(ii)}
-TODO
+Da $\vec v$ stetig differenzierbar ist und $D$ konvex sowie offen ist, muss nur noch geprüft werden ob gilt:
+\begin{align*}
+\text{rot} \vec v &= \vec 0\\
+&= \begin{pmatrix}
+\left(-\cos(x)z-\frac 23(x+y)^{-\frac 13}z \right)\frac {\partial}{\partial y} - (x+y)^{\frac 23} \frac{\partial}{\partial z} \\
+\left(z^2  + \sin(x)\right) \frac{\partial}{\partial z} -\left(-\cos(x)z-\frac 23(x+y)^{-\frac 13}z \right) \frac{\partial}{\partial x}\\
+(x+y)^{\frac 23} \frac{\partial}{\partial x} - \left( z^2 + \sin(x) \right) \frac{\partial}{\partial y}
+\end{pmatrix}\\
+&= \begin{pmatrix}
+-\frac 29(x+y)^{-\frac 43}z -0 \\
+...\\
+....\\
+\end{pmatrix} \neq \vec 0
+\end{align*}
+$\vec v$ besitzt somit kein Potential, da die hinreichende Bedingung nicht erfüllt ist.
 \end{document}
