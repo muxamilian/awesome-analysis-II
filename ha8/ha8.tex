@@ -4,6 +4,8 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{mathpazo}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
 \usepackage{stmaryrd} % Für den Widerspruchsblitz :D
 \usepackage[a4paper,
 left=3.0cm, right=3.0cm,
@@ -22,6 +24,43 @@ top=2.0cm, bottom=2.0cm]{geometry}
 % new commands for vectors
 \newcommand{\vectwo}[2]{\begin{pmatrix}#1\\#2\\\end {pmatrix}}
 \newcommand{\vecthree}[3]{\begin{pmatrix}#1\\#2\\#3\\\end {pmatrix}}
+
+\usepackage{listings}
+\usepackage{courier}
+ \lstset{
+         basicstyle=\footnotesize\ttfamily, % Standardschrift
+         %numbers=left,               % Ort der Zeilennummern
+         numberstyle=\tiny,          % Stil der Zeilennummern
+         %stepnumber=2,               % Abstand zwischen den Zeilennummern
+         numbersep=5pt,              % Abstand der Nummern zum Text
+         tabsize=2,                  % Groesse von Tabs
+         extendedchars=true,         %
+         breaklines=true,            % Zeilen werden Umgebrochen
+         keywordstyle=\color{red},
+    		frame=b,         
+ %        keywordstyle=[1]\textbf,    % Stil der Keywords
+ %        keywordstyle=[2]\textbf,    %
+ %        keywordstyle=[3]\textbf,    %
+ %        keywordstyle=[4]\textbf,   \sqrt{\sqrt{}} %
+         stringstyle=\color{white}\ttfamily, % Farbe der String
+         showspaces=false,           % Leerzeichen anzeigen ?
+         showtabs=false,             % Tabs anzeigen ?
+         xleftmargin=17pt,
+         framexleftmargin=17pt,
+         framexrightmargin=5pt,
+         framexbottommargin=4pt,
+         %backgroundcolor=\color{lightgray},
+         showstringspaces=false      % Leerzeichen in Strings anzeigen ?        
+ }
+ \usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43, 0.35, 0.35,0.01}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={bf,footnotesize}}
+
+\usepackage{color}
+\usepackage{enumerate}
+
+
 
 \begin{document}
 \begin{center}
@@ -74,5 +113,50 @@ Da $\vec v$ stetig differenzierbar ist und $D$ konvex sowie offen ist, muss nur 
 \end{align*}
 $\vec v$ besitzt somit kein Potential, da die hinreichende Bedingung nicht erfüllt ist.
 \end{enumerate}
+\end{enumerate}
+\subsection*{Aufgabe 3}
+\begin{enumerate}[$\quad$]
+	\item \ \\ 
+	\begin{minipage}{0.50\columnwidth}
+	Bei $\vartheta$ konstant entstehen jeweil zwei Kegel die an der z-Achse ausgerichtet sind und jeweils in die andere Richtung gucken. Der gewählte Winkel entscheidet den Winkel der Kegel. Interesassante Spezialfälle sind 0 und $\frac{\pi}{2}$. Bei 0 ist die resultierende Fläche im Grunde nicht vorhanden bzw. ist die z-Achso, bei $\frac{\pi}{2}$ ist eine Fläche entlang der x bzw y Achse.
+	\begin{lstlisting}[caption= Mathematica Code für den Graph von f]
+	ParametricPlot3D[{r*Sin[2] Cos[z], r*Sin[2] Sin[z], r*Cos[2]}, 
+	{z, 0, 2 \[Pi]}, {r, -10, 10}, PlotStyle -> None, 
+	BoundaryStyle -> Black]
+	\end{lstlisting}
+	\end{minipage}
+	\begin{minipage}{0.50\columnwidth}
+	\begin{center}
+	\includegraphics[scale=0.7]{thetakonstant.pdf} 
+	\end{center}
+	\end{minipage}
+	\item \ \\
+	\begin{minipage}{0.50\columnwidth}
+	Bei $\varphi$ konstant entsteht eine Fläche die auf der z-Achse steht und je nach gewähltem $\varphi$ sich auf der z-Achse dreht.
+	\begin{lstlisting}[caption= Mathematica Code für den Graph von f]
+	ParametricPlot3D[{r*Sin[y] Cos[0], r*Sin[y] Sin[0], r*Cos[y]}, 
+	{y, 0, \[Pi]}, {r, -2, 2}, PlotStyle -> None, 
+	 PlotRange -> {{-1, 1}, {-1, 1}, {-1, 1}}]
+	\end{lstlisting}
+	\end{minipage}
+	\begin{minipage}{0.50\columnwidth}
+	\begin{center}
+	\includegraphics[scale=0.7]{phikonstant.pdf} 
+	\end{center}
+	\end{minipage}
+	\item 	\ \\
+	\begin{minipage}{0.50\columnwidth}
+	Bei $\varphi$ konstant entsteht eine Fläche die auf der z-Achse steht und je nach gewähltem $\varphi$ sich auf der z-Achse dreht.
+	\begin{lstlisting}[caption= Mathematica Code für den Graph von f]
+	ParametricPlot3D[{Sin[y] Cos[z], Sin[y] Sin[z], Cos[y]}, 
+	{z, 0, 2 \[Pi]}, {y, 0, \[Pi]}, PlotStyle -> None]
+	\end{lstlisting}
+	\end{minipage}
+	\begin{minipage}{0.50\columnwidth}
+	\begin{center}
+	\includegraphics[scale=0.7]{rkonstant.pdf} 
+	\end{center}
+	\end{minipage}
+
 \end{enumerate}
 \end{document}
