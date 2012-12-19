@@ -74,6 +74,18 @@ $\vec v$ besitzt somit kein Potential, da die hinreichende Bedingung nicht erfü
 \end{enumerate}
 \end{enumerate}
 
+\section*{Aufgabe 2}
+\begin{align*}
+\vec v(x,y,z) &= \frac{1}{\sqrt{x^2 + y^2 + z^2}}\vecthree{x}{y}{z} + \vecthree{-y}{x}{0}\\
+\vec v(r \sin \theta \cos \varphi, r \sin \theta \cos \varphi, r \cos \theta )&= \vecthree{\frac{x}{r}}{\frac{y}{r}}{\frac{z}{r}} + \vecthree{-y}{x}{0} \\
+&= 1\cdot \vec e_r + r \sin(\theta) \cdot \vec e_\varphi + 0 \cdot \vec e_\theta \\
+\\
+\text{div}\ \vec v &= \frac{2r}{r^2} + \frac{1}{r \sin \theta}(r\cos \theta)\\
+&= \frac{2r}{r^2} + \frac{\cos \theta}{\sin \theta}\\
+\text{rot}\ \vec v &= \frac{1}{r\sin \theta}\left( 2r\sin(\theta)\cos(\theta) \right)\vec e_r + \frac{1}{r}(2r\sin \theta)\vec e_\varphi + \frac{1}{r}\left(-2r\sin \theta \right) \vec e_\theta \\
+&= \frac{1}{r} \left(\frac{1}{\sin \theta}\left( 2r\sin(\theta)\cos(\theta) \right)\vec e_r + (2r\sin \theta)\vec e_\varphi + \left(-2r\sin \theta \right) \vec e_\theta\right) \\
+&= 2\cos(\theta) \vec e_r + 2\sin (\theta)\vec e_\varphi - 2\sin (\theta) \vec e_\theta\\
+\end{align*}
 \section*{Aufgabe 4}
 
 \begin{enumerate}[(i)]
