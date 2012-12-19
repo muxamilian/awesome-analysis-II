@@ -34,13 +34,17 @@ Maximilian Bachl\> 341455
 \end{tabbing}
 \section*{Aufgabe 1}
 	\begin{enumerate}[(a)]
-\item Wir wissen bereits, dass $\vec{v}$ wirbelfrei ist und ein Potential besitzt (Da $\vec{u}$ ein Potential ist. Damit $\vec{u} + \text{grad} f$ ein Vektorpotential von $\vec{v}$ ist, muss gelten:
+\item Wir wissen bereits, dass $\vec{v}$ wirbelfrei ist und ein Potential besitzt (Da $\vec{u}$ ein Potential ist. Da $\vec{v}$ konvex und offen ist, ist eine hinreichende Bedingung damit $\vec{u} + \text{grad} f$ ein Vektorpotential von $\vec{v}$ ist, dass gilt:
 \begin{enumerate}[1.]
-\item $\nabla (\vec{u} + \text{grad} f) = -\vec{v} $ \\
+\item $\text{rot} (\vec{u} + \text{grad} f) = 0 $ \\
 \begin{align*}
-\nabla (\vec{u} + \text{grad} f) &= \nabla \vec{u} + \nabla (\text{grad} f) \\
-&= -\vec{v} + \nabla(\text{grad} f) \\
-&\Leftrightarrow \nabla(\text{grad} f) = 0 \\
+\text{rot} (\vec{u} + \text{grad} f) &= \text{rot} \vec{u} + \text{rot}(\text{grad} f) \\
+&= 0 + \text{rot}(\text{grad} f) \\
+&\Leftrightarrow \text{rot}(\text{grad} f) = 0 \\
+&=\text{rot}\vecthree{\frac{\partial f}{\partial x}}{\frac{\partial f}{\partial y}}{\frac{\partial f}{\partial z}} \\
+&= \begin{pmatrix} \frac{\partial}{\partial y}\frac{\partial f}{\partial z} - \frac{\partial}{\partial z}\frac{\partial f}{\partial y} \\ -\frac{\partial}{\partial x}\frac{\partial f}{\partial z} + \frac{\partial}{\partial z}\frac{\partial f}{\partial x} \\ \frac{\partial}{\partial x}\frac{\partial f}{\partial y} - \frac{\partial}{\partial y}\frac{\partial f}{\partial x}
+\end{pmatrix} \\
+&= 0
 \end{align*}
 
 \end{enumerate}
