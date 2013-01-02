@@ -1,0 +1,104 @@
+\documentclass[10pt,a4paper,parskip=half]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathpazo}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usepackage{stmaryrd} % Für den Widerspruchsblitz :D
+\usepackage[a4paper,
+left=3.0cm, right=3.0cm,
+top=2.0cm, bottom=2.0cm]{geometry}
+\usepackage{fullpage}
+\usepackage[german]{babel}
+\usepackage{enumerate}
+\setlength{\unitlength}{1cm}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\R}{\mathbb{R}}
+\parindent 0mm
+\author{Tom}
+\title{Analysis 2 - Hausaufgabe 9}
+
+% new commands for vectors
+\newcommand{\vectwo}[2]{\begin{pmatrix}#1\\#2\\\end {pmatrix}}
+\newcommand{\vecthree}[3]{\begin{pmatrix}#1\\#2\\#3\\\end {pmatrix}}
+
+\usepackage{listings}
+\usepackage{courier}
+ \lstset{
+         basicstyle=\footnotesize\ttfamily, % Standardschrift
+         %numbers=left,               % Ort der Zeilennummern
+         numberstyle=\tiny,          % Stil der Zeilennummern
+         %stepnumber=2,               % Abstand zwischen den Zeilennummern
+         numbersep=5pt,              % Abstand der Nummern zum Text
+         tabsize=2,                  % Groesse von Tabs
+         extendedchars=true,         %
+         breaklines=true,            % Zeilen werden Umgebrochen
+         keywordstyle=\color{red},
+    		frame=b,         
+ %        keywordstyle=[1]\textbf,    % Stil der Keywords
+ %        keywordstyle=[2]\textbf,    %
+ %        keywordstyle=[3]\textbf,    %
+ %        keywordstyle=[4]\textbf,   \sqrt{\sqrt{}} %
+         stringstyle=\color{white}\ttfamily, % Farbe der String
+         showspaces=false,           % Leerzeichen anzeigen ?
+         showtabs=false,             % Tabs anzeigen ?
+         xleftmargin=17pt,
+         framexleftmargin=17pt,
+         framexrightmargin=5pt,
+         framexbottommargin=4pt,
+         %backgroundcolor=\color{lightgray},
+         showstringspaces=false      % Leerzeichen in Strings anzeigen ?        
+ }
+ \usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43, 0.35, 0.35,0.01}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={bf,footnotesize}}
+
+\usepackage{color}
+\usepackage{enumerate}
+
+
+
+\begin{document}
+\begin{center}
+\textsc{\Large{Analysis 2 - Hausaufgabe 9}} \\
+\end{center}
+\begin{tabbing}
+Tom Nick \hspace{1.4cm}\= 342225\\
+Tom Lehmann\> 340621\\
+Maximilian Bachl\> 341455
+\end{tabbing}
+\section*{Aufgabe 1}
+\begin{enumerate}[(a)]
+\item \begin{align*}
+x &= r \sin \left( \vartheta \right) \cos (\varphi) \\
+y &= r \sin (\vartheta ) \sin( \varphi) \\
+z &= r \cos( \vartheta )
+\intertext{\textbf{Ein Längenkreis ist ein verfickter Vollkreis! Ein Meridian  ist ein Halbkreis. Egal. Kackspassten! - Tom}}
+ \vec{\gamma_1}(t) &= \begin{pmatrix}6300 \sin (t) \cos(0) \\ 6300  \sin(t) \sin(0) \\ 6300 \cos(t) \end{pmatrix} = \begin{pmatrix} 6300 \sin(t) \\ 0 \\ 6300 \cos(t) \end{pmatrix}  \quad  t \in [0,\pi]
+\end{align*}
+\item
+\begin{align*}
+\vec{\gamma_2}(t) &= t^2 \quad t \in [-1,1]
+\end{align*}
+\item
+\begin{align*}
+\vec{\gamma_3}(t) &= \begin{pmatrix} \sin(t) \cos(\tfrac{\pi}4 \\ \sin(t) \sin(\tfrac{\pi}4 \\ \cos(t)\end{pmatrix} \quad  t \in [0,2\pi[
+\end{align*}
+\end{enumerate}
+\section*{Aufgabe 2}
+\begin{align*}
+\int\limits_{\gamma} \vec v \; d\vec s &= \int\limits_{-\pi}^{\pi} \vec v \left(\vec{\gamma}\left(t\right)\right) \cdot \dot{\gamma}(t) \; dt\\
+&= \int\limits_{-\pi}^{\pi} \vec v\left(\cos(t),\cos(t),\sin(t) \right) \cdot \begin{pmatrix}-\sin(t) \\ -\sin(t) \\ \cos(t)\end{pmatrix}dt \\
+&= \int\limits_{-\pi}^{\pi} \begin{pmatrix}\cos^2(t) + \sin^2(t) + \cos(t)\sin(t) \\ \frac{\cos(t)}{\cos^2(t)+ \sin^2(t)} + \cos(t)\sin(t) \\ \frac{\sin(t)}{\cos^2(t) + \sin^2(t)} + \cos(t) \cos(t) + 2 \cos(t)\sin(t)\end{pmatrix} \cdot \begin{pmatrix}-\sin(t) \\ -\sin(t) \\ \cos(t)\end{pmatrix}dt \\
+\begin{split} &= \int\limits_{-\pi}^{\pi} -\sin(t) \cdot \left( \cos^2(t) + \sin^2(t) + \cos(t)\sin(t)  \right) -\sin(t) \cdot \left( \tfrac{\cos(t)}{\cos^2(t)+ \sin^2(t)} + \cos(t)\sin(t) \right)
+\\&\quad + \cos(t) \cdot \left( \tfrac{\sin(t)}{\cos^2(t) + \sin^2(t)} + \cos^2(t) + 2 \cos(t)\sin(t)\right) dt \end{split}
+\intertext{Da im Integral in jedem Summanden cos- oder sin-Terme ungerader Potenz vorhanden sind, ist das Integral  über eine ganze  Periodenlänge  von  $-\pi$ bis $\pi$ gerade $0$.} 
+\end{align*}
+TODO $\int_{\gamma} \vec{\omega} d\vec s$
+\end{document}
+
+

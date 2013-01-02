@@ -1,0 +1,192 @@
+\documentclass[10pt,a4paper,parskip=half]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathpazo}
+\usepackage{stmaryrd} % Für den Widerspruchsblitz :D
+\usepackage[a4paper,
+left=3.0cm, right=3.0cm,
+top=2.0cm, bottom=2.0cm]{geometry}
+\usepackage{fullpage}
+\usepackage[german]{babel}
+\usepackage{enumerate}
+\setlength{\unitlength}{1cm}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\R}{\mathbb{R}}
+\parindent 0mm
+\author{Tom}
+\title{Analysis 2 - Hausaufgabe 6}
+
+% new commands for vectors
+\newcommand{\vectwo}[2]{\begin{pmatrix}#1\\#2\\\end {pmatrix}}
+\newcommand{\vecthree}[3]{\begin{pmatrix}#1\\#2\\#3\\\end {pmatrix}}
+
+\begin{document}
+\begin{center}
+\textsc{\Large{Analysis 2 - Hausaufgabe 6}} \\
+\end{center}
+\begin{tabbing}
+Tom Nick \hspace{1.4cm}\= 342225\\
+Tom Lehmann\> 340621\\
+Maximilian Bachl\> 341455
+\end{tabbing}
+\section*{Aufgabe 1}
+Es handelt sich hier um die Suche nach Extrema mit Nebenbedingung, weshalb wir zunächst nach Extrema auf dem Rand des Kreises suchen.\\\\
+Die Nebenbedingung lautet: $g(x,y) = x^2 + y^2 - 1 = 0$.
+\begin{enumerate}
+\item {Singulärer Fall:}
+\begin{align*}
+\nabla g(\vec x) &= \vec 0 = \begin{pmatrix}2x \\ 2y\end{pmatrix}  \Rightarrow (x,y) = (0,0)
+\intertext{Da $g(0,0) = -1 \neq 0$ gibt es hier keinen singulären Fall.}
+\end{align*}
+\item {$\nabla f( \vec x) = \lambda \cdot \nabla g(\vec x)$}
+\begin{align*}
+\nabla f(\vec x) &= \begin{pmatrix}6x-2y \\ -2x + 2y \end{pmatrix}= \lambda \begin{pmatrix}2x \\ 2y\end{pmatrix} = \lambda \cdot \nabla g(\vec x)
+\intertext{Also:}
+\text{I: }&6x-2y = \lambda \cdot 2x \Leftrightarrow 3- \frac{y}{x} = \lambda \Leftrightarrow -\frac{y}{x} = \lambda -3\\
+\text{II: }&-2x + 2y = \lambda \cdot 2y \Leftrightarrow -\frac{x}{y} +1 = \lambda \Leftrightarrow -\frac{x}{y} = \lambda -1 \Leftrightarrow \frac{y}{x} = -\frac{1}{\lambda -1}\\
+\text{III: }&x^2 + y^2 -1 = 0\\
+\end{align*}
+Addiert man nun I und II so erhält man $0 = \lambda -3 -\frac{1}{\lambda -1} \Leftrightarrow 0 = \lambda^2 -4\lambda +2 \Leftrightarrow \lambda = 2 \pm \sqrt 2$.
+<<<<<<< HEAD
+=======
+
+>>>>>>> 17d2b2abcf3406e499e3393ffdf090cace8bec6f
+Einsetzten von $\lambda = 2 + \sqrt{2}$ in I:
+\begin{align*}
+-\frac yx &= 2 + \sqrt{2} -3 = -1 + \sqrt{2}\\
+\Rightarrow y &= -x (\sqrt{2} - 1)
+\intertext{in III:}
+0 &= x^2 + (-x(\sqrt{2}-1))^2 - 1\\
+&= x^2 + x^2 \cdot \left( \sqrt{2} - 1 \right)^2 - 1\\
+&\text{\textbf{Was ist mit der -1 passiert?}}\\
+&= x^2 + x^2 \cdot \left( 2 - 2\sqrt{2} + 1 \right)\\
+&\text{\textbf{Diese Umformung haut nicht hin. Das von Mathematica stimmt.}}\\
+&= 2x^2 \left(2-\sqrt{2}\right)\\
+\Rightarrow x^2 &= 0 \Leftrightarrow x=0 \Rightarrow y = \pm 1
+\intertext{Einsetzen von $\lambda = 2 + \sqrt{2}$ in I:}
+-\frac yx &= 2 - \sqrt{2} -3 = -1 - \sqrt{2}\\
+\Rightarrow y &= x(\sqrt{2} + 1)
+\intertext{in III:}
+0 &= x^2 + \left( x (\sqrt{2} + 1 ) \right)^2 - 1\\
+&= x^2 + x^2  \left(\sqrt{2} +1\right)^2 -1\\
+&= x^2 + x^2 \left(2 + 2\sqrt{2}+ 1 \right)\\
+&= 2x^2 \left( 2 + \sqrt{2} \right) \\
+\Rightarrow x^2 &= 0 \Leftrightarrow x = 0 \Rightarrow y = \pm 1
+\end{align*}
+\textbf{Das entspricht nicht Max komischer Lösung!!! - Iron Man}\\\\
+Somit ist $x = \pm\frac{1}{2} \sqrt{2-\sqrt{2}}$ und $y = \frac{1}{2} \left(\pm3 \sqrt{2-\sqrt{2}}+\left(2-\sqrt{2}\right)^{3/2}\right)$.
+<<<<<<< HEAD
+=======
+
+>>>>>>> 17d2b2abcf3406e499e3393ffdf090cace8bec6f
+Durch Einsetzen erhält man für $\lambda = 2 - \sqrt 2$, dass $x = -\frac{1}{2} \sqrt{2-\sqrt{2}}$ und $y = \frac{1}{2} \left(-3 \sqrt{2-\sqrt{2}}+\left(2-\sqrt{2}\right)^{\frac{3}{2}}\right)$.\\
+Für $\lambda = 2 + \sqrt 2$ ist $x = \frac{1}{2} \sqrt{2-\sqrt{2}}$ und $y = \frac{1}{2} \left(3 \sqrt{2-\sqrt{2}}+\left(2-\sqrt{2}\right)^{\frac{3}{2}}\right)$. 
+
+$$\vec x_{k_1} = \vectwo{-\frac{1}{2} \sqrt{2-\sqrt{2}}}{\frac{1}{2} \left(-3 \sqrt{2-\sqrt{2}}+\left(2-\sqrt{2}\right)^{\frac{3}{2}}\right)}$$
+$$\vec x_{k_2} = \vectwo{\frac{1}{2} \sqrt{2-\sqrt{2}}}{\frac{1}{2} \left(3 \sqrt{2-\sqrt{2}}+\left(2-\sqrt{2}\right)^{\frac{3}{2}}\right)}$$
+
+$$f(\vec x_{k_1}) = 2 + \sqrt 2$$
+$$f(\vec x_{k_2}) = 14+9 \sqrt{2}$$
+\end{enumerate}
+Wir prüfen zunächst die notwendige Bedingung für kritische Punkte$\nabla f(\vec x_k) = 0$:
+\begin{align*}
+\nabla f( \vec x) &= \vec 0 = \begin{pmatrix}2\left(x-y\right) + 4x \\ -2\left(x-y\right) \end{pmatrix} = \begin{pmatrix} 6x -2y \\ -2x + 2y\end{pmatrix}
+\intertext{Also:}
+0 &= 6x-2y \\ % \text{Evtl. Nummerierung hinzufügen}\\
+0 &= -2x + 2y \\
+\Rightarrow 0 &= 4x \Rightarrow x=0 \Rightarrow y=0
+\end{align*}
+Wir erhalten deshalb einen kritischen Punkt: $x_{k3} = \begin{pmatrix}0 \\ 0\end{pmatrix}$.\\
+Die Hessematrix ist, da es sich bei $f$ um eine zweimal stetig partiell differenzierbare Funktion handelt, gemäß dem Satz von Schwarz, symmetrisch.
+\begin{align*}
+f''(\vec x) &= H_f(\vec x) =  \begin{pmatrix}6 & -2 \\ -2 & 2\end{pmatrix}\\
+D_1 &= \det (6) = 6 > 0\\
+D_2 &= \det \begin{pmatrix} 6 & -2 \\ -2 & 2\end{pmatrix} = 8 > 0
+\end{align*}
+Damit ist $H_f(\vec x)$ positiv definit, woraus schlusszufolgern ist, dass die Funktion $f$ bei $f(0,0) = 0$ ein lokales Minimum besitzt. Da $f(x,y)$ eine Komposition aus $(x-y)^2 > 0 \; \; \forall x,y \in \mathbb{R}$ und $2x^2 > 0 \; \; \forall x \in \mathbb{R}$ ist, ist $f(0,0) = 0$ sogar ein globales Minimum.
+
+Um nun über globale Extrema zu entscheiden, reicht es, die Funktionswerte von $f$ zu vergleichen, da die gegebene Menge kompakt ist und $f$ stetig ist.
+
+Da $f(x_{k_1}) = 2 + \sqrt 2$, $f(x_{k_2}) = 14+9 \sqrt{2}$ und $f(x_{k_3}) = 0$, ist bei $x_{k_3}$ ein globales Minimum und bei $x_{k_2}$ ein globales Maximum unter der Beschränkung.
+
+\textbf{\textsc{Müssen wir für $x_{k_1}$ noch irgendwas zeigen, oder reicht das? -- Max}}
+
+\section*{Aufgabe 2}
+Um lokale Extrema einer mehrdimensionalen Funktion zu bestimmen, müssen wir 1. die kritischen Punkte finden und 2. diese als Funktionswerte der Hessematrix übergeben.
+\begin{enumerate}
+	\item kritische Punkte sind alle Funktionswerte die $\nabla f(x,y,z) = \vec0$ erfüllen.
+	\[\nabla f(x,y,z) = 
+	\begin{pmatrix}
+		4x \\ 
+		4z + 2y \\
+		4y + 10z	
+	\end{pmatrix} \overset{\text{DGL}}{\Rightarrow}
+	\begin{pmatrix}
+		4 & 0 & 0 \\
+		0 & 2 & 4 \\
+		0 & 4 & 10 
+	\end{pmatrix} \overset{\text{Gauss}}{\Rightarrow}
+	\begin{pmatrix}
+		1 & 0 & 0 \\
+		0 & 1 & 0 \\
+		0 & 0 & 1
+	\end{pmatrix}\]
+	Der Kern der Einheitsmatrix ist der Null-Vektor. Dies ist auch der einzige kritische Punkt demnach.
+	\item Hesse-Matrix berechnen und kritische Punkte einfügen:
+	\[H_f(x,y,z) =
+	\begin{pmatrix}
+		4 & 0 & 0 \\
+		0 & 2 & 4 \\
+		0 & 4 & 10
+	\end{pmatrix}
+	\] 
+	Die Hessematrix ist, da es sich bei $f$ um eine zweimal stetig partiell differenzierbare Funktion handelt, gemäß dem Satz von Schwarz, symmetrisch.\\
+	Da die Hesse Matrix konstant ist, müssen wir den Punkt offensichtlich nicht einsetzen. Mit dem Hurwitzkritirium kann nun überprüft, was der kritische Punkt nun ist. 
+	\begin{align*}
+	 	&\det(4) = 4 \\
+	 	&\det \begin{pmatrix}
+	 		4 & 0 \\
+	 		0 & 2	
+	 	\end{pmatrix} = 8 \\
+	 	&\det \begin{pmatrix}
+	 		4 & 0 & 0 \\
+			0 & 2 & 4 \\
+			0 & 4 & 10
+	 	\end{pmatrix} \overset{\text{nach Laplace}}{=} 4\cdot (2\cdot10 - 4\cdot4) = 16
+	 \end{align*} Damit ist $H_f(0,0,0)$ positiv definit. Somit ist ein lokales Minimum bei $\vec 0$. Ist es auch ein globales Minimum? 
+	$2x^2$, $y^2$ und $5z^2$ werden nie negativ. Also kann nur $4yz$ negativ werden. Da aber $4yz  + y^2 + 5z^2 \ge 0$ für alle $(x,y) \in \mathbb{R}^2$ offensichtlich gilt, kann $f$ keine negativen Funktionswerte haben,  und muss somit, da $f(0,0,0) = 0$, an der Stelle $(0,0,0)$ ein globales Minimum haben.
+\end{enumerate}
+\section*{Aufgabe 3}
+Wir haben die Nebenbedingung $g(a,b) = a + b -10 = 0$. Außerdem haben wir die Funktion $f(a,b) = ab$. Da der von g gebildete Körper kein Inneres besitzt, kann es in diesem auch keine Extrema geben.
+
+Wir überprüfen, ob ein singulärer Fall vorliegt: 
+\begin{align*}
+\nabla g(a,b) &= \vectwo{1}{1} = \vectwo{0}{0} \text{ Da es hierfür keine Lösung gibt, liegt kein singulärer Fall vor.}
+\end{align*}
+
+Als nächstes überprüfen wir auf andere Extrema am Rand.
+\begin{align*}
+\nabla f(a,b) = \vectwo{b}{a} &= \lambda \vectwo{1}{1} = \lambda \nabla g(a,b) \\
+\text{Es gilt: } a + b - 10 &= 0 \\
+\text{Daraus folgt: }& a = \lambda \\
+& b = \lambda \\
+& \lambda = 5 \Rightarrow a = 5 \land b = 5
+\end{align*}
+
+%Es gibt somit den zu untersuchenden kritischen Punkt $\vec x_{k_1} = \vectwo{5}{5}$
+%\begin{align*}
+%f''(a,b) = \begin{pmatrix}
+%0 & 1 \\
+%1 & 0 \\
+%\end{pmatrix}
+%\end{align*}
+%Da $det_1 = 0$ und $det_2 < 0$ ist die Hesse-Matrix semidefinit und somit kann man bei $\vectwo{5}{5}$ keine Aussage machen. Da man sich die Funktion $f(a,b) = ab$ aber gut vorstellen kann, weiß man, dass es keine Extrema gibt. 
+
+Somit haben wir als kritischen Punkt $x_{k_1} = \vectwo{5}{5}$.
+Da der Gradient von $f$ in allen Punkten außer (0,0), bei denen $a,b > 0$ größer als 0 ist, muss es sich bei (5,5) um ein globales Maximum handeln. 
+
+
+\end{document}
