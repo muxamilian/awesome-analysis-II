@@ -72,7 +72,7 @@ Tom Lehmann\> 340621\\
 Maximilian Bachl\> 341455
 \end{tabbing}
 \section*{Aufgabe 1}
-\begin{enumerate}[(a)]
+\begin{itemize}
 \item \begin{align*}
 x &= r \sin \left( \vartheta \right) \cos (\varphi) \\
 y &= r \sin (\vartheta ) \sin( \varphi) \\
@@ -82,14 +82,17 @@ z &= r \cos( \vartheta )
 \end{align*}
 \item
 \begin{align*}
-\vec{\gamma_2}(t) &= t^2 \quad t \in [-1,1]
+\intertext{\textbf{Oops, da hat Tom wohl die Aufgabe nicht ganz gelesen :) - Max}}
+\vec{\gamma_2}(t) &= \vectwo{t}{t^2} \quad t \in [-1,1]
 \end{align*}
 \item
 \begin{align*}
-\vec{\gamma_3}(t) &= \begin{pmatrix} \sin(t) \cos(\tfrac{\pi}4 \\ \sin(t) \sin(\tfrac{\pi}4 \\ \cos(t)\end{pmatrix} \quad  t \in [0,2\pi[
+\vec{\gamma_3}(t) &= \begin{pmatrix} \sin(t) \cos(\tfrac{\pi}4) \\ \sin(t) \sin(\tfrac{\pi}4) \\ \cos(t)\end{pmatrix} \quad  t \in [0,2\pi[
 \end{align*}
-\end{enumerate}
+\end{itemize}
 \section*{Aufgabe 2}
+\begin{itemize}
+\item
 \begin{align*}
 \int\limits_{\gamma} \vec v \; d\vec s &= \int\limits_{-\pi}^{\pi} \vec v \left(\vec{\gamma}\left(t\right)\right) \cdot \dot{\gamma}(t) \; dt\\
 &= \int\limits_{-\pi}^{\pi} \vec v\left(\cos(t),\cos(t),\sin(t) \right) \cdot \begin{pmatrix}-\sin(t) \\ -\sin(t) \\ \cos(t)\end{pmatrix}dt \\
@@ -98,7 +101,30 @@ z &= r \cos( \vartheta )
 \\&\quad + \cos(t) \cdot \left( \tfrac{\sin(t)}{\cos^2(t) + \sin^2(t)} + \cos^2(t) + 2 \cos(t)\sin(t)\right) dt \end{split}
 \intertext{Da im Integral in jedem Summanden cos- oder sin-Terme ungerader Potenz vorhanden sind, ist das Integral  über eine ganze  Periodenlänge  von  $-\pi$ bis $\pi$ gerade $0$.} 
 \end{align*}
-TODO $\int_{\gamma} \vec{\omega} d\vec s$
+\item
+\begin{align*}
+\int\limits_{\gamma} \vec{w} \; d\vec s &= \int\limits_{- \pi}^{\pi} \vec w (\vec \gamma (t)) \cdot \dot \gamma (t) dt \\
+&= \int\limits_{- \pi}^{\pi} \vecthree{\cos^2 t}{\cos^2 t}{\cos^2(t) + \sin^2(t)} \cdot \begin{pmatrix}-\sin(t) \\ -\sin(t) \\ \cos(t)\end{pmatrix}dt\\
+&= \int\limits_{- \pi}^{\pi} \left( -2\cos^2(t)\sin(t) + \cos^3(t) + \sin^2(t)\cos(t)  \right) dt\\
+ \intertext{Da im Integral in jedem Summanden cos- oder sin-Terme ungerader Potenz vorhanden sind, ist das Integral  über eine ganze  Periodenlänge  von  $-\pi$ bis $\pi$ gerade $0$.} 
+\end{align*}
+\end{itemize}
+\section*{Aufgabe 3}
+Wir nehmen die Funktion $f = 1$ um die Länge mithilfe des Kurvenintegrals abschätzen zu können.
+\begin{align*}
+l &= \int\limits_{\gamma} 1 ds \\
+&= \int\limits_{0}^{2 \pi} 1 \left| \dot \gamma(t) \right| dt\\
+&= \int\limits_{0}^{2 \pi} \left| \vectwo{e^t\cos(5t) - 5e^t\sin(5t)}{e^t\sin(5t) + 5e^t\cos(5t)} \right| dt\\
+&= \int\limits_{0}^{2 \pi} \sqrt{\left(e^t\cos(5t) - 5e^t\sin(5t)\right)^2 + \left(e^t\sin(5t) + 5e^t\cos(5t)\right)^2} dt\\
+&= \int\limits_{0}^{2 \pi} \sqrt{e^{2t}\cos^2(5t) - 2e^t\cos(5t)5e^t\sin(5t) + 5e^{2t}\sin^2(5t) + e^{2t}\sin^2(5t) +2e^t\sin(5t)5e^t\cos(5t) + 5e^{2t}\cos^2(5t)} dt\\
+&= \int\limits_{0}^{2 \pi} \sqrt{e^{2t}\cos^2(5t) + 5e^{2t}\sin^2(5t) + e^{2t}\sin^2(5t) + 5e^{2t}\cos^2(5t)} dt\\
+&= \int\limits_{0}^{2 \pi} \sqrt{e^{2t}\left(\cos^2(5t) + \sin^2(5t)\right) + 5e^{2t}\left(\sin^2(5t) + \cos^2(5t)\right)} dt\\
+&\overset{\text{Pythagoras im Einheitskreis}}{=} \int\limits_{0}^{2 \pi} \sqrt{e^{2t} + 5e^{2t}} dt\\
+&= \int\limits_{0}^{2 \pi} \sqrt{6e^{2t}} dt\\
+&= \int\limits_{0}^{2 \pi} \sqrt{6}e^{t} dt\\
+&= \sqrt{6}e^{t} \Big|_{0}^{2 \pi} \\
+&= \sqrt{6}e^{2\pi} - \sqrt{6} \\
+\end{align*}
 \end{document}
 
 
