@@ -71,6 +71,23 @@ Tom Nick \hspace{1.4cm}\= 342225\\
 Tom Lehmann\> 340621\\
 Maximilian Bachl\> 341455
 \end{tabbing}
+\section*{Aufgabe 1}
+\begin{enumerate}[a)]
+   \item 
+            \begin{align*}
+               \int^{1}_0\int^{2}_{1}xye^{xy^2} dxdy &= \int^{1}_0 \left. \frac{1}{y^3}e^{xy^2}(-1 + y^2x)\right|_{1}^{2} dy \\ 
+               &=   \int^{1}_0 (\frac{1}{y^3}e^{2y^2}(2y^2 - 1)) - (\frac{1}{y^3}e^{y^2}(y^2 - 1)) dy = \left. \frac{e^{y^2}(e^{y^2} -1)}{2y^2} \right|_0^1\\
+               &= \frac{e^2 -e}{2}
+            \end{align*}
+   \item 
+            \begin{align*}
+               \int^{2}_{1}\int^1_0\int^y_0(x+1) dzdydx &=
+            \end{align*}
+   \item 
+            \begin{align*}
+               \int^{1}_{0}\int^{1+y}_{\sqrt{y}}(xy^3) dxdy &=
+            \end{align*}
+\end{enumerate}
 \section*{Aufgabe 2}
 \begin{align*}
 \mathcal{T} &:= \left\lbrace (x,y,z)^T \in \R^3 \mid 0\leq x \leq 1, \; 0\leq y \text{?? TODO}\ \right\rbrace
@@ -80,14 +97,17 @@ Maximilian Bachl\> 341455
 x &= r \sin( \vartheta ) \cos(\varphi) \\
 y &= r \sin(\vartheta) \sin(\varphi)\\
 z &= r \cos( \vartheta)\\
-\\
-\iiint\limits_{\mathcal{K}_R} \left( x^2 + y^2 \right) dx \; dy \;  dz &= \int\limits_{0}^{\pi} \int\limits_{0}^{2\pi}\int\limits_{0}^{R} \left( r^2\sin^2(\vartheta)\cos^2(\varphi) + r^2\sin^2(\vartheta)\sin^2(\varphi) \right)dr \; d\varphi \; d\vartheta\\ &= \int\limits_{0}^{\pi} \int\limits_{0}^{2\pi}\int\limits_{0}^{R} \left( r^2\sin^2(\vartheta) \left( \cos^2(\varphi) + \sin^2(\varphi) \right) \right) dr \; d\varphi \; d\vartheta\\
-&= \int\limits_{0}^{\pi} \int\limits_{0}^{2\pi}\int\limits_{0}^{R}  r^2\sin^2(\vartheta) dr \; d\varphi \; d\varphi\\
-&= \int\limits_{0}^{\pi} \sin^2(\vartheta) \int\limits_{0}^{2\pi}\int\limits_{0}^{R} r^2 dr \; d\varphi \; d\vartheta\\
-&= \int\limits_{0}^{\pi} \sin^2(\vartheta)  \int\limits_{0}^{2\pi} \frac 13 R^3 d\varphi \; d\vartheta\\
-&= \int\limits_{0}^{\pi} \sin^2(\vartheta)\frac 13 R^3 2\pi \; d\vartheta\\
-&= \frac 23 \pi R^3 \int\limits_0^{\pi} \sin^2(\vartheta) \; d\vartheta\\
-&= \frac 23 \pi R^3 
+\text{und der Funktionaldeterminanten} \\
+dV &= r^2 \sin \vartheta~ dr ~d\vartheta ~d\varphi \\
+\iiint\limits_{\mathcal{K}_R} \left( x^2 + y^2 \right) dV &= \int\limits_{0}^{R}\int\limits_{0}^{\pi} \int\limits_{0}^{2\pi} \left( r^2\sin^2(\vartheta)\cos^2(\varphi) + r^2\sin^2(\vartheta)\sin^2(\varphi) \right) r^2 \sin dr \; d\varphi \; d\vartheta\\ 
+&= \int\limits_{0}^{\pi} \int\limits_{0}^{2\pi}\int\limits_{0}^{R} \left( r^2\sin^2(\vartheta) \left( \cos^2(\varphi) + \sin^2(\varphi) \right) \right)  r^2 \sin \vartheta~ dr ~d\vartheta ~d\varphi\\
+&= \int\limits_{0}^{\pi} \int\limits_{0}^{2\pi}\int\limits_{0}^{R}  r^2\sin^2(\vartheta)  r^2 \sin \vartheta~ dr ~d\vartheta ~d\varphi\\
+&= \int\limits_{0}^{\pi} \int\limits_{0}^{2\pi}\int\limits_{0}^{R}  r^4\sin^3(\vartheta) dr \; d\varphi \; d\vartheta\\
+&= \int\limits_{0}^{\pi} \sin^3(\vartheta) \int\limits_{0}^{2\pi}\int\limits_{0}^{R} r^4 dr \; d\varphi \; d\vartheta\\
+&= \int\limits_{0}^{\pi} \sin^3(\vartheta)  \int\limits_{0}^{2\pi} \frac 15 R^5 d\varphi \; d\vartheta\\
+&= \int\limits_{0}^{\pi} \sin^3(\vartheta)\frac 15 R^5 2\pi \; d\vartheta\\
+&= \frac 25 \pi R^5 \int\limits_0^{\pi} \sin^3(\vartheta) \; d\vartheta\\
+&= \frac 25 \pi R^5 \cdot \frac 43
 \end{align*}
 \section*{Aufgabe 4}
 Wir kippen nicht das Glas sondern definieren, das die Gravitationskraft nicht mehr in $-\vec e_y$ sondern in $-\sqrt 2 (\vec e_x + \vec e_y)$-Richtung zeigt. Das heißt, wenn das Glas um $45 Grad$ gekippt wird, verläuft die Oberfläche des Bieres entlang $y_B = x + 2$, da die Oberfläche einer Flüssigkeit in Ruhe stets orthogonal zum Gravitationsvektor ist. Die Verschiebung in $\vec e_y$-Richtung kommt daher, dass das Glas voll gefüllt ist und das Bier die Kante des Bierglases berührt und demzufolge durch den Punkt $(2,4)$ geht. Um die Integrationsgrenzen zu erhalten, berechnen wir die Schnittstellen beider Graphen:
