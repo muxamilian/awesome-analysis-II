@@ -89,7 +89,9 @@ Maximilian Bachl\> 341455
             \end{align*}
    \item 
             \begin{align*}
-               \int\limits^{1}_{0}\int\limits^{1+y}_{\sqrt{y}}(xy^3) dxdy &=
+               \int\limits^{1}_{0}\int\limits^{1+y}_{\sqrt{y}}(xy^3) dxdy &=   \int\limits^{1}_{0} \left. (\frac 1 2 x^2y^3) \right|^{1+y}_{\sqrt{y}} dy \\
+               &=   \int\limits^{1}_{0} (\frac 1 2 (y^5 + y^4 + y^3))  dy = \frac 1 2 \int\limits^{1}_{0} y^5 + y^4 + y^3  dy \\
+               &= \left.\frac 1 2\left( \frac 16 y^6 + \frac 15 y^5 + \frac 14 y^3 \right)\right|^1_0 = \frac 12\left( \frac 16 + \frac 15 + \frac 14 \right) = \frac{37}{120}
             \end{align*}
 \end{enumerate}
 \section*{Aufgabe 2}
