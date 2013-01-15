@@ -75,11 +75,9 @@ Maximilian Bachl\> 341455
 \begin{enumerate}[a)]
    \item 
             \begin{align*}
-               \int\limits^{1}_0\int\limits^{2}_{1}xye^{xy^2} dxdy &= \int\limits^{1}_0 \left. \frac{e^{xy^2}(y^2x -1)}{y^3}\right|_{1}^{2} dy \\ 
-               &=   \int\limits^{1}_0 \frac{e^{2y^2}(2y^2 -1)}{y^3} -  \frac{e^{y^2}(y^2 -1)}{y^3} dy \\
-               &= \int\limits^{1}_0 \frac{e^{2y^2}(2y^2 -1)}{y^3} dy -  \int\limits^{1}_0  \frac{e^{y^2}(y^2 -1)}{y^3} dy \\
-               &= \left. \frac{e^{2y^2}}{2y^2} \right|^1_0 - \left. \frac{e^{y^2}}{2y^2} \right|^1_0 = \left. \frac{e^{2y^2} - e^{y^2}}{2y^2} \right|^1_0 \\
-               &= \frac{e^2 -e}{2}
+               \int\limits^{1}_0\int\limits^{2}_{1}xye^{xy^2} dxdy &= \int\limits^{2}_{1}\int\limits^{1}_0xye^{xy^2} dydx \\
+               &= \frac 12 \left. \int\limits^{2}_{1} e^{xy^2} \right|^1_0 dx = \frac 12 \int\limits^{2}_{1} (e^x - 1) dx \\
+               &= \frac 12 (e^x - x)|^2_1 = \frac 12 (e^2 - 2 - (e - 1)) = \frac 12 (e^2 - e - 1)
             \end{align*}
    \item 
             \begin{align*}
