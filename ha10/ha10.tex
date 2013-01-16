@@ -37,7 +37,7 @@ top=2.0cm, bottom=2.0cm]{geometry}
          extendedchars=true,         %
          breaklines=true,            % Zeilen werden Umgebrochen
          keywordstyle=\color{red},
-    		frame=b,         
+     	frame=b,         
  %        keywordstyle=[1]\textbf,    % Stil der Keywords
  %        keywordstyle=[2]\textbf,    %
  %        keywordstyle=[3]\textbf,    %
@@ -75,9 +75,9 @@ Maximilian Bachl\> 341455
 \begin{enumerate}[a)]
    \item 
             \begin{align*}
-               \int\limits^{1}_0\int\limits^{2}_{1}xye^{xy^2} dxdy &= \int\limits^{1}_0 \left. \frac{1}{y^3}e^{xy^2}(-1 + y^2x)\right|_{1}^{2} dy \\ 
-               &=   \int\limits^{1}_0 (\frac{1}{y^3}e^{2y^2}(2y^2 - 1)) - (\frac{1}{y^3}e^{y^2}(y^2 - 1)) dy = \left. \frac{e^{y^2}(e^{y^2} -1)}{2y^2} \right|_0^1\\
-               &= \frac{e^2 -e}{2}
+               \int\limits^{1}_0\int\limits^{2}_{1}xye^{xy^2} dxdy &= \int\limits^{2}_{1}\int\limits^{1}_0xye^{xy^2} dydx \\
+               &= \frac 12 \left. \int\limits^{2}_{1} e^{xy^2} \right|^1_0 dx = \frac 12 \int\limits^{2}_{1} (e^x - 1) dx \\
+               &= \frac 12 (e^x - x)|^2_1 = \frac 12 (e^2 - 2 - (e - 1)) = \frac 12 (e^2 - e - 1)
             \end{align*}
    \item 
             \begin{align*}
@@ -96,7 +96,10 @@ Maximilian Bachl\> 341455
 \end{enumerate}
 \section*{Aufgabe 2}
 \begin{align*}
-\mathcal{T} &:= \left\lbrace (x,y,z)^T \in \R^3 \mid 0\leq x \leq 1, \; 0\leq y \text{?? TODO}\ \right\rbrace
+\mathcal{T} &:= \left\lbrace (x,y,z)^T \in \R^3 \mid 0\leq x \leq 1, \; 0\leq y \leq 1 - x, \: 0 \leq z \leq (1 - y - x)\right\rbrace \\
+   \int\limits^1_0 \int\limits^{1-x}_0 \int\limits^{1-y - x}_{0} x \;dzdydx &=  \left.  \int\limits^1_0 \int\limits^{1-x}_0  xz \right|^{1-y-x}_{0} \;dydx =   \int\limits^1_0 \int\limits^{1-x}_0  x(1-x-y) \;dydx = \left. \int\limits^{1}_{0}  yx - yx^2 - \frac 12 xy^2 \right|^{1-x}_{0} \;dx \\
+   &= \int\limits^{1}_{0} (1-x)x - (1-x)x^2 - \frac 12 x(1-x)^2 \; dx =  \int\limits^{1}_{0} \frac{x^3}{2} - x^2 + \frac x2  \; dx \\
+   &= \frac 12 (1 -x)^2 \;dx =  \left. \frac 12\left( \frac{x^4}{4} - \frac{2x^3}{3} + \frac{x^2}{2} \right) \right |^1_0 = \frac{1}{24}
 \end{align*}
 \section*{Aufgabe 3}
 \begin{align*}
@@ -105,8 +108,8 @@ y &= r \sin(\vartheta) \sin(\varphi)\\
 z &= r \cos( \vartheta)\\
 \text{und der Funktionaldeterminanten} \\
 dV &= r^2 \sin \vartheta~ dr ~d\vartheta ~d\varphi \\
-\iiint\limits_{\mathcal{K}_R} \left( x^2 + y^2 \right) dV &= \int\limits_{0}^{R}\int\limits_{0}^{\pi} \int\limits_{0}^{2\pi} \left( r^2\sin^2(\vartheta)\cos^2(\varphi) + r^2\sin^2(\vartheta)\sin^2(\varphi) \right) r^2 \sin dr \; d\varphi \; d\vartheta\\ 
-&= \int\limits_{0}^{\pi} \int\limits_{0}^{2\pi}\int\limits_{0}^{R} \left( r^2\sin^2(\vartheta) \left( \cos^2(\varphi) + \sin^2(\varphi) \right) \right)  r^2 \sin \vartheta~ dr ~d\vartheta ~d\varphi\\
+\iiint\limits_{\mathcal{K}_R} \left( x^2 + y^2 \right) dV &= \int\limits_{0}^{R}\int\limits_{0}^{\pi} \int\limits_{0}^{2\pi} \left( r^2\sin^2(\vartheta)\cos^2(\varphi) + r^2\sin^2(\vartheta)\sin^2(\varphi) \right) r^2 \sin(\vartheta)~ dr \; d\varphi \; d\vartheta\\ 
+&= \int\limits_{0}^{\pi} \int\limits_{0}^{2\pi}\int\limits_{0}^{R} \left( r^2\sin^2(\vartheta) \left( \cos^2(\varphi) + \sin^2(\varphi) \right) \right)  r^2 \sin(\vartheta)~ dr ~d\vartheta ~d\varphi\\
 &= \int\limits_{0}^{\pi} \int\limits_{0}^{2\pi}\int\limits_{0}^{R}  r^2\sin^2(\vartheta)  r^2 \sin \vartheta~ dr ~d\vartheta ~d\varphi\\
 &= \int\limits_{0}^{\pi} \int\limits_{0}^{2\pi}\int\limits_{0}^{R}  r^4\sin^3(\vartheta) dr \; d\varphi \; d\vartheta\\
 &= \int\limits_{0}^{\pi} \sin^3(\vartheta) \int\limits_{0}^{2\pi}\int\limits_{0}^{R} r^4 dr \; d\varphi \; d\vartheta\\
@@ -116,7 +119,7 @@ dV &= r^2 \sin \vartheta~ dr ~d\vartheta ~d\varphi \\
 &= \frac 25 \pi R^5 \cdot \frac 43
 \end{align*}
 \section*{Aufgabe 4}
-Wir kippen nicht das Glas sondern definieren, das die Gravitationskraft nicht mehr in $-\vec e_y$ sondern in $-\sqrt 2 (\vec e_x + \vec e_y)$-Richtung zeigt. Das heißt, wenn das Glas um $45 Grad$ gekippt wird, verläuft die Oberfläche des Bieres entlang $y_B = x + 2$, da die Oberfläche einer Flüssigkeit in Ruhe stets orthogonal zum Gravitationsvektor ist. Die Verschiebung in $\vec e_y$-Richtung kommt daher, dass das Glas voll gefüllt ist und das Bier die Kante des Bierglases berührt und demzufolge durch den Punkt $(2,4)$ geht. Um die Integrationsgrenzen zu erhalten, berechnen wir die Schnittstellen beider Graphen:
+Wir kippen nicht das Glas sondern definieren, das die Gravitationskraft nicht mehr in $-\vec e_y$ sondern in $-\sqrt 2 (\vec e_x + \vec e_y)$-Richtung zeigt. Das heißt, wenn das Glas um $45^{\circ}$ gekippt wird, verläuft die Oberfläche des Bieres entlang $y_B = x + 2$, da die Oberfläche einer Flüssigkeit in Ruhe stets orthogonal zum Gravitationsvektor ist. Die Verschiebung in $\vec e_y$-Richtung kommt daher, dass das Glas voll gefüllt ist und das Bier die Kante des Bierglases berührt und demzufolge durch den Punkt $(2,4)$ geht. Um die Integrationsgrenzen zu erhalten, berechnen wir die Schnittstellen beider Graphen:
 \begin{align*}
 x^2 &= x + 2 \Rightarrow x_{1/2} =  \frac 12 \pm \sqrt{ \frac 14 + 2} = \frac 12 \pm 1,5\\
 \Rightarrow &x_1 = -1\\
