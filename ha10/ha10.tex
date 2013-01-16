@@ -37,7 +37,7 @@ top=2.0cm, bottom=2.0cm]{geometry}
          extendedchars=true,         %
          breaklines=true,            % Zeilen werden Umgebrochen
          keywordstyle=\color{red},
-    		frame=b,         
+     	frame=b,         
  %        keywordstyle=[1]\textbf,    % Stil der Keywords
  %        keywordstyle=[2]\textbf,    %
  %        keywordstyle=[3]\textbf,    %
@@ -76,7 +76,6 @@ Maximilian Bachl\> 341455
    \item 
             \begin{align*}
                \int\limits^{1}_0\int\limits^{2}_{1}xye^{xy^2} dxdy &= \int\limits^{2}_{1}\int\limits^{1}_0xye^{xy^2} dydx \\
-               &\text{SUBSTITUTION MIT $xy^2$. ABER WARUM WERDEN DIE GRENZEN NICHT ANGEPASST?}\\
                &= \frac 12 \left. \int\limits^{2}_{1} e^{xy^2} \right|^1_0 dx = \frac 12 \int\limits^{2}_{1} (e^x - 1) dx \\
                &= \frac 12 (e^x - x)|^2_1 = \frac 12 (e^2 - 2 - (e - 1)) = \frac 12 (e^2 - e - 1)
             \end{align*}
@@ -97,7 +96,10 @@ Maximilian Bachl\> 341455
 \end{enumerate}
 \section*{Aufgabe 2}
 \begin{align*}
-\mathcal{T} &:= \left\lbrace (x,y,z)^T \in \R^3 \mid 0\leq x \leq 1, \; 0\leq y \text{?? TODO}\ \right\rbrace
+\mathcal{T} &:= \left\lbrace (x,y,z)^T \in \R^3 \mid 0\leq x \leq 1, \; 0\leq y \leq 1 - x, \: 0 \leq z \leq (1 - y - x)\right\rbrace \\
+   \int\limits^1_0 \int\limits^{1-x}_0 \int\limits^{1-y - x}_{0} x \;dzdydx &=  \left.  \int\limits^1_0 \int\limits^{1-x}_0  xz \right|^{1-y-x}_{0} \;dydx =   \int\limits^1_0 \int\limits^{1-x}_0  x(1-x-y) \;dydx = \left. \int\limits^{1}_{0}  yx - yx^2 - \frac 12 xy^2 \right|^{1-x}_{0} \;dx \\
+   &= \int\limits^{1}_{0} (1-x)x - (1-x)x^2 - \frac 12 x(1-x)^2 \; dx =  \int\limits^{1}_{0} \frac{x^3}{2} - x^2 + \frac x2  \; dx \\
+   &= \frac 12 (1 -x)^2 \;dx =  \left. \frac 12\left( \frac{x^4}{4} - \frac{2x^3}{3} + \frac{x^2}{2} \right) \right |^1_0 = \frac{1}{24}
 \end{align*}
 \section*{Aufgabe 3}
 \begin{align*}
