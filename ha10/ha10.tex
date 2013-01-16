@@ -97,9 +97,9 @@ Maximilian Bachl\> 341455
 \section*{Aufgabe 2}
 \begin{align*}
 \mathcal{T} &:= \left\lbrace (x,y,z)^T \in \R^3 \mid 0\leq x \leq 1, \; 0\leq y \leq 1 - x, \: 0 \leq z \leq (1 - y - x)\right\rbrace \\
-   \int\limits^1_0 \int\limits^{1-x}_0 \int\limits^{1-y - x}_{0} x \;dzdydx &=  \left.  \int\limits^1_0 \int\limits^{1-x}_0  xz \right|^{1-y-x}_{0} \;dydx =   \int\limits^1_0 \int\limits^{1-x}_0  x(1-x-y) \;dydx = \left. \int\limits^{1}_{0}  yx - yx^2 - \frac 12 xy^2 \right|^{1-x}_{0} \;dx \\
-   &= \int\limits^{1}_{0} (1-x)x - (1-x)x^2 - \frac 12 x(1-x)^2 \; dx =  \int\limits^{1}_{0} \frac{x^3}{2} - x^2 + \frac x2  \; dx \\
-   &= \frac 12 (1 -x)^2 \;dx =  \left. \frac 12\left( \frac{x^4}{4} - \frac{2x^3}{3} + \frac{x^2}{2} \right) \right |^1_0 = \frac{1}{24}
+   \int\limits^1_0 \int\limits^{1-x}_0 \int\limits^{1-y - x}_{0} 1 \;dzdydx &=  \left.  \int\limits^1_0 \int\limits^{1-x}_0  z \right|^{1-y-x}_{0} \;dydx =   \int\limits^1_0 \int\limits^{1-x}_0  1-x-y \;dydx = \left. \int\limits^{1}_{0}  y - yx - \frac 12 y^2 \right|^{1-x}_{0} \;dx \\
+   &= \int\limits^{1}_{0} (1-x) - (1-x)x - \frac 12 (1-x)^2 \; dx =  \int\limits^{1}_{0} \frac{x^2}{2} - x + \frac 12  \; dx \\
+   &= \frac 16 x^3 - \frac 12 x^2 + \frac 12 x = \frac 16
 \end{align*}
 \section*{Aufgabe 3}
 \begin{align*}
