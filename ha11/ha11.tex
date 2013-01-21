@@ -43,8 +43,8 @@ top=2.0cm, bottom=2.0cm]{geometry}
  %        keywordstyle=[3]\textbf,    %
  %        keywordstyle=[4]\textbf,   \sqrt{\sqrt{}} %
          stringstyle=\color{white}\ttfamily, % Farbe der String
-         showspaces=false,           % Leerzeichen anzeigen ?
-         showtabs=false,             % Tabs anzeigen ?
+         showspaces=false,            % Leerzeichen anzeigen ?
+         showtabs=false,              % Tabs anzeigen ?
          xleftmargin=17pt,
          framexleftmargin=17pt,
          framexrightmargin=5pt,
@@ -71,7 +71,40 @@ Tom Nick \hspace{1.4cm}\= 342225\\
 Tom Lehmann\> 340621\\
 Maximilian Bachl\> 341455
 \end{tabbing}
+\section*{Aufgabe 1}
+\begin{enumerate}[(i)]
+\item
+\begin{align*}
+\vec x&:~~ [0,2\pi[ \times [0,3] \to \mathbb{R}^3\\
+\vec x(u,v) &= \vecthree{4\cos u}{v}{4\sin u} \\
+\end{align*}
+\item
+\begin{align*}
+\vec y&:~~ [0,2\pi[ \times [0,1] \to \mathbb{R}^3\\
+\vec y(u,v) &= \vecthree{\sqrt v\cos u}{\sqrt v\sin u}{v} \\
+\end{align*}
+\end{enumerate}
+\section*{Aufgabe 2}
+Wir parametrisieren die Oberfläche:
+\begin{align*}
+\vec x&:~~ [0,2\pi[ \times [0,\pi] \to \mathbb{R}^3\\
+\vec x(u,v) &= \vecthree{a\sin(u) \cos(v)}{b\cos(u)\sin(v)}{c \sin(u)} \\
+\end{align*}
 
+$\mathrm d O$ ist somit:
+\begin{align*}
+\left|\frac{\partial \vec x}{\partial u} \times \frac{\partial \vec x}{\partial v}\right| \mathrm d u \mathrm d v &= \left|\vecthree{a \cos u \cos v}{-b \sin u \sin v}{c \cos v} \times \vecthree{-a \sin u \sin v}{b \cos u \cos v}{0}\right| \mathrm d u \mathrm d v\\
+&= \left|\vecthree{-bc \cos u \cos^2 v}{-ac \sin u \sin v \cos v}{ab \cos^2 u \cos^2 v - ab \sin^2 u \sin^2 v}\right| \mathrm d u \mathrm d v\\
+&= \sqrt{\left(-bc \cos u \cos^2 v\right)^2 + \left(-ac \sin u \sin v \cos v\right)^2 + \left(ab \cos^2 u \cos^2 v - ab \sin^2 u \sin^2 v\right)^2} \mathrm d u \mathrm d v
+\end{align*}
+
+Das gesuchte Integral ist somit:
+\begin{align*}
+&\int_0^{\pi} \int_0^{2\pi} f(\vec x(u,v)) \cdot \sqrt{\left(-bc \cos u \cos^2 v\right)^2 + \left(-ac \sin u \sin v \cos v\right)^2 + \left(ab \cos^2 u \cos^2 v - ab \sin^2 u \sin^2 v\right)^2} \mathrm d u \mathrm d v \\
+&= \text{\textbf{Aufs Rechnen hatt ich dann nicht mehr so arg Lust... -- Max}}
+\end{align*}
+\section*{Aufgabe 3}
+\section*{Aufgabe 4}
 \end{document}
 
 
