@@ -1,0 +1,136 @@
+\documentclass[10pt,a4paper,parskip=half]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathpazo}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usepackage{stmaryrd} % Für den Widerspruchsblitz :D
+\usepackage[left=1cm, right=1cm,
+top=1cm, bottom=1cm]{geometry}
+\usepackage{fullpage}
+\usepackage[german]{babel}
+\usepackage{enumerate}
+\setlength{\unitlength}{1cm}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\R}{\mathbb{R}}
+\parindent 0mm
+\author{Tom}
+\title{Analysis 2 - Hausaufgabe 10}
+
+% new commands for vectors
+\newcommand{\vectwo}[2]{\begin{pmatrix}#1\\#2\\\end {pmatrix}}
+\newcommand{\vecthree}[3]{\begin{pmatrix}#1\\#2\\#3\\\end {pmatrix}}
+
+\usepackage{listings}
+\usepackage{courier}
+ \lstset{
+         basicstyle=\footnotesize\ttfamily, % Standardschrift
+         %numbers=left,               % Ort der Zeilennummern
+         numberstyle=\tiny,          % Stil der Zeilennummern
+         %stepnumber=2,               % Abstand zwischen den Zeilennummern
+         numbersep=5pt,              % Abstand der Nummern zum Text
+         tabsize=2,                  % Groesse von Tabs
+         extendedchars=true,         %
+         breaklines=true,            % Zeilen werden Umgebrochen
+         keywordstyle=\color{red},
+     	frame=b,         
+ %        keywordstyle=[1]\textbf,    % Stil der Keywords
+ %        keywordstyle=[2]\textbf,    %
+ %        keywordstyle=[3]\textbf,    %
+ %        keywordstyle=[4]\textbf,   \sqrt{\sqrt{}} %
+         stringstyle=\color{white}\ttfamily, % Farbe der String
+         showspaces=false,            % Leerzeichen anzeigen ?
+         showtabs=false,              % Tabs anzeigen ?
+         xleftmargin=17pt,
+         framexleftmargin=17pt,
+         framexrightmargin=5pt,
+         framexbottommargin=4pt,
+         %backgroundcolor=\color{lightgray},
+         showstringspaces=false      % Leerzeichen in Strings anzeigen ?        
+ }
+ \usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43, 0.35, 0.35,0.01}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={bf,footnotesize}}
+
+\usepackage{color}
+\usepackage{enumerate}
+
+
+
+\begin{document}
+\begin{center}
+\textsc{\Large{Analysis 2 - Hausaufgabe 11}} \\
+\end{center}
+\begin{tabbing}
+Tom Nick \hspace{1.4cm}\= 342225\\
+Tom Lehmann\> 340621\\
+Maximilian Bachl\> 341455
+\end{tabbing}
+\section*{Aufgabe 1}
+\begin{enumerate}[(i)]
+\item
+\begin{align*}
+\vec x&:~~ [0,2\pi[ \times [0,3] \to \mathbb{R}^3\\
+\vec x(u,v) &= \vecthree{4\cos u}{v}{4\sin u} \\
+\end{align*}
+\item
+\begin{align*}
+\vec y&:~~ [0,2\pi[ \times [0,1] \to \mathbb{R}^3\\
+\vec y(u,v) &= \vecthree{\sqrt v\cos u}{\sqrt v\sin u}{v} \\
+\end{align*}
+\end{enumerate}
+\section*{Aufgabe 2}
+Wir parametrisieren die Oberfläche:
+\begin{align*}
+\vec x&:~~ [0,2\pi[ \times [0,\pi] \to \mathbb{R}^3\\
+\vec x(u,v) &= \vecthree{a\sin(u) \cos(v)}{b\cos(u)\sin(v)}{c \sin(u)} \\
+\end{align*}
+$\mathrm d O$ ist somit:
+\begin{align*}
+\left|\frac{\partial \vec x}{\partial u} \times \frac{\partial \vec x}{\partial v}\right| \mathrm d u \mathrm d v &= \left|\vecthree{a \cos u \cos v}{-b \sin u \sin v}{c \cos v} \times \vecthree{-a \sin u \sin v}{b \cos u \cos v}{0}\right| \mathrm d u \mathrm d v\\
+&= \left|\vecthree{-bc \cos u \cos^2 v}{-ac \sin u \sin v \cos v}{ab \cos^2 u \cos^2 v - ab \sin^2 u \sin^2 v}\right| \mathrm d u \mathrm d v\\
+&= \sqrt{\left(-bc \cos u \cos^2 v\right)^2 + \left(-ac \sin u \sin v \cos v\right)^2 + \left(ab \cos^2 u \cos^2 v - ab \sin^2 u \sin^2 v\right)^2} \mathrm d u \mathrm d v
+\end{align*}
+
+Das gesuchte Integral ist somit:
+\begin{align*}
+&\int_0^{\pi} \int_0^{2\pi} f(\vec x(u,v)) \cdot \sqrt{\left(-bc \cos u \cos^2 v\right)^2 + \left(-ac \sin u \sin v \cos v\right)^2 + \left(ab \cos^2 u \cos^2 v - ab \sin^2 u \sin^2 v\right)^2} \mathrm d u \mathrm d v \\
+&= \int_0^{\pi} \int_0^{2\pi} \sqrt{\frac{(a\sin(u) \cos(v))^2}{a^4} + \frac{(b\cos(u)\sin(v))^2}{b^4} + \frac{(c \sin(u))^2}{c^4}} \\
+&\cdot \sqrt{\left(-bc \cos u \cos^2 v\right)^2 + \left(-ac \sin u \sin v \cos v\right)^2 + \left(ab \cos^2 u \cos^2 v - ab \sin^2 u \sin^2 v\right)^2} \mathrm d u \mathrm d v \\
+&= \int_0^{\pi} \int_0^{2\pi} \sqrt{\frac{\sin^2(u) \cos(v)^2}{a^2} + \frac{\cos^2(u)\sin^2(v)}{b^2} + \frac{\sin^2(u)}{c^2}} \\
+&\cdot \sqrt{\left(-bc \cos u \cos^2 v\right)^2 + \left(-ac \sin u \sin v \cos v\right)^2 + \left(ab \cos^2 u \cos^2 v - ab \sin^2 u \sin^2 v\right)^2} \mathrm d u \mathrm d v \\
+& = ...
+\intertext{\textbf{Das kann doch nicht deren Ernst sein. -- Max}}
+\end{align*}
+\section*{Aufgabe 3}
+Die Parametrisierung für die Fläche $S$ ist wie folgt:
+\begin{align*}
+\vec y&:~~ [0,2\pi[ \times [0,1] \to \mathbb{R}^3\\
+\vec y(u,v) &= \vecthree{\sqrt v\cos u}{\sqrt v\sin u}{v} \\
+\end{align*}
+$\mathrm d O$ ist somit:
+\begin{align*}
+\frac{\partial \vec y}{\partial u} \times \frac{\partial \vec y}{\partial v} &= \vecthree{-\sqrt{v}\sin u}{\sqrt{v}\cos u}{0} \times \vecthree{\frac 1 2 v^{-\frac 1 2}\cos u}{\frac 1 2 v^{-\frac 1 2} \sin u}{1} \mathrm d u \mathrm d v\\
+&= \vecthree{\sqrt{v}\cos u}{\sqrt{v}\sin u}{-\frac 1 2 \sin^2 u - \frac 1 2 \cos^2 u} \mathrm d u \mathrm d v\\
+&= \vecthree{\sqrt{v}\cos u}{\sqrt{v}\sin u}{-\frac 1 2 (\sin^2 u + \cos^2 u)} \mathrm d u \mathrm d v\\
+&= \vecthree{\sqrt{v}\cos u}{\sqrt{v}\sin u}{-\frac 1 2} \mathrm d u \mathrm d v\\
+\end{align*}
+
+Das gesuchte Integral ist somit:
+\begin{align*}
+\int_0^1 \int_0^{2\pi} \vec v(\vec y(u,v)) \cdot \vecthree{\sqrt{v}\cos u}{\sqrt{v}\sin u}{-\frac 1 2} \mathrm d u \mathrm d v &= \int_0^1 \int_0^{2\pi} \vecthree{\sqrt v\sin u}{-\sqrt v\cos u}{v^2} \cdot \vecthree{\sqrt{v}\cos u}{\sqrt{v}\sin u}{-\frac 1 2} \mathrm d u \mathrm d v \\
+&= \int_0^1 \int_0^{2\pi} \left(v \sin u \cos u - v \sin u \cos u - \frac 1 2 v^2\right) \mathrm d u \mathrm d v \\
+&= \int_0^1 \int_0^{2\pi} - \frac 1 2 v^2~ \mathrm d u \mathrm d v \\
+&= \int_0^1 \left. - \frac 1 2 v^2 u~ \right|_0^{2\pi} \mathrm d v \\
+&= \int_0^1 - \pi v^2 ~ \mathrm d v \\
+&= \left. - \frac \pi 3 v^3 \right|_0^1 \\
+&= -\frac \pi 3
+\end{align*}
+\section*{Aufgabe 4}
+\end{document}
+
+
