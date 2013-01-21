@@ -7,9 +7,8 @@
 \usepackage{tikz}
 \usetikzlibrary{patterns}
 \usepackage{stmaryrd} % Für den Widerspruchsblitz :D
-\usepackage[a4paper,
-left=3.0cm, right=3.0cm,
-top=2.0cm, bottom=2.0cm]{geometry}
+\usepackage[left=1cm, right=1cm,
+top=1cm, bottom=1cm]{geometry}
 \usepackage{fullpage}
 \usepackage[german]{babel}
 \usepackage{enumerate}
@@ -90,7 +89,6 @@ Wir parametrisieren die Oberfläche:
 \vec x&:~~ [0,2\pi[ \times [0,\pi] \to \mathbb{R}^3\\
 \vec x(u,v) &= \vecthree{a\sin(u) \cos(v)}{b\cos(u)\sin(v)}{c \sin(u)} \\
 \end{align*}
-
 $\mathrm d O$ ist somit:
 \begin{align*}
 \left|\frac{\partial \vec x}{\partial u} \times \frac{\partial \vec x}{\partial v}\right| \mathrm d u \mathrm d v &= \left|\vecthree{a \cos u \cos v}{-b \sin u \sin v}{c \cos v} \times \vecthree{-a \sin u \sin v}{b \cos u \cos v}{0}\right| \mathrm d u \mathrm d v\\
@@ -101,9 +99,37 @@ $\mathrm d O$ ist somit:
 Das gesuchte Integral ist somit:
 \begin{align*}
 &\int_0^{\pi} \int_0^{2\pi} f(\vec x(u,v)) \cdot \sqrt{\left(-bc \cos u \cos^2 v\right)^2 + \left(-ac \sin u \sin v \cos v\right)^2 + \left(ab \cos^2 u \cos^2 v - ab \sin^2 u \sin^2 v\right)^2} \mathrm d u \mathrm d v \\
-&= \text{\textbf{Aufs Rechnen hatt ich dann nicht mehr so arg Lust... -- Max}}
+&= \int_0^{\pi} \int_0^{2\pi} \sqrt{\frac{(a\sin(u) \cos(v))^2}{a^4} + \frac{(b\cos(u)\sin(v))^2}{b^4} + \frac{(c \sin(u))^2}{c^4}} \\
+&\cdot \sqrt{\left(-bc \cos u \cos^2 v\right)^2 + \left(-ac \sin u \sin v \cos v\right)^2 + \left(ab \cos^2 u \cos^2 v - ab \sin^2 u \sin^2 v\right)^2} \mathrm d u \mathrm d v \\
+&= \int_0^{\pi} \int_0^{2\pi} \sqrt{\frac{\sin^2(u) \cos(v)^2}{a^2} + \frac{\cos^2(u)\sin^2(v)}{b^2} + \frac{\sin^2(u)}{c^2}} \\
+&\cdot \sqrt{\left(-bc \cos u \cos^2 v\right)^2 + \left(-ac \sin u \sin v \cos v\right)^2 + \left(ab \cos^2 u \cos^2 v - ab \sin^2 u \sin^2 v\right)^2} \mathrm d u \mathrm d v \\
+& = ...
+\intertext{\textbf{Das kann doch nicht deren Ernst sein. -- Max}}
 \end{align*}
 \section*{Aufgabe 3}
+Die Parametrisierung für die Fläche $S$ ist wie folgt:
+\begin{align*}
+\vec y&:~~ [0,2\pi[ \times [0,1] \to \mathbb{R}^3\\
+\vec y(u,v) &= \vecthree{\sqrt v\cos u}{\sqrt v\sin u}{v} \\
+\end{align*}
+$\mathrm d O$ ist somit:
+\begin{align*}
+\frac{\partial \vec y}{\partial u} \times \frac{\partial \vec y}{\partial v} &= \vecthree{-\sqrt{v}\sin u}{\sqrt{v}\cos u}{0} \times \vecthree{\frac 1 2 v^{-\frac 1 2}\cos u}{\frac 1 2 v^{-\frac 1 2} \sin u}{1} \mathrm d u \mathrm d v\\
+&= \vecthree{\sqrt{v}\cos u}{\sqrt{v}\sin u}{-\frac 1 2 \sin^2 u - \frac 1 2 \cos^2 u} \mathrm d u \mathrm d v\\
+&= \vecthree{\sqrt{v}\cos u}{\sqrt{v}\sin u}{-\frac 1 2 (\sin^2 u + \cos^2 u)} \mathrm d u \mathrm d v\\
+&= \vecthree{\sqrt{v}\cos u}{\sqrt{v}\sin u}{-\frac 1 2} \mathrm d u \mathrm d v\\
+\end{align*}
+
+Das gesuchte Integral ist somit:
+\begin{align*}
+\int_0^1 \int_0^{2\pi} \vec v(\vec y(u,v)) \cdot \vecthree{\sqrt{v}\cos u}{\sqrt{v}\sin u}{-\frac 1 2} \mathrm d u \mathrm d v &= \int_0^1 \int_0^{2\pi} \vecthree{\sqrt v\sin u}{-\sqrt v\cos u}{v^2} \cdot \vecthree{\sqrt{v}\cos u}{\sqrt{v}\sin u}{-\frac 1 2} \mathrm d u \mathrm d v \\
+&= \int_0^1 \int_0^{2\pi} \left(v \sin u \cos u - v \sin u \cos u - \frac 1 2 v^2\right) \mathrm d u \mathrm d v \\
+&= \int_0^1 \int_0^{2\pi} - \frac 1 2 v^2~ \mathrm d u \mathrm d v \\
+&= \int_0^1 \left. - \frac 1 2 v^2 u~ \right|_0^{2\pi} \mathrm d v \\
+&= \int_0^1 - \pi v^2 ~ \mathrm d v \\
+&= \left. - \frac \pi 3 v^3 \right|_0^1 \\
+&= -\frac \pi 3
+\end{align*}
 \section*{Aufgabe 4}
 \end{document}
 
