@@ -70,6 +70,7 @@ Tom Nick \hspace{1.4cm}\= 342225\\
 Tom Lehmann\> 340621\\
 Maximilian Bachl\> 341455
 \end{tabbing}
+\textbf{WARUM IGNORIERST DU MEINE GEOMETRY EINSTELLUNGEN, \LaTeX?}
 \section*{Aufgabe 1}
 \begin{enumerate}[(i)]
 \item
@@ -114,7 +115,7 @@ Die Parametrisierung für die Fläche $S$ ist wie folgt:
 \end{align*}
 $\mathrm d O$ ist somit:
 \begin{align*}
-\frac{\partial \vec y}{\partial u} \times \frac{\partial \vec y}{\partial v} &= \vecthree{-\sqrt{v}\sin u}{\sqrt{v}\cos u}{0} \times \vecthree{\frac 1 2 v^{-\frac 1 2}\cos u}{\frac 1 2 v^{-\frac 1 2} \sin u}{1} \mathrm d u \mathrm d v\\
+\frac{\partial \vec y}{\partial u} \times \frac{\partial \vec y}{\partial v} ~ \mathrm d u \mathrm d v &= \vecthree{-\sqrt{v}\sin u}{\sqrt{v}\cos u}{0} \times \vecthree{\frac 1 2 v^{-\frac 1 2}\cos u}{\frac 1 2 v^{-\frac 1 2} \sin u}{1} \mathrm d u \mathrm d v\\
 &= \vecthree{\sqrt{v}\cos u}{\sqrt{v}\sin u}{-\frac 1 2 \sin^2 u - \frac 1 2 \cos^2 u} \mathrm d u \mathrm d v\\
 &= \vecthree{\sqrt{v}\cos u}{\sqrt{v}\sin u}{-\frac 1 2 (\sin^2 u + \cos^2 u)} \mathrm d u \mathrm d v\\
 &= \vecthree{\sqrt{v}\cos u}{\sqrt{v}\sin u}{-\frac 1 2} \mathrm d u \mathrm d v\\
@@ -127,10 +128,22 @@ Das gesuchte Integral ist somit:
 &= \int_0^1 \int_0^{2\pi} - \frac 1 2 v^2~ \mathrm d u \mathrm d v \\
 &= \int_0^1 \left. - \frac 1 2 v^2 u~ \right|_0^{2\pi} \mathrm d v \\
 &= \int_0^1 - \pi v^2 ~ \mathrm d v \\
-&= \left. - \frac \pi 3 v^3 \right|_0^1 \\
-&= -\frac \pi 3
+&= \left. - \frac \pi 6 v^3 \right|_0^1 \\
+&= -\frac \pi 6 \\
+&\overset{\text{per Def. immer pos.}}{=} \frac \pi 6
 \end{align*}
 \section*{Aufgabe 4}
+Die Winkel der Breiten betragen somit: $\theta_1 = 66.5^{\circ} = \frac{2\pi \cdot 66.5}{360} = 1.16$ und $\theta_2 = 113.5^{\circ} = \frac{2\pi \cdot 113.5}{360} = 1.98$
+
+Die Parametrisierung ist also:
+\begin{align*}
+\vec z&:~~ [1.16,1.98] \times [0,2\pi[ \to \mathbb{R}^3\\
+\vec z(u,v) &= 6378 \cdot \vecthree{\sin u \cos v}{\sin u \sin v}{\cos u} \\
+\end{align*}
+$\mathrm d O$ ist somit:
+\begin{align*}
+\left|\frac{\partial \vec y}{\partial u} \times \frac{\partial \vec y}{\partial v}\right| ~ \mathrm d u \mathrm d v&= \left|\vecthree{\cos u \cos v}{-\cos u \sin v}{0} \times \vecthree{-\sin u \sin v}{\sin u \cos v}{\sin u}\right| ~ \mathrm d u \mathrm d v\\
+\end{align*}
 \end{document}
 
 
