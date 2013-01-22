@@ -142,8 +142,27 @@ Die Parametrisierung ist also:
 \end{align*}
 $\mathrm d O$ ist somit:
 \begin{align*}
-\left|\frac{\partial \vec y}{\partial u} \times \frac{\partial \vec y}{\partial v}\right| ~ \mathrm d u \mathrm d v&= \left|\vecthree{\cos u \cos v}{-\cos u \sin v}{0} \times \vecthree{-\sin u \sin v}{\sin u \cos v}{\sin u}\right| ~ \mathrm d u \mathrm d v\\
+\left|\frac{\partial \vec y}{\partial u} \times \frac{\partial \vec y}{\partial v}\right| ~ \mathrm d u \mathrm d v&= 6378^2 \left|\vecthree{\cos u \cos v}{\cos u \sin v}{-\sin u} \times \vecthree{-\sin u \sin v}{\sin u \cos v}{0}\right| ~ \mathrm d u \mathrm d v\\
+&= 6378^2 \left| \vecthree{\sin^2 u \cos v}{-\sin^2 u \sin v}{\cos u \sin u \cos^2 v + \sin u \cos u \sin^2 v} \right|~ \mathrm d u \mathrm d v\\
+&= 6378^2 \sqrt{\left(\sin^2 u \cos v\right)^2 + \left(\sin^2 u \sin v\right)^2 + \left(\cos u \sin u \cos^2 v + \sin u \cos u \sin^2 v\right)^2}~ \mathrm d u \mathrm d v\\
+&= 6378^2 \sqrt{\sin^4 u \cos^2 v + \sin^4 u \sin^2 v + \left(\cos u \sin u \cos^2 v + \sin u \cos u \sin^2 v\right)^2}~ \mathrm d u \mathrm d v\\
+&= 6378^2 \sqrt{\sin^4 u \cos^2 v + \sin^4 u \sin^2 v + \left(\sin u \cos u\right)^2}~ \mathrm d u \mathrm d v\\
+&= 6378^2 \sqrt{\sin^4 u \cos^2 v + \sin^4 u \sin^2 v + \sin^2 u \cos^2 u}~ \mathrm d u \mathrm d v\\
+&= 6378^2 \sqrt{\sin^4 u\left(\cos^2 v + \sin^2 v\right) + \sin^2 u \cos^2 u}~ \mathrm d u \mathrm d v\\
+&= 6378^2 \sqrt{\sin^4 u+ \sin^2 u \cos^2 u}~ \mathrm d u \mathrm d v\\
+&= 6378^2 \sqrt{\sin^2 u \left(\sin^2 u +\cos^2 u\right)}~ \mathrm d u \mathrm d v\\
+&= 6378^2 \sqrt{\sin^2 u}~ \mathrm d u \mathrm d v\\
+&= 6378^2 \sin u~ \mathrm d u \mathrm d v\\
 \end{align*}
+
+Das Integral ist somit:
+\begin{align*}
+6379^2 \cdot \int_0^{2\pi} \int_{1.18}^{1.98} \sin u ~ \mathrm d u \mathrm d v &= 6379^2 \cdot \int_0^{2\pi} \left. -\cos u \right|_{1.18}^{1.98} ~ \mathrm d v\\
+&= 6379^2 \left(-\cos 1.98 + \cos 1.18\right) \cdot \int_0^{2\pi}1~ \mathrm d v \\
+&= 6379^2 \left(-\cos 1.98 + \cos 1.18\right) \cdot \left(\left. v \right|_0^{2\pi} \right) \\
+&= 6379^2 \left(-\cos 1.98 + \cos 1.18\right) 2\pi \\
+\end{align*}
+
 \end{document}
 
 
