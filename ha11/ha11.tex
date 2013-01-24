@@ -116,7 +116,7 @@ Das gesuchte Integral ist somit:
 &= \int\limits_0^{2\pi}   \int\limits_0^{\pi}abc \sin u \sqrt{\frac{\sin^2(u) \cos^2(v)}{a^2} + \frac{\sin^2(u)\sin^2(v)}{b^2} + \frac{\cos^2(u)}{c^2}} \sqrt{\left(\frac{\cos v \sin u}a\right)^2 + \left(\frac{\sin v \sin u}b\right)^2 + \left(\frac{\cos u}c\right)^2} \mathrm d u \mathrm d v\\
 &= \int\limits_0^{2\pi}   \int\limits_0^{\pi}abc \sin u \cdot  \left(\frac{\sin^2(u) \cos^2(v)}{a^2} + \frac{\sin^2(u)\sin^2(v)}{b^2} + \frac{\cos^2(u)}{c^2}\right)\mathrm d u \;\mathrm d v\\
 &= abc \int\limits_0^{\pi} \sin (u) \int\limits_0^{2\pi}\frac{\sin^2(u) \cos^2(v)}{a^2} + \frac{\sin^2(u)\sin^2(v)}{b^2} + \frac{\cos^2(u)}{c^2}\;\mathrm d v \;\mathrm d u
-\intertext{Da das Integral von $0$ bis $2\pi$ sowohl beim Sinus als auch beim Sinus $\pi$ ergibt, gilt:}
+\intertext{Da das Integral von $0$ bis $2\pi$ sowohl über $\sin^2$ als auch über $\cos^2$ $\pi$ ergibt, gilt:}
 &= \pi \cdot abc \int\limits_0^{\pi} \sin(u)  \left(\frac{\sin^2(u)}{a^2} + \frac{\sin^2(u)}{b^2} + \frac{\cos^2(u)}{c^2}\right) \mathrm d u\\
 &= \pi \cdot abc \int\limits_0^{\pi}\frac{\sin^3(u)}{a^2} + \frac{\sin^3(u)}{b^2} + \frac{\cos^2(u)\sin(u)}{c^2} \mathrm d u
 \intertext{Es gilt: $\int\limits_0^{\pi} \sin^3(x) \mathrm d x = \frac 43$ und $\int\limits_0^{\pi} \cos^2(x)\sin(x) \mathrm d x = \frac 23$}
