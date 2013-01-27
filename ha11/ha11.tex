@@ -70,7 +70,7 @@ Tom Nick \hspace{1.4cm}\= 342225\\
 Tom Lehmann\> 340621\\
 Maximilian Bachl\> 341455
 \end{tabbing}
-\textbf{WARUM IGNORIERST DU MEINE GEOMETRY EINSTELLUNGEN, \LaTeX?}
+%\textbf{WARUM IGNORIERST DU MEINE GEOMETRY EINSTELLUNGEN, \LaTeX?}
 \section*{Aufgabe 1}
 \begin{enumerate}[(i)]
 \item
@@ -87,25 +87,43 @@ Maximilian Bachl\> 341455
 \section*{Aufgabe 2}
 Wir parametrisieren die Oberfläche:
 \begin{align*}
-\vec x&:~~ [0,2\pi[ \times [0,\pi] \to \mathbb{R}^3\\
-\vec x(u,v) &= \vecthree{a\sin(u) \cos(v)}{b\cos(u)\sin(v)}{c \sin(u)} \\
+\vec x&:~~ [0,\pi[ \times [0,2\pi[ \to \mathbb{R}^3\\
+\vec x(u,v) &= \vecthree{a\sin(u) \cos(v)}{b\sin(u)\sin(v)}{c \cos(u)} \\
 \end{align*}
-$\mathrm d O$ ist somit:
+$\mathrm d  O$ ist somit:
 \begin{align*}
-\left|\frac{\partial \vec x}{\partial u} \times \frac{\partial \vec x}{\partial v}\right| \mathrm d u \mathrm d v &= \left|\vecthree{a \cos u \cos v}{-b \sin u \sin v}{c \cos v} \times \vecthree{-a \sin u \sin v}{b \cos u \cos v}{0}\right| \mathrm d u \mathrm d v\\
-&= \left|\vecthree{-bc \cos u \cos^2 v}{-ac \sin u \sin v \cos v}{ab \cos^2 u \cos^2 v - ab \sin^2 u \sin^2 v}\right| \mathrm d u \mathrm d v\\
-&= \sqrt{\left(-bc \cos u \cos^2 v\right)^2 + \left(-ac \sin u \sin v \cos v\right)^2 + \left(ab \cos^2 u \cos^2 v - ab \sin^2 u \sin^2 v\right)^2} \mathrm d u \mathrm d v
+\left|\frac{\partial \vec x}{\partial u} \times \frac{\partial \vec x}{\partial v}\right| \mathrm d u \mathrm d v &= \left|\vecthree{a \cos u \cos v}{b \cos u \sin v}{-c \sin u} \times \vecthree{-a \sin u \sin v}{b \sin u \cos v}{0}\right| \mathrm d u \mathrm d v\\
+&= \left|\vecthree{bc \sin^2 u \cos v}{ac \sin^2 u \sin v}{ab \sin u \cos u \cos^2 v + ab \sin u \cos u \sin^2 v}\right| \mathrm d u \mathrm d v\\
+&= \sin(u) \left| \vecthree{bc \cos v \sin u}{ac \sin v \sin u}{ab \cos u \cos^2 v + ab \cos u \sin^2 v}\right| \mathrm d u \mathrm d v\\
+%\intertext{Here comes the shit. Proudly presented by Tom}
+&= \sin(u) \left| \vecthree{bc \cos v \sin u}{ac \sin v \sin u}{ab \cos u (\cos^2 v + \sin^2 v)}\right| \mathrm d u \mathrm d v\\
+&= \sin(u) \left| \vecthree{bc \cos v \sin u}{ac \sin v \sin u}{ab \cos u}\right| \mathrm d u \mathrm d v\\
+&= \sin(u) \sqrt{\left(bc \cos v \sin u\right)^2 + \left(ac \sin v \sin u\right)^2 + \left(ab \cos u\right)^2} \mathrm d u \mathrm d v
 \end{align*}
 
 Das gesuchte Integral ist somit:
 \begin{align*}
-&\int_0^{\pi} \int_0^{2\pi} f(\vec x(u,v)) \cdot \sqrt{\left(-bc \cos u \cos^2 v\right)^2 + \left(-ac \sin u \sin v \cos v\right)^2 + \left(ab \cos^2 u \cos^2 v - ab \sin^2 u \sin^2 v\right)^2} \mathrm d u \mathrm d v \\
-&= \int_0^{\pi} \int_0^{2\pi} \sqrt{\frac{(a\sin(u) \cos(v))^2}{a^4} + \frac{(b\cos(u)\sin(v))^2}{b^4} + \frac{(c \sin(u))^2}{c^4}} \\
-&\cdot \sqrt{\left(-bc \cos u \cos^2 v\right)^2 + \left(-ac \sin u \sin v \cos v\right)^2 + \left(ab \cos^2 u \cos^2 v - ab \sin^2 u \sin^2 v\right)^2} \mathrm d u \mathrm d v \\
-&= \int_0^{\pi} \int_0^{2\pi} \sqrt{\frac{\sin^2(u) \cos(v)^2}{a^2} + \frac{\cos^2(u)\sin^2(v)}{b^2} + \frac{\sin^2(u)}{c^2}} \\
-&\cdot \sqrt{\left(-bc \cos u \cos^2 v\right)^2 + \left(-ac \sin u \sin v \cos v\right)^2 + \left(ab \cos^2 u \cos^2 v - ab \sin^2 u \sin^2 v\right)^2} \mathrm d u \mathrm d v \\
-& = ...
-\intertext{\textbf{Das kann doch nicht deren Ernst sein. -- Max}}
+%&\int_0^{\pi} \int_0^{2\pi} f(\vec x(u,v)) \cdot \begin{pmatrix}-bc \cos u \cos^2 v \\ -ac \sin u \sin v \cos v \\ab \cos^2 u \cos^2 v - ab \sin^2 u \sin^2 v \end{pmatrix} \mathrm d u \mathrm d v\\
+ %&= \int\limits_{0}^{\pi}\int\limits_{0}^{2\pi} \begin{pmatrix} -ac \sin u \sin v \cos v  \\ bc \cos u \cos^2 v \\ \left( ab \cos^2 u \cos^2 v - ab \sin^2 u \sin^2 v \right)^2\end{pmatrix}  \cdot \begin{pmatrix}-bc \cos u \cos^2 v \\ -ac \sin u \sin v \cos v \\ab \cos^2 u \cos^2 v - ab \sin^2 u \sin^2 v \end{pmatrix}\mathrm d u \mathrm d v 
+% \intertext{TODO: ausmultiplizieren und integrieren. kb das inner bahn ohne wolfram zu machen. Der Fehler war das ihr ein skalares Oberflächenintegral berechnet habt (mit Betrag) hier aber ein Flussintegral berechnet werden soll/ wird. - Tom}
+&\int\limits_0^{2\pi} \int\limits_0^{\pi} f(\vec x(u,v)) \cdot \sin(u) \sqrt{\left(bc \cos v \sin u\right)^2 + \left(ac \sin v \sin u\right)^2 + \left(ab \cos u\right)^2} \mathrm d u \mathrm d v \\
+&= \int\limits_0^{2\pi} \int\limits_0^{\pi} \sin (u) \sqrt{\frac{(a\sin(u) \cos(v))^2}{a^4} + \frac{(b\sin(u)\sin(v))^2}{b^4} + \frac{(c \cos(u))^2}{c^4}} \\
+&\cdot \sqrt{\left(bc \cos v \sin u\right)^2 + \left(ac \sin v \sin u\right)^2 + \left(ab \cos u\right)^2} \mathrm d u \mathrm d v \\
+&= \int\limits_0^{2\pi}   \int\limits_0^{\pi} \sin(u) \cdot \sqrt{\frac{\sin^2(u) \cos^2(v)}{a^2} + \frac{\sin^2(u)\sin^2(v)}{b^2} + \frac{\cos^2(u)}{c^2}} \\
+&\cdot \sqrt{\left(bc \cos v \sin u\right)^2 + \left(ac \sin v \sin u\right)^2 + \left(ab \cos u\right)^2} \mathrm d u \mathrm d v \\
+&= \int\limits_0^{2\pi}   \int\limits_0^{\pi} \sin(u) \cdot \sqrt{\frac{\sin^2(u) \cos^2(v)}{a^2} + \frac{\sin^2(u)\sin^2(v)}{b^2} + \frac{\cos^2(u)}{c^2}} \\
+& \cdot \sqrt{a^2b^2c^2\left(\frac{\cos v \sin u}a\right)^2 + a^2b^2c^2\left(\frac{\sin v \sin u}b\right)^2 + a^2b^2c^2 \left(\frac{\cos u}c\right)^2} \mathrm d u \mathrm d v \\
+&= \int\limits_0^{2\pi}   \int\limits_0^{\pi}abc \sin u \sqrt{\frac{\sin^2(u) \cos^2(v)}{a^2} + \frac{\sin^2(u)\sin^2(v)}{b^2} + \frac{\cos^2(u)}{c^2}} \sqrt{\left(\frac{\cos v \sin u}a\right)^2 + \left(\frac{\sin v \sin u}b\right)^2 + \left(\frac{\cos u}c\right)^2} \mathrm d u \mathrm d v\\
+&= \int\limits_0^{2\pi}   \int\limits_0^{\pi}abc \sin u \cdot  \left(\frac{\sin^2(u) \cos^2(v)}{a^2} + \frac{\sin^2(u)\sin^2(v)}{b^2} + \frac{\cos^2(u)}{c^2}\right)\mathrm d u \;\mathrm d v\\
+&= abc \int\limits_0^{\pi} \sin (u) \int\limits_0^{2\pi}\frac{\sin^2(u) \cos^2(v)}{a^2} + \frac{\sin^2(u)\sin^2(v)}{b^2} + \frac{\cos^2(u)}{c^2}\;\mathrm d v \;\mathrm d u
+\intertext{Da das Integral von $0$ bis $2\pi$ sowohl über $\sin^2$ als auch über $\cos^2$ $\pi$ ergibt, gilt:}
+&= \pi \cdot abc \int\limits_0^{\pi} \sin(u)  \left(\frac{\sin^2(u)}{a^2} + \frac{\sin^2(u)}{b^2} + \frac{\cos^2(u)}{c^2}\right) \mathrm d u\\
+&= \pi \cdot abc \int\limits_0^{\pi}\frac{\sin^3(u)}{a^2} + \frac{\sin^3(u)}{b^2} + \frac{\cos^2(u)\sin(u)}{c^2} \mathrm d u
+\intertext{Es gilt: $\int\limits_0^{\pi} \sin^3(x) \mathrm d x = \frac 43$ und $\int\limits_0^{\pi} \cos^2(x)\sin(x) \mathrm d x = \frac 23$}
+&= \pi \cdot abc  \left(\frac 4{3a^2}  + \frac 4{3b^2} + \frac 2{3c^2}\right)\\
+&= \frac {2\pi}3 abc \left( \frac 2{a^2} + \frac 2{b^2} + \frac 1{c^2} \right)
+%\intertext{\textbf{Das kann doch nicht deren Ernst sein. -- Max}}
+%\intertext{\textbf{Isses auch nicht. -- Tom}}
 \end{align*}
 \section*{Aufgabe 3}
 Die Parametrisierung für die Fläche $S$ ist wie folgt:
