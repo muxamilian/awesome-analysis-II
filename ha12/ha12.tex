@@ -138,16 +138,27 @@ Wir benutzen die Zylinderkoordinaten, Funktionaldetermiante ist $r~dr ~ d\varphi
     Nach dem Satz von Stokes gilt:
     \begin{align*}
         \vec v(\vec x) &= \vecthree{6\cos \varphi }{4 \cos \varphi \sin \varphi - 6\sin \varphi}{8 \cos \varphi \sin \varphi - 6\cos \varphi } \\
-        \iint\limits_M \text{rot } \vec v \cdot d\vec O  &= \int\limits_{\delta M} \vec v  \cdot \vec ds \\
-        &= \int\limits_{0}^{2\pi} \vecthree{6\cos \varphi }{4 \cos \varphi \sin \varphi - 6\sin \varphi}{8 \cos \varphi \sin \varphi - 6\cos \varphi }  \cdot \vecthree{6\cos \varphi }{4 \cos \varphi \sin \varphi - 6\sin \varphi}{8 \cos \varphi \sin \varphi - 6\cos \varphi } ~ d\varphi \\
-        &= \int\limits_{0}^{2\pi} 12 \cos^2 \varphi + 6\sin \varphi - 4\sin \varphi \cos \varphi + (6\cos \varphi - 8\sin \varphi)^2 \cos^2 \varphi ~ d \varphi \\
-        &= 55 \pi
+        \iint\limits_M \vec v \cdot d\vec O  &= \int\limits_{\delta M} \vec v  \cdot \vec ds \\
+        &= \int\limits_{0}^{2\pi} \vecthree{6\cos \varphi }{4 \cos \varphi \sin \varphi - 6\sin \varphi}{8 \cos \varphi \sin \varphi - 6\cos \varphi }  \cdot  \vecthree{-2\sin \varphi}{2\cos \varphi}{0} ~ d\varphi \\
+        &= \int\limits_{0}^{2\pi} -12 \sin \varphi\cos\varphi + 8 \cos^2 \varphi \sin \varphi - 12 \sin \varphi \cos \varphi ~ d \varphi \\
+        &= \int\limits_{0}^{2\pi} -24 \sin \varphi\cos\varphi + 8 \cos^2 \varphi \sin \varphi  ~ d \varphi \\
+        &= 0
     \end{align*}
     \item 
     \begin{align*}
       \text{rot } \vec w(x,y,z)  = \left( xz - 0 \right)e_x + \left( xy - yz \right)e_y + \left( 2xy - xz \right)e_z = \vecthree{xz}{xy -yz}{2xy - xz}
     \end{align*}
-    \item 
+    \item Es gilt:
+    \[ U = Z \cup K \Rightarrow \delta U = (\delta Z \cap M) \cup (\delta K \cap M)  \]
+    Somit lässt sich das Integral berechnen mit:
+    \begin{align*}
+      \iint\limits_{\delta U} \vec v \cdot \vec dO &= \iint\limits_{\delta Z} \vec v \cdot \vec dO - \iint\limits_{M } \vec v \cdot \vec dO + \iint\limits_{\delta K} \vec v \cdot \vec dO - \iint\limits_{M } \vec v \cdot \vec dO\\ 
+      &= \iint\limits_{\delta Z} \vec v \cdot \vec dO  + \iint\limits_{\delta K} \vec v \cdot \vec dO - 2\iint\limits_{M } \vec v \cdot \vec dO
+    \end{align*}
+    Das letzter Integral wurde schon berechnet und beträgt $0$, die beiden anderen werden mithilfe des Satz von Gauss berechnet.
+    \[ \text{div } \vec v = z + x - z + - x = 0 \]
+    Da die Divergenz 0 beträgt, kann jedes Integral nur 0 ergeben. Somit gilt:
+    \[ \iint\limits_{\delta U} \vec v \cdot \vec dO = 0 \]
 
 \end{enumerate}
 
