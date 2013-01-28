@@ -159,8 +159,22 @@ Wir benutzen die Zylinderkoordinaten, Funktionaldetermiante ist $r~dr ~ d\varphi
     \[ \text{div } \vec v = z + x - z + - x = 0 \]
     Da die Divergenz 0 beträgt, kann jedes Integral nur 0 ergeben. Somit gilt:
     \[ \iint\limits_{\delta U} \vec v \cdot \vec dO = 0 \]
-
 \end{enumerate}
+
+\subsection*{2. Aufgabe}
+\[ K = \left\{  \vecthree{x}{y}{z} \in \R^3 \mid z = x^2 + y^2 - 4,~z \le 0  \right\}  = \left\{  \vecthree{r \cos \varphi}{r \sin \varphi}{r^2 - 4} \mid~ r \in [0,2] ,~ \varphi \in [0,2\pi] \right\} \]
+
+\[ \text{rot } \vec v =  (0 - 1 )e_x + (0 - 1 )e_y + (0 - 1)e_z = -\vecthree{1}{1}{1}\]
+\[ \vec dO = \vecthree{\cos \varphi}{\sin \varphi}{2r} \times \vecthree{-r\sin \varphi}{r\cos \varphi}{0} = \vecthree{-2r^2 \cos \varphi}{-2r^2\sin \varphi}{r} ~dr~ d\varphi \]
+\begin{align*}
+\iint\limits_{K} \text{rot } \vec v \cdot \vec dO &= \int\limits_{0}^{2\pi}\int\limits_{0}^{2} -\vecthree{1}{1}{1} \cdot \vecthree{-2r^2 \cos \varphi}{-2r^2\sin \varphi}{r} ~dr~ d\varphi \\
+&= \int\limits_{0}^{2\pi}\int\limits_{0}^{2} 2r^2\cos \varphi + 2r^2 \sin \varphi -r   ~dr~ d\varphi \\
+&= \left.\int\limits_{0}^{2\pi} \frac 23 r^3 \cos \varphi + \frac 23 r^3 \sin \varphi - \frac 12 r^2 \right|_{0}^{2}   ~ d\varphi \\
+&= \int\limits_{0}^{2\pi} \frac {16}3  \cos \varphi + \frac {16}{3} \sin \varphi - 4   ~ d\varphi \\
+&= \left.\frac {16}3  \sin \varphi - \frac {16}{3} \cos \varphi - 4\varphi \right|_{0}^{2\pi}   
+= - \frac {16}{3} - 8\pi + \frac{16}{3} \\
+&= 8\pi
+\end{align*}
 
 
 \end{document}
