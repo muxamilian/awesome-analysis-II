@@ -82,7 +82,7 @@ Maximilian Bachl\> 341455
    \end{minipage}
    \begin{minipage}{0.50\columnwidth}
    \begin{center}
-   \includegraphics[scale=0.7]{1aZ.pdf} 
+   %\includegraphics[scale=0.7]{1aZ.pdf} 
    \end{center}
    \end{minipage}
    \ \\
@@ -97,20 +97,20 @@ Maximilian Bachl\> 341455
    \end{minipage}
    \begin{minipage}{0.50\columnwidth}
    \begin{center}
-   \includegraphics[scale=0.7]{1aK.pdf} 
+   %\includegraphics[scale=0.7]{1aK.pdf} 
    \end{center}
    \end{minipage}
    \item  
    Wir benutzen die Zylinderkoordinaten, Funktionaldetermiante ist $r~dr ~ d\varphi ~dz$
    \[ Z = \{ (x,y,z) \in \R^3  \mid x^2 + y^2 \le 4, 0 \le z \le 3\} = \left\{ \vecthree{r \cos \varphi}{r\sin \varphi}{z} \mid r \in [0,2] ,~ \varphi \in [0,2\pi], ~z \in [0,3] \right\} \] 
-   Für $\vec v (r,\varphi, z)$ ergibt sich dann:
-   \[ \vec v (r,\varphi, z) = \vecthree{zr\cos\varphi}{r\sin \varphi (r\cos \varphi - z)}{r\cos \varphi (r\sin \varphi - z)} \]
-   Da $Z$ ein kompakter Bereich ist kann der Satz von Gauss angewendet werden, womit gilt:
+   Da $Z$ ein kompakter Bereich ist kann der Satz von Gauss angewendet werden:
+   \[ \text{div } \vec v(x,y,z) =  z + x - z + x = 1\]
       \begin{align*}
-            \iint\limits_{\delta Z} \vec w \cdot d \vec O &= \iiint\limits_{Z} \text{div } \vec w~ r~dr ~d\varphi~ dz \\
-            &= \iiint\limits_{Z} (z \cos\varphi + r^2\cos^2\varphi - r^2 \sin^2\varphi - zr \cos \varphi  -1 )~ r~dr ~d\varphi~ dz \\
-            &= \iiint\limits_{Z} (z \cos\varphi + r^2\cos^2(2\varphi) - zr \cos \varphi  - r\cos \varphi )~ r~dr ~d\varphi~ dz \\
-               &= \iiint\limits_{Z} (z \cos\varphi + r^2\cos^2(2\varphi) - zr \cos \varphi  - r\cos \varphi )~ r~dr ~d\varphi~ dz \\
+            \iint\limits_{\delta Z} \vec v \cdot d \vec O &= \iiint\limits_{Z} \text{div } \vec v~ r~dr ~d\varphi~ dz \\
+            &= \int\limits_{0}^3\int\limits_0^{2\pi}\int\limits_0^2  r~dr ~d\varphi~ dz \\
+            &= \frac 12 \left.\int\limits_{0}^3\int\limits_0^{2\pi} r^2 \right|^2_0 ~d\varphi ~ dz  = 2 \int\limits_{0}^3\int\limits_0^{2\pi} 1 ~d\varphi ~dz \\
+            &= 2 \int\limits_{0}^3 2\pi  ~dz = 4\pi \int\limits_{0}^3 1 ~dz \\
+            &= 12 \pi
       \end{align*}
 \end{enumerate}
 
