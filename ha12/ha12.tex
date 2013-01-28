@@ -82,7 +82,7 @@ Maximilian Bachl\> 341455
    \end{minipage}
    \begin{minipage}{0.50\columnwidth}
    \begin{center}
-   %\includegraphics[scale=0.7]{1aZ.pdf} 
+   \includegraphics[scale=0.7]{1aZ.pdf} 
    \end{center}
    \end{minipage}
    \ \\
@@ -98,7 +98,7 @@ Maximilian Bachl\> 341455
    \end{minipage}
    \begin{minipage}{0.50\columnwidth}
    \begin{center}
-   %\includegraphics[scale=0.7]{1aK.pdf} 
+   \includegraphics[scale=0.7]{1aK.pdf} 
    \end{center}
    \end{minipage}
    \item  
@@ -170,12 +170,19 @@ Wir benutzen die Zylinderkoordinaten, Funktionaldetermiante ist $r~dr ~ d\varphi
 \iint\limits_{K} \text{rot } \vec v \cdot \vec dO &= \int\limits_{0}^{2\pi}\int\limits_{0}^{2} -\vecthree{1}{1}{1} \cdot \vecthree{-2r^2 \cos \varphi}{-2r^2\sin \varphi}{r} ~dr~ d\varphi \\
 &= \int\limits_{0}^{2\pi}\int\limits_{0}^{2} 2r^2\cos \varphi + 2r^2 \sin \varphi -r   ~dr~ d\varphi \\
 &= \left.\int\limits_{0}^{2\pi} \frac 23 r^3 \cos \varphi + \frac 23 r^3 \sin \varphi - \frac 12 r^2 \right|_{0}^{2}   ~ d\varphi \\
-&= \int\limits_{0}^{2\pi} \frac {16}3  \cos \varphi + \frac {16}{3} \sin \varphi - 4   ~ d\varphi \\
-&= \left.\frac {16}3  \sin \varphi - \frac {16}{3} \cos \varphi - 4\varphi \right|_{0}^{2\pi}   
-= - \frac {16}{3} - 8\pi + \frac{16}{3} \\
-&= 8\pi
+&= \int\limits_{0}^{2\pi} \frac {16}3  \cos \varphi + \frac {16}{3} \sin \varphi - 2   ~ d\varphi \\
+&= \left.\frac {16}3  \sin \varphi - \frac {16}{3} \cos \varphi - 2\varphi \right|_{0}^{2\pi}   
+= - \frac {16}{3} - 4\pi + \frac{16}{3} \\
+&= 4\pi
 \end{align*}
-
-
+\[ \delta K =  \left\{  \vecthree{2 \cos \varphi}{2 \sin \varphi}{0} \mid~ \varphi \in [0,2\pi] \right\} \]
+\begin{align*}
+\int\limits_{\delta K} \vec v \cdot \vec ds &= \int\limits_{0}^{2\pi}\vecthree{2(\cos \varphi+ \sin \varphi)}{2\sin\varphi}{2\cos\varphi} \cdot \vecthree{-2\sin \varphi}{2\cos \varphi}{0} ~d\varphi \\
+&= \int\limits_{0}^{2\pi} -4 \cos\varphi\sin \varphi -4 \sin^2 \varphi + 4\sin \varphi\cos\varphi ~d\varphi \\
+&= \int\limits_{0}^{2\pi} -4 \sin^2 \varphi ~d\varphi \\
+&= \left. \sin(2\varphi) - 2\varphi \right|^{2\pi}_0 \\
+&= 4\pi
+\end{align*}
+Da Linke Seite gleich Rechte Seite, gilt hier der Satz von Stokes.
 \end{document}
 
