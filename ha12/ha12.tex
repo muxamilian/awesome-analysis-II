@@ -90,9 +90,10 @@ Maximilian Bachl\> 341455
    Ein VollKegel mit der Höhe 1.
    \begin{lstlisting}[caption= Mathematica Code für die Menge K]
    RegionPlot3D[
-    Sqrt[x^2 + y^2] <= 8 - 2 z, {x, -8, 8}, 
-    {y, -8, 8}, {z, 3, 4}, 
-    AxesLabel -> {x, y, z}]
+   RegionPlot3D[
+ Sqrt[x^2 + y^2] <= 8 - 2 z, {x, -2, 2}, 
+ {y, -2, 2}, {z, 3, 4}, 
+ AxesLabel -> {x, y, z}]
    \end{lstlisting}
    \end{minipage}
    \begin{minipage}{0.50\columnwidth}
@@ -126,6 +127,10 @@ Wir benutzen die Zylinderkoordinaten, Funktionaldetermiante ist $r~dr ~ d\varphi
                 &= \left. \frac 45 \pi (z-4)^5 \right|^4_3    \\
                 &= \frac 45 \pi
       \end{align*}
+    \item 
+    \begin{align*}
+        M = Z \cap K = \left\{ \vecthree{r \cos \varphi}{r\sin \varphi}{z} \mid r \in [0,2], ~z = 3 ,~ \varphi \in [0,2\pi] \right\} 
+    \end{align*}
 \end{enumerate}
 
 
