@@ -112,6 +112,20 @@ Maximilian Bachl\> 341455
             &= 2 \int\limits_{0}^3 2\pi  ~dz = 4\pi \int\limits_{0}^3 1 ~dz \\
             &= 12 \pi
       \end{align*}
+Wir benutzen die Zylinderkoordinaten, Funktionaldetermiante ist $r~dr ~ d\varphi ~dz$
+   \[ K = \{ (x,y,z) \in \R^3  \mid \sqrt{x^2 + y^2} \le 8 - 2z ,~z \in [3,4]\} = \left\{ \vecthree{r \cos \varphi}{r\sin \varphi}{z} \mid 0 \le r \le 8-2z, ~z \in [3,4] ,~ \varphi \in [0,2\pi] \right\} \] 
+   Da $K$ ein kompakter Bereich ist kann der Satz von Gauss angewendet werden:
+   \[ \text{div } \vec w(x,y,z) =  yz + x^2 + xy\]
+      \begin{align*}
+            \iint\limits_{\delta K} \vec w \cdot d \vec O &= \iiint\limits_{K} \text{div } \vec w~ r~dr ~d\varphi~ dz \\
+            &= \int\limits_{3}^4\int\limits_0^{2\pi}\int\limits_0^{8-2z}  (rz\sin\varphi + r^2\cos^2\varphi + r\cos\varphi ~r\sin\varphi )r~dr ~d\varphi~ dz \\
+             &= \left.\int\limits_{3}^4\int\limits_0^{2\pi}  \frac 13 r^3z \sin \varphi + \frac 14 r^4 \cos^2 \varphi + \frac 14 r^4 \cos \varphi \sin \varphi \right|^{8-2z}_0 ~d\varphi~ dz \\
+              &= \int\limits_{3}^4\int\limits_0^{2\pi}  \frac 13 (8-2z)^3z\sin \varphi + \frac 14 (8-2z)^4\cos^2\varphi + \frac 14 (8-2z)^4\cos \varphi \sin \varphi  ~d\varphi~ dz \\
+               &= \left.\int\limits_{3}^4  - \frac 43 (8-2z)^3z\cos \varphi + (8-2z)^4(\varphi + \sin \varphi \cos \varphi) -(8-2z)^4\cos^2 \varphi  \right|^{2\pi}_{0}~ dz \\
+                &= \int\limits_{3}^4 4\pi(z-4)^4   ~ dz \\
+                &= \left. \frac 45 \pi (z-4)^5 \right|^4_3    \\
+                &= \frac 45 \pi
+      \end{align*}
 \end{enumerate}
 
 
