@@ -82,12 +82,12 @@ Maximilian Bachl\> 341455
    \end{minipage}
    \begin{minipage}{0.50\columnwidth}
    \begin{center}
-   \includegraphics[scale=0.7]{1aZ.pdf} 
+%   \includegraphics[scale=0.7]{1aZ.pdf} 
    \end{center}
    \end{minipage}
    \ \\
    \begin{minipage}{0.50\columnwidth}
-   Ein VollKegel mit der Höhe 1.
+   Ein Vollkegel mit der Höhe 1.
    \begin{lstlisting}[caption= Mathematica Code für die Menge K]
    RegionPlot3D[
    RegionPlot3D[
@@ -98,13 +98,13 @@ Maximilian Bachl\> 341455
    \end{minipage}
    \begin{minipage}{0.50\columnwidth}
    \begin{center}
-   \includegraphics[scale=0.7]{1aK.pdf} 
+%   \includegraphics[scale=0.7]{1aK.pdf} 
    \end{center}
    \end{minipage}
    \item  
    Wir benutzen die Zylinderkoordinaten, Funktionaldetermiante ist $r~dr ~ d\varphi ~dz$
    \[ Z = \{ (x,y,z) \in \R^3  \mid x^2 + y^2 \le 4, 0 \le z \le 3\} = \left\{ \vecthree{r \cos \varphi}{r\sin \varphi}{z} \mid r \in [0,2] ,~ \varphi \in [0,2\pi], ~z \in [0,3] \right\} \] 
-   Da $Z$ ein kompakter Bereich ist kann der Satz von Gauss angewendet werden:
+   Da $Z$ ein kompakter Bereich ist kann der Satz von Gauß angewendet werden:
    \[ \text{div } \vec w(x,y,z) =  yz + x^2 + xy\]
       \begin{align*}
             \iint\limits_{\delta Z} \vec v \cdot d \vec O &= \iiint\limits_{Z} \text{div } \vec w~ r~dr ~d\varphi~ dz \\
@@ -118,7 +118,7 @@ Maximilian Bachl\> 341455
       \end{align*}
 Wir benutzen die Zylinderkoordinaten, Funktionaldetermiante ist $r~dr ~ d\varphi ~dz$
    \[ K = \{ (x,y,z) \in \R^3  \mid \sqrt{x^2 + y^2} \le 8 - 2z ,~z \in [3,4]\} = \left\{ \vecthree{r \cos \varphi}{r\sin \varphi}{z} \mid 0 \le r \le 8-2z, ~z \in [3,4] ,~ \varphi \in [0,2\pi] \right\} \] 
-   Da $K$ ein kompakter Bereich ist kann der Satz von Gauss angewendet werden:
+   Da $K$ ein kompakter Bereich ist kann der Satz von Gauß angewendet werden:
    \[ \text{div } \vec w(x,y,z) =  yz + x^2 + xy\]
       \begin{align*}
             \iint\limits_{\delta K} \vec w \cdot d \vec O &= \iiint\limits_{K} \text{div } \vec w~ r~dr ~d\varphi~ dz \\
@@ -155,7 +155,7 @@ Wir benutzen die Zylinderkoordinaten, Funktionaldetermiante ist $r~dr ~ d\varphi
       \iint\limits_{\delta U} \vec v \cdot \vec dO &= \iint\limits_{\delta Z} \vec v \cdot \vec dO - \iint\limits_{M } \vec v \cdot \vec dO + \iint\limits_{\delta K} \vec v \cdot \vec dO - \iint\limits_{M } \vec v \cdot \vec dO\\ 
       &= \iint\limits_{\delta Z} \vec v \cdot \vec dO  + \iint\limits_{\delta K} \vec v \cdot \vec dO - 2\iint\limits_{M } \vec v \cdot \vec dO
     \end{align*}
-    Das letzter Integral wurde schon berechnet und beträgt $0$, die beiden anderen werden mithilfe des Satz von Gauss berechnet.
+    Das letzter Integral wurde schon berechnet und beträgt $0$, die beiden anderen werden mithilfe des Satz von Gauß berechnet.
     \[ \text{div } \vec v = z + x - z + - x = 0 \]
     Da die Divergenz 0 beträgt, kann jedes Integral nur 0 ergeben. Somit gilt:
     \[ \iint\limits_{\delta U} \vec v \cdot \vec dO = 0 \]
@@ -183,6 +183,6 @@ Wir benutzen die Zylinderkoordinaten, Funktionaldetermiante ist $r~dr ~ d\varphi
 &= \left. \sin(2\varphi) - 2\varphi \right|^{2\pi}_0 \\
 &= 4\pi
 \end{align*}
-Da Linke Seite gleich Rechte Seite, gilt hier der Satz von Stokes.
+Da linke Seite gleich rechte Seite, gilt hier der Satz von Stokes.
 \end{document}
 
