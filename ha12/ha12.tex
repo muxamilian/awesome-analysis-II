@@ -135,7 +135,8 @@ Wir benutzen die Zylinderkoordinaten, Funktionaldetermiante ist $r~dr ~ d\varphi
         M &= Z \cap K = \left\{ \vecthree{r \cos \varphi}{r\sin \varphi}{3} \mid r \in [0,2] ,~ \varphi \in [0,2\pi] \right\}  \\
         \delta M &=  \left\{ \vecthree{2 \cos \varphi}{2\sin \varphi}{3} \mid ~ \varphi \in [0,2\pi] \right\} 
     \end{align*}
-    Nach dem Satz von Stokes gilt:
+    Nach dem Satz von Stokes gilt:\\
+    \textbf{\textsc{Wie hast du das mit Umlaufrichtung herausgefunden? Und warum brauchst du keine Funktionaldeterminante? -- Max}}
     \begin{align*}
         \vec v(\vec x) &= \vecthree{6\cos \varphi }{4 \cos \varphi \sin \varphi - 6\sin \varphi}{8 \cos \varphi \sin \varphi - 6\cos \varphi } \\
         \iint\limits_M \vec v \cdot d\vec O  &= \int\limits_{\delta M} \vec v  \cdot \vec ds \\
@@ -162,6 +163,7 @@ Wir benutzen die Zylinderkoordinaten, Funktionaldetermiante ist $r~dr ~ d\varphi
 \end{enumerate}
 
 \subsection*{2. Aufgabe}
+\textsc{\textbf{Was ist mit der Funktionaldeterminante passiert? -- Max}}
 \[ K = \left\{  \vecthree{x}{y}{z} \in \R^3 \mid z = x^2 + y^2 - 4,~z \le 0  \right\}  = \left\{  \vecthree{r \cos \varphi}{r \sin \varphi}{r^2 - 4} \mid~ r \in [0,2] ,~ \varphi \in [0,2\pi] \right\} \]
 
 \[ \text{rot } \vec v =  (0 - 1 )e_x + (0 - 1 )e_y + (0 - 1)e_z = -\vecthree{1}{1}{1}\]
@@ -175,7 +177,7 @@ Wir benutzen die Zylinderkoordinaten, Funktionaldetermiante ist $r~dr ~ d\varphi
 = - \frac {16}{3} - 4\pi + \frac{16}{3} \\
 &= 4\pi
 \end{align*}
-\[ \delta K =  \left\{  \vecthree{2 \cos \varphi}{2 \sin \varphi}{0} \mid~ \varphi \in [0,2\pi] \right\} \]
+\[ \delta K =  \left\{ \left. \vecthree{2 \cos \varphi}{2 \sin \varphi}{0} \right|~ \varphi \in [0,2\pi] \right\} \]
 \begin{align*}
 \int\limits_{\delta K} \vec v \cdot \vec ds &= \int\limits_{0}^{2\pi}\vecthree{2(\cos \varphi+ \sin \varphi)}{2\sin\varphi}{2\cos\varphi} \cdot \vecthree{-2\sin \varphi}{2\cos \varphi}{0} ~d\varphi \\
 &= \int\limits_{0}^{2\pi} -4 \cos\varphi\sin \varphi -4 \sin^2 \varphi + 4\sin \varphi\cos\varphi ~d\varphi \\
