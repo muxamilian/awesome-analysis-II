@@ -150,7 +150,7 @@ Wir benutzen die Zylinderkoordinaten, Funktionaldetermiante ist $r~dr ~ d\varphi
       \text{rot } \vec w(x,y,z)  = \left( xz - 0 \right)e_x + \left( xy - yz \right)e_y + \left( 2xy - xz \right)e_z = \vecthree{xz}{xy -yz}{2xy - xz}
     \end{align*}
     \item Es gilt:
-    \[ U = Z \cup K \Rightarrow \delta U = (\delta Z \cap M) \cup (\delta K \cap M)  \]
+    \[ U = Z \cup K \Rightarrow \delta U = (\delta Z \setminus M) \cup (\delta K \setminus M)  \]
     Somit lässt sich das Integral berechnen mit:
     \begin{align*}
       \iint\limits_{\delta U} \vec v \cdot \vec dO &= \iint\limits_{\delta Z} \vec v \cdot \vec dO - \iint\limits_{M } \vec v \cdot \vec dO + \iint\limits_{\delta K} \vec v \cdot \vec dO - \iint\limits_{M } \vec v \cdot \vec dO\\ 
@@ -167,7 +167,7 @@ Wir benutzen die Zylinderkoordinaten, Funktionaldetermiante ist $r~dr ~ d\varphi
 \[ K = \left\{  \vecthree{x}{y}{z} \in \R^3 \mid z = x^2 + y^2 - 4,~z \le 0  \right\}  = \left\{  \vecthree{r \cos \varphi}{r \sin \varphi}{r^2 - 4} \mid~ r \in [0,2] ,~ \varphi \in [0,2\pi] \right\} \]
 
 \[ \text{rot } \vec v =  (0 - 1 )e_x + (0 - 1 )e_y + (0 - 1)e_z = -\vecthree{1}{1}{1}\]
-\[ \vec dO = \vecthree{\cos \varphi}{\sin \varphi}{2r} \times \vecthree{-r\sin \varphi}{r\cos \varphi}{0} = \vecthree{-2r^2 \cos \varphi}{-2r^2\sin \varphi}{r} ~dr~ d\varphi \]
+\[ \vec dO = \vecthree{\cos \varphi}{\sin \varphi}{2r} \times \vecthree{-r\sin \varphi}{r\cos \varphi}{0} ~dr~ d\varphi = \vecthree{-2r^2 \cos \varphi}{-2r^2\sin \varphi}{r} ~dr~ d\varphi \]
 \begin{align*}
 \iint\limits_{K} \text{rot } \vec v \cdot \vec dO &= \int\limits_{0}^{2\pi}\int\limits_{0}^{2} -\vecthree{1}{1}{1} \cdot \vecthree{-2r^2 \cos \varphi}{-2r^2\sin \varphi}{r} ~dr~ d\varphi \\
 &= \int\limits_{0}^{2\pi}\int\limits_{0}^{2} 2r^2\cos \varphi + 2r^2 \sin \varphi -r   ~dr~ d\varphi \\
