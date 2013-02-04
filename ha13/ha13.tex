@@ -80,14 +80,14 @@ Außerdem gilt trivialerweise $\sqrt[k]{\left|a_k\right|} \le q <1 \Leftrightarr
 Weil $\sum_{k=0}^{\infty} \frac 1 {k^2}$ konvergiert und o.B.d.A $~q^k < \frac 1 {k^2}$ ab einem gewissen $k_1$ folgt, dass auch die Reihe $\sum_{k=0}^{\infty} a_k$ konvergiert.
 \item
 $$\sqrt[k]{|k^nx^k|} \le \sqrt {|x|} = \sqrt[k]{|k^n|}~x \le \sqrt {|x|}$$
-Ab einem gewissen $k_0$ ist diese Gleichung erfüllt, da $\lim_{k\to\infty} \sqrt[k]{k^n} = 1$. Da aber $|x| < 1$ ist diese Gleichung erfüllt. Die $ \sqrt {|x|}$ steht hier für das $q$ aus dem vorherigen Beweis. Wir nehmen die Wurzel, da nur so die obige Formel gilt und $\sqrt {|x|}$ noch immer kleiner als $1$ ist. 
+Es gilt $\lim_{k\to\infty} \sqrt[k]{k^n} = 1$, wobei sich die Folge von oben der Null nähert. Da aber $|x| < 1$ ist diese Gleichung erfüllt. Die $ \sqrt {|x|}$ steht hier für das $q$ aus dem vorherigen Beweis. Wir nehmen die Wurzel, da nur so die obige Formel gilt und $\sqrt {|x|}$ noch immer kleiner als $1$ ist. 
 
 Nach dem Wurzelkriterium konvergiert diese Reihe also. Wenn $\left| x \right| > 0$ ist das Wurzelkriterium nicht mehr erfüllt und der Grenzwert der Folge bleibt größer als $1$. 
 \end{itemize}
 \section*{Aufgabe 2}
 \begin{enumerate}[a)]
 	\item 
-	Ist nicht konvergent, da das notwendige Konvergenzkriterium nicht erfüllt ist:
+	Ist nicht konvergent, da das notwendige Konvergenzkriterium nicht erfüllt ist und auch nicht absolut konvergent, da die notwendige Bedingung $\lim_{n\to\infty} |a_k| = 0$ nicht erfüllt ist:
 		\begin{align*} 
 			\lim_{n \to \infty} (-1)^n\frac{2n+7}{70n + 8} = \pm \frac 27 
 		\end{align*}
@@ -98,16 +98,26 @@ Nach dem Wurzelkriterium konvergiert diese Reihe also. Wenn $\left| x \right| > 
             \end{align*}
          Da offensichtlich gilt $\sum_{n=1}^{\infty}\frac{1000^n}{n!} =  \sum_{n=1}^{\infty}\left|\frac{1000^n}{n!}\right|$  ist die Reihe auch absolut konvergent.
          \item 
-         Da $\lim_{1 \to n} \frac{n^5}{2^n+3^n} = 0$ ist die Reihe konvergent, da weiterhin gilt $\sum_{n=1}^{\infty}\frac{n^5}{2^n+3^n}  =  \sum_{n=1}^{\infty}\left|\frac{n^5}{2^n+3^n}\right|$ ist die Reihe absolut konvergent.
+         Da $\lim_{n \to \infty} \frac{n^5}{2^n+3^n} = 0$ ist die Reihe konvergent, da weiterhin gilt $\sum_{n=1}^{\infty}\frac{n^5}{2^n+3^n}  =  \sum_{n=1}^{\infty}\left|\frac{n^5}{2^n+3^n}\right|$ ist die Reihe absolut konvergent.
          \item 
-         Da $\lim_{1 \to n} \frac{1}{4n + (-1)^n} = 0$ gilt nach dem Leibnizkriterium, dass die Reihe konvergent ist. Offensichtlich ist die Reihenfolge auch absolut konvergent.
-
-
+         Da $\lim_{n \to \infty} \frac{1}{4n + (-1)^n} = 0$ gilt nach dem Leibnizkriterium, dass die Reihe konvergent ist. Offensichtlich ist die Reihe auch absolut konvergent.
+\item
+\begin{align*}
+\lim_{n\to\infty} \frac{\frac{4^{n}}{5^{n+2}}}{\frac{4^{n-1}}{5^{n+1}}} = \lim_{n\to\infty} \frac{\frac{4^{n}}{25\cdot5^{n}}}{\frac{\frac 1 4 4^{n}}{5\cdot5^{n}}} = \lim_{n\to\infty}\frac{4^{n}}{25\cdot5^{n}} \cdot \frac{5\cdot5^{n}}{\frac 1 4 4^{n}} = \lim_{n\to\infty}\frac{1}{25} \cdot \frac{5}{\frac 1 4} = \lim_{n\to\infty}\frac{1}{25} \cdot \frac{5}{\frac 1 4} = \frac 4 5
+\end{align*}
+Nach dem Quotientenkriterium ist die Reihe also konvergent und somit konvergiert die Reihe auch absolut.
+\item
+\begin{align*}
+\lim_{n\to\infty} \frac{\frac{2^{6n+6}}{n^{2n+2}}}{\frac{2^{6n}}{n^{2n}}} = \lim_{n\to\infty} \frac{\frac{2^62^{6n}}{n^2n^{2n}}}{\frac{2^{6n}}{n^{2n}}} = \lim_{n\to\infty} \frac{2^6}{n^2} = 0 
+\end{align*}
+Nach dem Quotientenkriterium ist die Reihe also konvergent und somit konvergiert die Reihe auch absolut.
 \end{enumerate}
 \section*{Aufgabe 3}
 \begin{enumerate}[a)]
-	\item 
-		\[ \sum_{k=1}^{\infty}(-1)^{k+1}\frac{(x-1)^k}{k} \]
+\item 
+\begin{align*}
+\sum_{k=1}^{\infty}(-1)^{k+1}\frac{(x-1)^k}{k}
+\end{align*}
 \end{enumerate}
 \end{document}
 
