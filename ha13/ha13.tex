@@ -18,7 +18,7 @@ top=1cm, bottom=1cm]{geometry}
 \newcommand{\R}{\mathbb{R}}
 \parindent 0mm
 \author{Tom}
-\title{Analysis 2 - Hausaufgabe 12}
+\title{Analysis 2 - Hausaufgabe 13}
 
 % new commands for vectors
 \newcommand{\vectwo}[2]{\begin{pmatrix}#1\\#2\\\end {pmatrix}}
@@ -100,7 +100,7 @@ Nach dem Wurzelkriterium konvergiert diese Reihe also. Wenn $\left| x \right| > 
          \item 
          Da $\lim_{n \to \infty} \frac{n^5}{2^n+3^n} = 0$ ist die Reihe konvergent, da weiterhin gilt $\sum_{n=1}^{\infty}\frac{n^5}{2^n+3^n}  =  \sum_{n=1}^{\infty}\left|\frac{n^5}{2^n+3^n}\right|$ ist die Reihe absolut konvergent.
          \item 
-         Da $\lim_{n \to \infty} \frac{1}{4n + (-1)^n} = 0$ gilt nach dem Leibnizkriterium, dass die Reihe konvergent ist. Offensichtlich ist die Reihe auch absolut konvergent.
+         Da $\lim_{n \to \infty} \frac{1}{4n + (-1)^n} = 0$ gilt nach dem Leibnizkriterium, dass die Reihe konvergent ist. Die Reihe ist allerdings nicht absolut konvergent, da dann das Leibnizkriterium nicht mehr erfüllt ist.
 \item
 \begin{align*}
 \lim_{n\to\infty} \frac{\frac{4^{n}}{5^{n+2}}}{\frac{4^{n-1}}{5^{n+1}}} = \lim_{n\to\infty} \frac{\frac{4^{n}}{25\cdot5^{n}}}{\frac{\frac 1 4 4^{n}}{5\cdot5^{n}}} = \lim_{n\to\infty}\frac{4^{n}}{25\cdot5^{n}} \cdot \frac{5\cdot5^{n}}{\frac 1 4 4^{n}} = \lim_{n\to\infty}\frac{1}{25} \cdot \frac{5}{\frac 1 4} = \lim_{n\to\infty}\frac{1}{25} \cdot \frac{5}{\frac 1 4} = \frac 4 5
@@ -141,6 +141,6 @@ Nun prüfen wir, ob die Reihe aus (a) auch für $x=1+i$ konvergiert.
 \begin{align*}
 \sum_{k=1}^{\infty}(-1)^{k+1}\frac{(x-1)^k}{k} \overset{\text{für x einsetzen}}{=} \sum_{k=1}^{\infty}(-1)^{k+1}\frac{i^k}{k}
 \end{align*}
-Da $\frac{i^k}{k}$ eine Nullfolge ist konvergiert die Reihe nach dem Leibnitz-Kriterium.
+Da $\frac{i^k}{k}$ eine Nullfolge ist konvergiert die Reihe nach dem Leibniz-Kriterium.
 \end{document}
 
