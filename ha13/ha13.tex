@@ -116,8 +116,31 @@ Nach dem Quotientenkriterium ist die Reihe also konvergent und somit konvergiert
 \begin{enumerate}[a)]
 \item 
 \begin{align*}
-\sum_{k=1}^{\infty}(-1)^{k+1}\frac{(x-1)^k}{k}
+\sum_{k=1}^{\infty}(-1)^{k+1}\frac{(x-1)^k}{k} = \sum_{k=1}^{\infty} \frac{(-1)^{k+1}}{k}(x-1)^k
 \end{align*}
+Der Entwicklungspunkt ist somit $x_0 = 1$.
+
+Wir berechnen nun den Konvergenzradius.
+\begin{align*}
+\lim_{k\to\infty} \left|\frac{\frac{(-1)^{k+1}}{k}}{\frac{(-1)^{k+2}}{k+1}}\right| = \lim_{k\to\infty} \left|\frac{\frac{-1\cdot(-1)^{k}}{k}}{\frac{(-1)^{k}}{k+1}}\right| = \lim_{k\to\infty} \left|\frac{-1\cdot(-1)^{k}}{k} \cdot \frac{k+1}{(-1)^{k}}\right| = \lim_{k\to\infty} \left|\frac{-1}{k} \cdot \frac{k+1}{1}\right| = 1
+\end{align*}
+Der Konvergenzradius ist also 1.
+\item
+\begin{align*}
+\sum_{k=1}^{\infty} \frac{z^k}{k!} = \sum_{k=1}^{\infty} \frac{1}{k!} \cdot z^k
+\end{align*}
+Der Entwicklungspunkt ist somit $x_0 = 1$.
+
+Wir berechnen nun den Konvergenzradius.
+\begin{align*}
+\lim_{k\to\infty} \left|\frac{\frac 1 {k!}}{\frac 1 {(k+1)!}}\right| = \lim_{k\to\infty} \left|\frac{\frac 1 {k!}}{\frac 1 {(k+1) k!}}\right| = \lim_{k\to\infty} \left|\frac {(k+1) k!} {k!}\right| = \infty
+\end{align*}
+Diese Summe konvergiert also für jede beliebige Zahl.
 \end{enumerate}
+Nun prüfen wir, ob die Reihe aus (a) auch für $x=1+i$ konvergiert. 
+\begin{align*}
+\sum_{k=1}^{\infty}(-1)^{k+1}\frac{(x-1)^k}{k} \overset{\text{für x einsetzen}}{=} \sum_{k=1}^{\infty}(-1)^{k+1}\frac{i^k}{k}
+\end{align*}
+Da $\frac{i^k}{k}$ eine Nullfolge ist konvergiert die Reihe nach dem Leibnitz-Kriterium.
 \end{document}
 
